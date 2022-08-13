@@ -17,7 +17,9 @@
  *
  * @package WordPress
  */
-
+define('WP_HOME','http://admiral.io/');
+define('WP_SITEURL','http://admiral.io/');
+define( 'FS_METHOD', 'direct' );
 // ** Параметры базы данных: Эту информацию можно получить у вашего хостинг-провайдера ** //
 /** Имя базы данных для WordPress */
 define( 'DB_NAME', 'admiral_local' );
