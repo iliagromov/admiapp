@@ -1,0 +1,172 @@
+/*_banner*/
+
+/* __debugGrid__ */
+
+.debugGrid {
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+}
+
+.debugGrid .wrapper {
+  height: inherit;
+}
+
+.debugGrid .parentFlex {
+  height: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.debugGrid .childFlex {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 12px;
+  margin-right: 12px;
+  width: -webkit-calc(8.33333% - 24px);
+  width: calc(8.33333% - 24px);
+  height: inherit;
+  outline: 1px solid #ff0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.debugGrid-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ff0;
+  border-radius: 50%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.debugGrid-btn__hidden {
+  display: none;
+}
+
+.debugGrid-btn:before,
+.debugGrid-btn:after {
+  content: '';
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  background: #000;
+}
+
+.debugGrid-btn:before {
+  width: 25px;
+  height: 2px;
+}
+
+.debugGrid-btn__create:after {
+  width: 2px;
+  height: 25px;
+  position: absolute;
+}
+
+.debugGrid__z-index-negative {
+  z-index: -1;
+}
+
+/* __debugGrid__ */
+
+.header .parent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -12px;
+  margin-right: -12px;
+  width: 1000px;
+}
+
+.header .parent .child {
+  /*child*/
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 12px;
+  margin-right: 12px;
+  width: -webkit-calc(100% - 24px);
+  width: calc(100% - 24px);
+  font-size: 40px;
+  width: 320px;
+  margin: 1px 2px 1px;
+}
+
+/*ui*/
+
+/*btn*/
+
+/*btns*/
+
+/*checkbox*/
+
+/*datapicker*/
+
+/*forms*/
+
+/*input*/
+
+/*link*/
+
+/*modals*/
+
+/*radio*/
+
+/*search*/
+
+/*select*/
+
+/*someBlock  if need use without component*/
+
+@media screen and (min-width: 480px) {
+  .header .parent .child {
+    font-size: 50px;
+    width: 567px;
+    margin: 2px 3px 2px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header .parent .child {
+    font-size: 60px;
+    width: 768px;
+    margin: 3px 4px 3px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .debugGrid .childFlex {
+    width: -webkit-calc(8.33333% - 24px);
+    width: calc(8.33333% - 24px);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .debugGrid .childFlex {
+    width: -webkit-calc(8.33333% - 24px);
+    width: calc(8.33333% - 24px);
+  }
+}

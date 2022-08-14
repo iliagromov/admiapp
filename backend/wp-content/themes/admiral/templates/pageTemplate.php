@@ -43,7 +43,7 @@ uasort($fields, 'cmp_function');
 
     <?php foreach ($fields as $field => $value) {
         
-        include(TEMPLATEPATH . "/components/$field/$field.php");
+        include(TEMPLATEPATH . "/src/components/$field/$field.php");
     } ?>
 </main>
 <!-- Tpl. Page -->

@@ -1,7 +1,7 @@
 {
     "root": "./",
     "src": "src/",
-    "dist": "dist/",
+    "dist": "./",
     "backend": "backend/wp-content/themes/factoring/",
     "html":"**/*.html",
     "pug": "**/*.pug",
