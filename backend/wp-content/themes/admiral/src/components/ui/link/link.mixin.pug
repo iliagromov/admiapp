@@ -1,7 +1,13 @@
 //-link
+// FIXME: add variables class
 mixin link(props)
-  a.page-link(href=`${props.href} ? ${props.href} : 'javascript:void(0)'`) #{props.title}
+  a.page-link(
+    href=props.href) #{props.title}
 
 mixin links(array)
   each link in array
     +link(link)
+
+mixin link-arrow(props)
+  a.page-link.page-link_arrow(href=props.href) #{props.title}
+      .svg-cheveron-right.svg-cheveron-right-box

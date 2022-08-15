@@ -1,0 +1,29 @@
+/*_banner*/
+$heightBanner: calc(100vh - 100px)
+.banner
+  position: relative
+  height: $heightBanner
+  max-height: $heightBanner
+  padding-bottom: 140px 
+  .wrapper
+    height: inherit 
+  &_bg
+    position: absolute
+    top: 0
+    img
+      width: 100%
+      height: $heightBanner
+      object-fit: cover
+  .page__title-h1
+    color: $color_white
+    
+  &-inner
+    box-sizing: border-box
+    padding: 70px 0
+    height: 100%
+    display: flex
+    align-items: flex-end
+    position: relative
+    z-index: 2
+    text-align: center
+    justify-content: center

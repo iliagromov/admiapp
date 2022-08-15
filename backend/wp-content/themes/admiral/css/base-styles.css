@@ -139,7 +139,7 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #0BBBEF;
+  background-color: #7D4E30;
   border-radius: 50px;
 }
 
@@ -189,7 +189,6 @@ img {
 
 body {
   font-family: "OpenSans-Regular";
-  background: #ccc;
 }
 
 a,

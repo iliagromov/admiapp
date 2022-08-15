@@ -1,0 +1,34 @@
+/*info-block-cards*/
+.info-block-cards
+  padding: 100px
+  .page__title
+    color: $blue-500
+
+  &-inner
+    +row-flex
+    align-items: center
+    justify-content: center
+  &__text
+    +col
+    +size(12)
+    +size-md(5.5)
+    display: flex
+    flex-direction: column
+    padding-left: 40px
+    
+    .page__title
+      margin-bottom: 16px
+
+    .page__text
+      padding-left: 20px
+      font-size: 18px
+      line-height: 150%
+      margin-bottom: 16px
+
+    .page-link
+      align-self: flex-end
+      color: $blue-500
+  &__img
+    +col
+    +size(12)
+    +size-md(5.5)
