@@ -1,5 +1,5 @@
 {
-    "viewportWidth" : 321,
+    "viewportWidth" : 320,
     "breakPoints": {
         "xs": {
             "width": "480px"
@@ -11,10 +11,7 @@
             "width": "1024px"
         },
         "lg": {
-            "width": "1440px"
-        },
-        "lgs": {
-            "width": "1940px"
+            "width": "1760px"
         }
     }
 }

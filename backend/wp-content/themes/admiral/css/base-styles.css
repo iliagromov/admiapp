@@ -163,6 +163,22 @@ img {
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Philosopher-Regular";
+  src: url("../fonts/Philosopher/Philosopher-Regular.ttf") format("truetype"), url("../fonts/Philosopher/Philosopher-Regular.woff") format("woff"), url("../fonts/Philosopher/Philosopher-Regular.eot") format("eot");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype"), url("../fonts/Roboto/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto/Roboto-Regular.eot") format("eot");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   font-family: "OpenSans-Regular";
   background: #ccc;
@@ -187,3 +203,9 @@ input:focus {
 }
 
 /* __base__ */
+
+@media screen and (min-width: 1760px) {
+  .wrapper {
+    max-width: 1600px;
+  }
+}
