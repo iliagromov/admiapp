@@ -9,6 +9,7 @@ $heightBanner: calc(100vh - 100px)
     height: inherit 
   &_bg
     position: absolute
+    width: 100%
     top: 0
     img
       width: 100%
@@ -117,10 +118,10 @@ $heightBanner: calc(100vh - 100px)
     bottom: 24px
     .swiper-button-next
 
-      right: 40%
+      right: 42%
       top: -15px
     .swiper-button-prev
-      left: 40%
+      left: 42%
       top: -15px
 
   &__link-show-more
@@ -160,12 +161,42 @@ $heightBanner: calc(100vh - 100px)
     @include debugBtn()
 /* __debugGrid__ */
 /*footer*/
+.footer
+  background: $braun-50
+  padding: 80px 0 40px
+  &-inner
+    +row-flex
+  &__nav
+    .page__title
+      color: $blue-500
+      margin-bottom: 32px
+    .page-link
+      display: flex
+      margin-bottom: 16px
+    
+    .page-fl-aic
+      margin-bottom: 16px
+      color: $braun-900
+      .page-link
+        margin: 0
+  &__col
+    +col
+    +size(6)
+    +size-sm(3)
+    +size-md(2)
+  &__contacts
+    +size(12)
+
+  
+  &__bottom
+    padding-top: 40px
+    border-top: 1px solid $braun-100
 .header
     padding: 16px 0
     background-color: $color_white
     position: sticky
     top: 0
-    z-index: 1
+    z-index: 100
     &-inner
         +row-flex
         align-items: center
@@ -206,6 +237,7 @@ $heightBanner: calc(100vh - 100px)
 /*revies*/
 .revies
   padding: 60px 0
+/*social*/
 /*ui*/
 
 /*btn*/

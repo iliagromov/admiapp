@@ -1,1 +1,31 @@
 /*footer*/
+.footer
+  background: $braun-50
+  padding: 80px 0 40px
+  &-inner
+    +row-flex
+  &__nav
+    .page__title
+      color: $blue-500
+      margin-bottom: 32px
+    .page-link
+      display: flex
+      margin-bottom: 16px
+    
+    .page-fl-aic
+      margin-bottom: 16px
+      color: $braun-900
+      .page-link
+        margin: 0
+  &__col
+    +col
+    +size(6)
+    +size-sm(3)
+    +size-md(2)
+  &__contacts
+    +size(12)
+
+  
+  &__bottom
+    padding-top: 40px
+    border-top: 1px solid $braun-100

@@ -30,14 +30,14 @@ gulp.task('sprite', function () {
 			pathDest: path.iconsPNG,
 			format: 'png'
 		},
-		webp: {
-			srcIconPath: srcIconPathPng,
-			imgName: 'spriteWEBP.webp',
-			imgPath: '../assets/icons/webp/spriteWEBP.webp',
-			cssName: 'spriteWEBP.sass',
-			pathDest: path.iconsWEBP,
-			format: 'webp'
-		}
+		// webp: {
+		// 	srcIconPath: srcIconPathPng,
+		// 	imgName: 'spriteWEBP.webp',
+		// 	imgPath: '../assets/icons/webp/spriteWEBP.webp',
+		// 	cssName: 'spriteWEBP.sass',
+		// 	pathDest: path.iconsWEBP,
+		// 	format: 'webp'
+		// }
 	}
 
 	const svgSpriteConfig = {
@@ -106,7 +106,7 @@ gulp.task('sprite', function () {
 	}
 
 	
-	return _spriteSVG(), _spritePNG(), _spriteWebp();
+	return _spriteSVG(), _spritePNG();
 });
 // ===============================================
 // Tasks images
