@@ -111,9 +111,15 @@
 
 /* __debugGrid__ */
 
+/*footer*/
+
 .header {
   padding: 16px 0;
   background-color: #ffffff;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .header-inner {
@@ -130,6 +136,58 @@
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.header__logo {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 12px;
+  margin-right: 12px;
+  width: -webkit-calc(33.33333% - 24px);
+  width: calc(33.33333% - 24px);
+}
+
+.header__nav {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 12px;
+  margin-right: 12px;
+  width: -webkit-calc(33.33333% - 24px);
+  width: calc(33.33333% - 24px);
+}
+
+.header__nav .page-link {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.header__menu .menu-btn {
+  /* Auto layout */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
+  width: 72px;
+  height: 40px;
+  /* braun/900 */
+  border: 1px solid #7D4E30;
+  border-radius: 50px;
 }
 
 /*slider-banner*/
@@ -151,7 +209,23 @@
 /*link*/
 
 .page-link {
-  color: inheirt;
+  text-transform: none;
+  text-decoration: none;
+  /* 16/reg, 19 */
+  font-family: Roboto-Regular;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #7D4E30;
+}
+
+.page-link:hover {
+  text-decoration: underline;
+}
+
+.page-link:disabled {
+  opacity: 0.5;
 }
 
 /*modals*/
@@ -173,10 +247,32 @@
   color: inherit;
 }
 
+@media screen and (min-width: 768px) {
+  .header__logo {
+    width: -webkit-calc(33.33333% - 24px);
+    width: calc(33.33333% - 24px);
+  }
+
+  .header__nav {
+    width: -webkit-calc(33.33333% - 24px);
+    width: calc(33.33333% - 24px);
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .debugGrid .childFlex {
     width: -webkit-calc(8.33333% - 24px);
     width: calc(8.33333% - 24px);
+  }
+
+  .header__logo {
+    width: -webkit-calc(33.33333% - 24px);
+    width: calc(33.33333% - 24px);
+  }
+
+  .header__nav {
+    width: -webkit-calc(33.33333% - 24px);
+    width: calc(33.33333% - 24px);
   }
 }
 

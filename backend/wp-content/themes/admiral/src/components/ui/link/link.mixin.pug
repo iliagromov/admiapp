@@ -1,3 +1,7 @@
 //-link
 mixin link(props)
-  a.page-link(href=props.href) #{props.title}
+  a.page-link(href=`${props.href} ? ${props.href} : 'javascript:void(0)'`) #{props.title}
+
+mixin links(array)
+  each link in array
+    +link(link)

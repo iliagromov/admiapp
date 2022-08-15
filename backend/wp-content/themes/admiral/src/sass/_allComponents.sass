@@ -37,15 +37,47 @@
         background: rgba(0, 0, 0, 0.4)
     @include debugBtn()
 /* __debugGrid__ */
+/*footer*/
 .header
     padding: 16px 0
     background-color: $color_white
+    position: sticky
+    top: 0
+    z-index: 1
     &-inner
         +row-flex
         align-items: center
+        // justify-content: space-between
     &__logo
+        +col
+        +size(4)
+        +size-sm(4)
+        +size-md(4)
+    &__nav
+        +col
+        +size(4)
+        +size-sm(4)
+        +size-md(4)
+        .page-link
+            +col
+
     &__phone
     &__menu
+        .menu-btn
+            /* Auto layout */
+            display: flex
+            flex-direction: row
+            align-items: center
+            padding: 8px
+            gap: 8px
+
+            width: 72px
+            height: 40px
+
+            /* braun/900 */
+            border: 1px solid $braun-900
+            border-radius: 50px
+
 /*slider-banner*/
 /*ui*/
 
@@ -57,7 +89,24 @@
 /*input*/
 /*link*/
 .page-link
-  color: inheirt
+  // color: inheirt
+  text-transform: none
+  text-decoration: none
+  /* 16/reg, 19 */
+  font-family: Roboto-Regular
+  font-style: normal
+  font-weight: 400
+  font-size: 16px
+  line-height: 150%
+
+  color: $braun-900
+
+  &:hover
+    text-decoration: underline
+    
+  &:disabled
+    opacity: 0.5
+
 /*modals*/
 /*radio*/
 /*search*/

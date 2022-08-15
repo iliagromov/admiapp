@@ -3,17 +3,34 @@ header.header
         .header-inner
             .header__logo
                 a(href="/")
-                    img(src="assets/images/png/logo.png", alt="logo") 
+                    img(src="assets/images/svg/logo.svg", alt="logo") 
             .header__nav 
-                nav.page-nav
-                    a.page-link(href="/") Коттеджи
-                    a.page-link(href="/") Программы
-                    a.page-link(href="/") Кухня
-                    a.page-link(href="/") Впечатления
+                nav.page-nav 
+                    +links([
+                        {
+                            href: '/',
+                            title: 'Коттеджи',
+                        },
+                        {
+                            href: '/',
+                            title: 'Программы',
+                        },
+                        {
+                            href: '/',
+                            title: 'Кухня',
+                        },
+                        {
+                            href: '/',
+                            title: 'Впечатления',
+                        },
+                    ])
             .header__phone
+                .svg-phone.svg-phone-box
                 +link({
                     href: "tel:+7 (495) 222-02-23",
                     title: "+7 (495) 222-02-23"
                 })
             .header__menu
                 .menu
+                    .menu-btn
+                        .svg-view-list.svg-view-list-box

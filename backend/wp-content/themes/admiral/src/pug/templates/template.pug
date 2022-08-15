@@ -39,8 +39,12 @@ html(lang="ru")
         //- include ../variables/useVariables
         //- include ../data/useDataJSON
         include ../mixins/mixins.pug
+        include ../../components/debuggrid/debuggrid.component.pug
+        include ../../components/header/header.component.pug
         
         block content
+        include ../../components/footer/footer.component.pug
+
         block style
             //- link(rel="stylesheet", href="css/viewport/mobileFirst-"+viewportWidth+"px.css", type="text/css")
 
