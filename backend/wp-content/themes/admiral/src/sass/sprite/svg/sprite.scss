@@ -2,13 +2,1183 @@
 	background: url("../assets/icons/svg/spriteSVG.svg") no-repeat;
 }
 
-.svg-mouse {
+.svg-ava {
 	@extend %svg-common;
 	background-position: 0 0;
+}
+
+.svg-ava-box {
+	width: 52px;
+	height: 52px;
+}
+
+.svg-barrel {
+	@extend %svg-common;
+	background-position: 10.116731517509727% 51.12419700214132%;
+}
+
+.svg-barrel-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-basket {
+	@extend %svg-common;
+	background-position: 18.67704280155642% 51.12419700214132%;
+}
+
+.svg-basket-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-bath {
+	@extend %svg-common;
+	background-position: 27.237354085603112% 51.12419700214132%;
+}
+
+.svg-bath-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-beauty-products {
+	@extend %svg-common;
+	background-position: 35.797665369649806% 51.12419700214132%;
+}
+
+.svg-beauty-products-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-belcart {
+	@extend %svg-common;
+	background-position: 10.276679841897232% 0;
+}
+
+.svg-belcart-box {
+	width: 52px;
+	height: 27.91px;
+}
+
+.svg-breakfast {
+	@extend %svg-common;
+	background-position: 44.3579766536965% 51.12419700214132%;
+}
+
+.svg-breakfast-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-breakfast-1 {
+	@extend %svg-common;
+	background-position: 57.17120622568093% 0;
+}
+
+.svg-breakfast-1-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-calendar {
+	@extend %svg-common;
+	background-position: 57.17120622568093% 9.421841541755889%;
+}
+
+.svg-calendar-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-cash {
+	@extend %svg-common;
+	background-position: 57.17120622568093% 18.843683083511777%;
+}
+
+.svg-cash-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-chat-alt-2 {
+	@extend %svg-common;
+	background-position: 57.17120622568093% 28.265524625267666%;
+}
+
+.svg-chat-alt-2-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-check {
+	@extend %svg-common;
+	background-position: 57.17120622568093% 37.687366167023555%;
+}
+
+.svg-check-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-check-circle {
+	@extend %svg-common;
+	background-position: 57.17120622568093% 47.109207708779444%;
+}
+
+.svg-check-circle-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-cheveron-down {
+	@extend %svg-common;
+	background-position: 0 62.25910064239829%;
+}
+
+.svg-cheveron-down-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-cheveron-left {
+	@extend %svg-common;
+	background-position: 8.560311284046692% 62.25910064239829%;
+}
+
+.svg-cheveron-left-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-cheveron-left-1 {
+	@extend %svg-common;
+	background-position: 17.120622568093385% 62.25910064239829%;
+}
+
+.svg-cheveron-left-1-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-cheveron-right {
+	@extend %svg-common;
+	background-position: 25.68093385214008% 62.25910064239829%;
+}
+
+.svg-cheveron-right-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-cheveron-up {
+	@extend %svg-common;
+	background-position: 34.24124513618677% 62.25910064239829%;
+}
+
+.svg-cheveron-up-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-clean {
+	@extend %svg-common;
+	background-position: 42.80155642023346% 62.25910064239829%;
+}
+
+.svg-clean-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-clock {
+	@extend %svg-common;
+	background-position: 51.36186770428016% 62.25910064239829%;
+}
+
+.svg-clock-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-collection {
+	@extend %svg-common;
+	background-position: 65.73151750972762% 0;
+}
+
+.svg-collection-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-cosmetic {
+	@extend %svg-common;
+	background-position: 65.73151750972762% 9.421841541755889%;
+}
+
+.svg-cosmetic-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-credit-card {
+	@extend %svg-common;
+	background-position: 65.73151750972762% 18.843683083511777%;
+}
+
+.svg-credit-card-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-cryptocurrency_sberbank {
+	@extend %svg-common;
+	background-position: 0 11.328976034858387%;
+}
+
+.svg-cryptocurrency_sberbank-box {
+	width: 52px;
+	height: 52px;
+}
+
+.svg-delivery {
+	@extend %svg-common;
+	background-position: 65.73151750972762% 28.265524625267666%;
+}
+
+.svg-delivery-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-dishes {
+	@extend %svg-common;
+	background-position: 65.73151750972762% 37.687366167023555%;
+}
+
+.svg-dishes-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-exclamation-circle {
+	@extend %svg-common;
+	background-position: 65.73151750972762% 47.109207708779444%;
+}
+
+.svg-exclamation-circle-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-fire {
+	@extend %svg-common;
+	background-position: 65.73151750972762% 56.53104925053533%;
+}
+
+.svg-fire-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-firewood {
+	@extend %svg-common;
+	background-position: 0 71.68094218415418%;
+}
+
+.svg-firewood-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-foot-massage {
+	@extend %svg-common;
+	background-position: 8.560311284046692% 71.68094218415418%;
+}
+
+.svg-foot-massage-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-fruits {
+	@extend %svg-common;
+	background-position: 17.120622568093385% 71.68094218415418%;
+}
+
+.svg-fruits-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-gift {
+	@extend %svg-common;
+	background-position: 25.68093385214008% 71.68094218415418%;
+}
+
+.svg-gift-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-globe-alt {
+	@extend %svg-common;
+	background-position: 34.24124513618677% 71.68094218415418%;
+}
+
+.svg-globe-alt-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-googlePay {
+	@extend %svg-common;
+	background-position: 10.276679841897232% 10.865931126713473%;
+}
+
+.svg-googlePay-box {
+	width: 52px;
+	height: 32.44px;
+}
+
+.svg-googlepay {
+	@extend %svg-common;
+	background-position: 42.80155642023346% 71.68094218415418%;
+}
+
+.svg-googlepay-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-hand {
+	@extend %svg-common;
+	background-position: 51.36186770428016% 71.68094218415418%;
+}
+
+.svg-hand-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-home {
+	@extend %svg-common;
+	background-position: 59.92217898832685% 71.68094218415418%;
+}
+
+.svg-home-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-home-2 {
+	@extend %svg-common;
+	background-position: 74.29182879377431% 0;
+}
+
+.svg-home-2-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-home-solid {
+	@extend %svg-common;
+	background-position: 99.2007722007722% 9.341825902335456%;
+}
+
+.svg-home-solid-box {
+	width: 40px;
+	height: 40px;
+}
+
+.svg-identification {
+	@extend %svg-common;
+	background-position: 74.29182879377431% 9.421841541755889%;
+}
+
+.svg-identification-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-light-bulb {
+	@extend %svg-common;
+	background-position: 74.29182879377431% 18.843683083511777%;
+}
+
+.svg-light-bulb-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-lock-closed {
+	@extend %svg-common;
+	background-position: 74.29182879377431% 28.265524625267666%;
+}
+
+.svg-lock-closed-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-logo {
+	@extend %svg-common;
+	background-position: 20.553359683794465% 0;
+}
+
+.svg-logo-box {
+	width: 52px;
+	height: 33.26px;
+}
+
+.svg-maestro {
+	@extend %svg-common;
+	background-position: 20.553359683794465% 7.046610169491525%;
+}
+
+.svg-maestro-box {
+	width: 52px;
+	height: 39px;
+}
+
+.svg-massage-professional {
+	@extend %svg-common;
+	background-position: 74.29182879377431% 37.687366167023555%;
+}
+
+.svg-massage-professional-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-master_card {
+	@extend %svg-common;
+	background-position: 0 22.043238660449344%;
+}
+
+.svg-master_card-box {
+	width: 52px;
+	height: 39.2px;
+}
+
+.svg-master_card_SC {
+	@extend %svg-common;
+	background-position: 10.276679841897232% 21.838187430443273%;
+}
+
+.svg-master_card_SC-box {
+	width: 52px;
+	height: 34.77px;
+}
+
+.svg-mir {
+	@extend %svg-common;
+	background-position: 20.553359683794465% 15.006645622196377%;
+}
+
+.svg-mir-box {
+	width: 52px;
+	height: 29.48px;
+}
+
+.svg-mouse {
+	@extend %svg-common;
+	background-position: 29.833049664378194% 0;
 }
 
 .svg-mouse-box {
 	width: 35.09px;
 	height: 52px;
+}
+
+.svg-music-note {
+	@extend %svg-common;
+	background-position: 74.29182879377431% 47.109207708779444%;
+}
+
+.svg-music-note-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-no_meat {
+	@extend %svg-common;
+	background-position: 37.67324487904895% 0;
+}
+
+.svg-no_meat-box {
+	width: 50.77px;
+	height: 52px;
+}
+
+.svg-noun-animals-prohibited-3847683_1 {
+	@extend %svg-common;
+	background-position: 74.29182879377431% 56.53104925053533%;
+}
+
+.svg-noun-animals-prohibited-3847683_1-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-noun-bedroom-1 {
+	@extend %svg-common;
+	background-position: 74.29182879377431% 65.95289079229121%;
+}
+
+.svg-noun-bedroom-1-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-noun-fire-131591 {
+	@extend %svg-common;
+	background-position: 0 81.10278372591006%;
+}
+
+.svg-noun-fire-131591-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-noun-living-room-254087_1 {
+	@extend %svg-common;
+	background-position: 8.560311284046692% 81.10278372591006%;
+}
+
+.svg-noun-living-room-254087_1-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-noun-no-meat-2390813 {
+	@extend %svg-common;
+	background-position: 17.120622568093385% 81.10278372591006%;
+}
+
+.svg-noun-no-meat-2390813-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-noun-no-smoking-1322400 {
+	@extend %svg-common;
+	background-position: 25.68093385214008% 81.10278372591006%;
+}
+
+.svg-noun-no-smoking-1322400-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-noun-vegan-3029210_1 {
+	@extend %svg-common;
+	background-position: 34.24124513618677% 81.10278372591006%;
+}
+
+.svg-noun-vegan-3029210_1-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-noun-virus-1182496 {
+	@extend %svg-common;
+	background-position: 42.80155642023346% 81.10278372591006%;
+}
+
+.svg-noun-virus-1182496-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-noun_Bath_1300224 {
+	@extend %svg-common;
+	background-position: 51.36186770428016% 81.10278372591006%;
+}
+
+.svg-noun_Bath_1300224-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-noun_Bath_2585529 {
+	@extend %svg-common;
+	background-position: 59.92217898832685% 81.10278372591006%;
+}
+
+.svg-noun_Bath_2585529-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-noun_Bath_2585610 {
+	@extend %svg-common;
+	background-position: 68.48249027237354% 81.10278372591006%;
+}
+
+.svg-noun_Bath_2585610-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-noun_Candle_2585535_1 {
+	@extend %svg-common;
+	background-position: 82.852140077821% 0;
+}
+
+.svg-noun_Candle_2585535_1-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-noun_Cream_2585659 {
+	@extend %svg-common;
+	background-position: 82.852140077821% 9.421841541755889%;
+}
+
+.svg-noun_Cream_2585659-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-noun_Dryer_1300217 {
+	@extend %svg-common;
+	background-position: 82.852140077821% 18.843683083511777%;
+}
+
+.svg-noun_Dryer_1300217-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-noun_Hot_2585540 {
+	@extend %svg-common;
+	background-position: 82.852140077821% 28.265524625267666%;
+}
+
+.svg-noun_Hot_2585540-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-noun_House_Slippers__2 {
+	@extend %svg-common;
+	background-position: 82.852140077821% 37.687366167023555%;
+}
+
+.svg-noun_House_Slippers__2-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-noun_Ironing__3 {
+	@extend %svg-common;
+	background-position: 82.852140077821% 47.109207708779444%;
+}
+
+.svg-noun_Ironing__3-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-noun_Tea_2585701 {
+	@extend %svg-common;
+	background-position: 82.852140077821% 56.53104925053533%;
+}
+
+.svg-noun_Tea_2585701-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-noun_back_2585554 {
+	@extend %svg-common;
+	background-position: 82.852140077821% 65.95289079229121%;
+}
+
+.svg-noun_back_2585554-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-noun_beauty_2585549 {
+	@extend %svg-common;
+	background-position: 82.852140077821% 75.37473233404711%;
+}
+
+.svg-noun_beauty_2585549-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-noun_beauty_2585570 {
+	@extend %svg-common;
+	background-position: 0 90.52462526766595%;
+}
+
+.svg-noun_beauty_2585570-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-noun_care_2585588 {
+	@extend %svg-common;
+	background-position: 8.560311284046692% 90.52462526766595%;
+}
+
+.svg-noun_care_2585588-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-noun_herb_2585682 {
+	@extend %svg-common;
+	background-position: 17.120622568093385% 90.52462526766595%;
+}
+
+.svg-noun_herb_2585682-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-noun_massage_2585542 {
+	@extend %svg-common;
+	background-position: 25.68093385214008% 90.52462526766595%;
+}
+
+.svg-noun_massage_2585542-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-noun_spa_2528450 {
+	@extend %svg-common;
+	background-position: 34.24124513618677% 90.52462526766595%;
+}
+
+.svg-noun_spa_2528450-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-noun_spa_2585736 {
+	@extend %svg-common;
+	background-position: 42.80155642023346% 90.52462526766595%;
+}
+
+.svg-noun_spa_2585736-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-noun_spa_3914978 {
+	@extend %svg-common;
+	background-position: 51.36186770428016% 90.52462526766595%;
+}
+
+.svg-noun_spa_3914978-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-noun_teacup_4 {
+	@extend %svg-common;
+	background-position: 59.92217898832685% 90.52462526766595%;
+}
+
+.svg-noun_teacup_4-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-order {
+	@extend %svg-common;
+	background-position: 68.48249027237354% 90.52462526766595%;
+}
+
+.svg-order-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-oven {
+	@extend %svg-common;
+	background-position: 77.04280155642023% 90.52462526766595%;
+}
+
+.svg-oven-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-parking {
+	@extend %svg-common;
+	background-position: 91.41245136186771% 0;
+}
+
+.svg-parking-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-paykeeper {
+	@extend %svg-common;
+	background-position: 20.553359683794465% 21.624768677354293%;
+}
+
+.svg-paykeeper-box {
+	width: 52px;
+	height: 30.07px;
+}
+
+.svg-payment {
+	@extend %svg-common;
+	background-position: 91.41245136186771% 9.421841541755889%;
+}
+
+.svg-payment-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-paypal {
+	@extend %svg-common;
+	background-position: 0 29.63514827921607%;
+}
+
+.svg-paypal-box {
+	width: 52px;
+	height: 27.79px;
+}
+
+.svg-paypass {
+	@extend %svg-common;
+	background-position: 0 35.500882383473474%;
+}
+
+.svg-paypass-box {
+	width: 52px;
+	height: 29.35px;
+}
+
+.svg-pencil {
+	@extend %svg-common;
+	background-position: 91.41245136186771% 18.843683083511777%;
+}
+
+.svg-pencil-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-pencil-alt {
+	@extend %svg-common;
+	background-position: 91.41245136186771% 28.265524625267666%;
+}
+
+.svg-pencil-alt-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-photograph {
+	@extend %svg-common;
+	background-position: 91.41245136186771% 37.687366167023555%;
+}
+
+.svg-photograph-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-qiwi {
+	@extend %svg-common;
+	background-position: 47.798418972332016% 0;
+}
+
+.svg-qiwi-box {
+	width: 52px;
+	height: 52px;
+}
+
+.svg-question-mark-circle {
+	@extend %svg-common;
+	background-position: 91.41245136186771% 47.109207708779444%;
+}
+
+.svg-question-mark-circle-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-receipt-tax {
+	@extend %svg-common;
+	background-position: 91.41245136186771% 56.53104925053533%;
+}
+
+.svg-receipt-tax-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-robokassa {
+	@extend %svg-common;
+	background-position: 47.798418972332016% 10.677618069815194%;
+}
+
+.svg-robokassa-box {
+	width: 52px;
+	height: 24px;
+}
+
+.svg-ruble {
+	@extend %svg-common;
+	background-position: 47.798418972332016% 16.55773420479303%;
+}
+
+.svg-ruble-box {
+	width: 52px;
+	height: 52px;
+}
+
+.svg-sauna {
+	@extend %svg-common;
+	background-position: 91.41245136186771% 65.95289079229121%;
+}
+
+.svg-sauna-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-search {
+	@extend %svg-common;
+	background-position: 91.41245136186771% 75.37473233404711%;
+}
+
+.svg-search-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-shower {
+	@extend %svg-common;
+	background-position: 91.41245136186771% 84.79657387580299%;
+}
+
+.svg-shower-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-star {
+	@extend %svg-common;
+	background-position: 99.2007722007722% 17.8343949044586%;
+}
+
+.svg-star-box {
+	width: 40px;
+	height: 40px;
+}
+
+.svg-support {
+	@extend %svg-common;
+	background-position: 0 99.94646680942184%;
+}
+
+.svg-support-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-swings {
+	@extend %svg-common;
+	background-position: 8.560311284046692% 99.94646680942184%;
+}
+
+.svg-swings-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-table {
+	@extend %svg-common;
+	background-position: 17.120622568093385% 99.94646680942184%;
+}
+
+.svg-table-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-thumb-up {
+	@extend %svg-common;
+	background-position: 25.68093385214008% 99.94646680942184%;
+}
+
+.svg-thumb-up-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-towel {
+	@extend %svg-common;
+	background-position: 34.24124513618677% 99.94646680942184%;
+}
+
+.svg-towel-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-tv {
+	@extend %svg-common;
+	background-position: 42.80155642023346% 99.94646680942184%;
+}
+
+.svg-tv-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-user {
+	@extend %svg-common;
+	background-position: 99.2007722007722% 26.326963906581742%;
+}
+
+.svg-user-box {
+	width: 40px;
+	height: 40px;
+}
+
+.svg-user-circle {
+	@extend %svg-common;
+	background-position: 51.36186770428016% 99.94646680942184%;
+}
+
+.svg-user-circle-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-user-group {
+	@extend %svg-common;
+	background-position: 59.92217898832685% 99.94646680942184%;
+}
+
+.svg-user-group-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-users {
+	@extend %svg-common;
+	background-position: 68.48249027237354% 99.94646680942184%;
+}
+
+.svg-users-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-veggi {
+	@extend %svg-common;
+	background-position: 47.68251089249453% 27.886710239651418%;
+}
+
+.svg-veggi-box {
+	width: 50.77px;
+	height: 52px;
+}
+
+.svg-veggi-1 {
+	@extend %svg-common;
+	background-position: 37.67324487904895% 11.328976034858387%;
+}
+
+.svg-veggi-1-box {
+	width: 50.77px;
+	height: 52px;
+}
+
+.svg-verified_visa {
+	@extend %svg-common;
+	background-position: 0 42.391925347552835%;
+}
+
+.svg-verified_visa-box {
+	width: 52px;
+	height: 38.41px;
+}
+
+.svg-view-list {
+	@extend %svg-common;
+	background-position: 77.04280155642023% 99.94646680942184%;
+}
+
+.svg-view-list-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-visa {
+	@extend %svg-common;
+	background-position: 10.276679841897232% 41.64033920851346%;
+}
+
+.svg-visa-box {
+	width: 52px;
+	height: 29.88px;
+}
+
+.svg-vorkasse {
+	@extend %svg-common;
+	background-position: 10.276679841897232% 35.48982980489829%;
+}
+
+.svg-vorkasse-box {
+	width: 52px;
+	height: 29.2px;
+}
+
+.svg-webmoney {
+	@extend %svg-common;
+	background-position: 0 52.0152505446623%;
+}
+
+.svg-webmoney-box {
+	width: 52px;
+	height: 52px;
+}
+
+.svg-wester_union {
+	@extend %svg-common;
+	background-position: 20.553359683794465% 41.61093341087525%;
+}
+
+.svg-wester_union-box {
+	width: 52px;
+	height: 29.54px;
+}
+
+.svg-x {
+	@extend %svg-common;
+	background-position: 85.60311284046692% 99.94646680942184%;
+}
+
+.svg-x-box {
+	width: 44px;
+	height: 44px;
+}
+
+.svg-yandex {
+	@extend %svg-common;
+	background-position: 99.9727626459144% 0;
+}
+
+.svg-yandex-box {
+	width: 44px;
+	height: 44px;
 }
 
