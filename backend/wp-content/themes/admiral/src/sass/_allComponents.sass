@@ -25,7 +25,7 @@ $heightBanner: calc(100vh - 100px)
       object-fit: cover
   &__title
     &_left
-      +size(5)
+      +size(5.5)
       .page__title-h1
         color: $color_white
         margin-bottom: 24px
@@ -427,6 +427,104 @@ $heightBanner: calc(100vh - 100px)
   .page__text
     font-size: 14px
     line-height: 150%
+/*single-bath-page*/
+.single-bath-page
+  &-inner
+    .page__title
+      color: $blue-500
+      margin-bottom: 20px
+    +row-flex
+  &-img
+    display: flex
+  &__img
+    display: flex
+    +size(12)
+    +size-md(6)
+    img
+      padding: 12px
+      box-sizing: border-box
+    &-4
+      display: flex
+      flex-wrap: wrap
+      +size-md(6)
+      img
+        +size-md(6)
+        padding: 12px
+        box-sizing: border-box
+  &-advantages
+    padding: 24px 0
+    .page__title-h3
+      margin-bottom: 24px
+    &__lists
+      +row-flex
+   
+  &-description
+    padding-bottom: 100px 
+    margin-bottom: 45px
+    border-bottom: 1px dashed #E5D8CE
+
+    .page__text
+      +size-md(10)
+      font-family: Philosopher-Regular
+  &-more-order
+    &__items
+      +row-flex
+
+    &__item
+      +col
+      +size(6)
+      background: #FFFFFF
+
+      border: 1px solid #F5F0EB
+
+      box-shadow: 0px 0px 15px rgba(1, 39, 104, 0.1)
+      border-radius: 20px
+      padding: 32px
+      .page__title
+        color: #A87E5C
+        margin-bottom: 16px
+      .page__text
+        color: #A87E5C
+        font-size: 14px
+        margin-bottom: 24px
+      &-img
+        margin-bottom: 24px
+      &-link
+        
+        .page-link
+          justify-content: flex-end
+          color: $blue-500
+  &-information
+    .page-ul
+      > li
+        +size(4)
+
+
+.page-ul
+      +col
+      display: flex
+
+      > li
+        flex-direction: column
+        align-items: flex-start
+       
+        color: #8D6141
+        font-size: 16px
+        font-weight: bold
+        img
+          width: 55px
+          height: 55px
+      ul
+          padding-top: 20px
+          padding-left: 4px
+          li
+            font-weight: normal
+            display: flex
+            align-items: center
+
+            margin-bottom: 15px
+            .page__text
+              font-size: 16px
 /*social*/
 .social
   display: flex

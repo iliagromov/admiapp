@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <!-- home -->
-  <main class="page">
+<main class="page">
     <section class="banner">
       <div class="banner_bg"><img src="assets/images/png/main-page/Banner.png" alt="banner"></div>
       <div class="wrapper">
@@ -174,7 +174,26 @@
       <div class="slider-banner__link-show-more"><a class="page-link page-link_arrow" href="/">Больше программ<div
             class="svg-cheveron-right svg-cheveron-right-box"></div></a></div>
     </section>
-    <section class="callback">callback</section>
+    <section class="callback">
+      <div class="wrapper">
+        <div class="callback-inner">
+          <h3 class="page__title page_regular page__title-h3">Отзывы</h3>
+          <div class="callback-items">
+            <div class="callback-item">
+              <div class="callback-item__stars"></div>
+              <div class="callback-item__text">
+                <p class="page__text">«Очень рада, что мне удалось получить то самое расслабление и удовольствие, заботу
+                  и тепло — то, о чем я мечтала — кайф! Спасибо огромное Адмиральским баням за приятную обстановку,
+                  домашний уют! Ваши сотрудники просто золото! Очень приветливые! Всем спасибо!».</p>
+              </div>
+              <div class="callback-item__name">
+                <div class="name">Виктория</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="slider-banner js--slider-banner swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide slider-banner-slide">
@@ -230,7 +249,17 @@
       <div class="slider-banner__link-show-more"><a class="page-link page-link_arrow" href="/">Больше программ<div
             class="svg-cheveron-right svg-cheveron-right-box"></div></a></div>
     </section>
-    <section class="revies">revies</section>
+    <section class="revies">
+      <div class="wrapper">
+        <div class="revies-inner">
+          <from class="page-form">
+            <h3 class="page__title page_regular page__title-h3">Подпишитесь и будьте в курсе наших акций
+              и спецпредложений</h3><input class="page-input" type="text" placeholder="Электронная почта"><button
+              class="page__btn page_broun-outline">Подписаться</button>
+          </from>
+        </div>
+      </div>
+    </section>
   </main>
   
 <!-- /home -->
