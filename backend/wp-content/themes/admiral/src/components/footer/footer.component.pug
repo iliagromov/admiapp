@@ -1,18 +1,14 @@
 //-footer
-section.footer
+footer.footer
   .footer__nav
     .wrapper
       .footer-inner
         .footer__col
-          .page__title.page_regular.page__title-h4 Коттеджи
+          .page__title.page_regular.page__title-h4 Проживание
           +links([
             {
               href:"/",
-              title:"О коттеджах",
-            },
-            {
-              href:"/",
-              title:"Цены",
+              title:"Коттеджи и номера",
             },
             {
               href:"/",
@@ -24,23 +20,11 @@ section.footer
             },
           ])
         .footer__col
-          .page__title.page_regular.page__title-h4 Программы
+          .page__title.page_regular.page__title-h4 Бани и SPA
           +links([
             {
               href:"/",
-              title:"О программах",
-            },
-            {
-              href:"/",
-              title:"SPA VIP PLUS",
-            },
-            {
-              href:"/",
-              title:"Банная забава",
-            },
-            {
-              href:"/",
-              title:"Адмирал",
+              title:"SPA Программы",
             },
           ])
         .footer__col
@@ -64,11 +48,11 @@ section.footer
             },
           ])
         .footer__col
-          .page__title.page_regular.page__title-h4 Впечатления
+          .page__title.page_regular.page__title-h4 Отдых и Впечатления
           +links([
             {
               href:"/",
-              title:"Расслабляющие процедуры",
+              title:"Ресторан",
             },
             {
               href:"/",
@@ -78,10 +62,18 @@ section.footer
               href:"/",
               title:"Зимние впечатления",
             },
+            {
+              href:"/",
+              title:"Расслабляющие процедуры",
+            },
           ])
         .footer__col
-          .page__title.page_regular.page__title-h4 Документы
+          .page__title.page_regular.page__title-h4 Информация
           +links([
+            {
+              href:"/",
+              title:"Правила посещения яхт-клуба",
+            },
             {
               href:"/",
               title:"Реквизиты",
@@ -93,18 +85,6 @@ section.footer
             {
               href:"/",
               title:"Публичная оферта",
-            },
-            {
-              href:"/",
-              title:"Правила аренды",
-            },
-            {
-              href:"/",
-              title:"Способы оплаты",
-            },
-            {
-              href:"/",
-              title:"Правила безопасности",
             },
           ])
         .footer__col.footer__contacts
@@ -128,10 +108,11 @@ section.footer
 
   .footer__bottom
     .wrapper
-      .foote-inner
+      .footer-inner
         .footer__logo
           a(href="/")
             img(src="assets/images/svg/logo.svg", alt="logo") 
           .footer__copy © 2022 Jura Software 
         .footer__social
+          include ../select-city/select-city.component.pug
           include ../social/social.component.pug

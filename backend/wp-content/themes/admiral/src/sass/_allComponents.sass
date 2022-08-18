@@ -137,6 +137,25 @@ $heightBanner: calc(100vh - 100px)
 /*callback*/
 .callback
   padding: 60px 0
+
+  &-inner
+    +row-flex
+    justify-content: center
+
+  .callback-item
+    +col
+    +size(8)
+    +size-md(8)
+    margin: 0 auto
+    padding: 64px 64px 32px 80px
+    box-sizing: border-box
+    text-align: center
+    background: $braun-50
+    border: 1px solid $braun-50
+    box-shadow: 0px 0px 20px 10px rgba(1, 39, 104, 0.05)
+    &__text
+    &__name
+      text-align: right
 /* __debugGrid__ */
 .debugGrid
     height: 100vh
@@ -191,6 +210,26 @@ $heightBanner: calc(100vh - 100px)
   &__bottom
     padding-top: 40px
     border-top: 1px solid $braun-100
+
+    .footer-inner
+      align-items: flex-end
+      justify-content: space-between
+
+  &__logo
+    +col
+    +size(12)
+    +size-md(4)
+    display: flex
+    align-items: flex-end
+  &__copy
+    color: $braun-900
+    margin-left: 16px
+  &__social
+    +col
+    +size(12)
+    +size-md(4)
+    display: flex
+    justify-content: flex-end
 .header
     padding: 16px 0
     background-color: $color_white
@@ -219,13 +258,13 @@ $heightBanner: calc(100vh - 100px)
         .menu-btn
             /* Auto layout */
             display: flex
-            flex-direction: row
+            justify-content: center
             align-items: center
             padding: 8px
             gap: 8px
-
-            width: 72px
-            height: 40px
+            margin-left: 10px
+            width: 62px
+            height: 30px
 
             /* braun/900 */
             border: 1px solid $braun-900
@@ -234,10 +273,77 @@ $heightBanner: calc(100vh - 100px)
 /*info-block-certificates*/
 .info-block-certificates
   padding: 60px 0
+  &-inner
+    +row-flex
+    justify-content: center
+  &__card
+    +col
+    +size(12)
+    +size-md(5.3)
+    &:nth-child(2)
+      
+      .info-block-certificates-card
+        margin-top: 60px
+  &-card
+    background: $braun-50
+    box-shadow: 0px 0px 20px 10px rgba(1, 39, 104, 0.05)
+    border-radius: 20px
+    padding: 32px
+    box-sizing: border-box
+    display: flex
+    flex-direction: column
+    .page__title
+      margin-bottom: 25px
+      font-size: 26px
+      line-height: 150%
+      padding-right: 26px
+    .page__text
+      padding-left: 24px
+      margin-bottom: 50px
+    .page-link
+      color: $blue-500
+      font-size: 16px
+      align-self: flex-end
+    
 /*revies*/
 .revies
   padding: 60px 0
+
+  &-inner
+    +row-flex
+    justify-content: center
+
+  .page-form
+    +col
+    +size(10)
+    +size-md(10)
+    padding: 64px
+    box-sizing: border-box
+    text-align: center
+    background: $braun-50
+    border: 1px solid $braun-50
+    box-shadow: 0px 0px 20px 10px rgba(1, 39, 104, 0.05)
+    .page__title
+      color: $blue-500
+      +size-md(6)
+      margin: 0 auto 32px
+
+    .page-input
+      +size-md(4)
+      margin: 0 auto 32px
+/*select-city*/
+.select-city
+  display: flex
+  align-items: center
+  margin-right: 16px
+  .page__text
+    font-size: 14px
+    line-height: 150%
 /*social*/
+.social
+  display: flex
+  &-link
+    // margin: 0 8px
 /*ui*/
 
 /*btn*/
@@ -273,3 +379,21 @@ $heightBanner: calc(100vh - 100px)
 /*radio*/
 /*search*/
 /*select*/
+
+*:root
+  --star-size: 60px
+  --star-color: #fff
+  --star-background: #fc0
+
+.stars
+  --percent: calc(var(--rating) / 5 * 100%)
+
+  display: inline-block
+  font-size: var(--star-size)
+  font-family: Times
+  line-height: 1
+
+  &::before
+    content: '★★★★★'
+    letter-spacing: 3px
+    background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent))

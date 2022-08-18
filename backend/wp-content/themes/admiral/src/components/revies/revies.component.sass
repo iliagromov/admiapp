@@ -1,3 +1,26 @@
 /*revies*/
 .revies
   padding: 60px 0
+
+  &-inner
+    +row-flex
+    justify-content: center
+
+  .page-form
+    +col
+    +size(10)
+    +size-md(10)
+    padding: 64px
+    box-sizing: border-box
+    text-align: center
+    background: $braun-50
+    border: 1px solid $braun-50
+    box-shadow: 0px 0px 20px 10px rgba(1, 39, 104, 0.05)
+    .page__title
+      color: $blue-500
+      +size-md(6)
+      margin: 0 auto 32px
+
+    .page-input
+      +size-md(4)
+      margin: 0 auto 32px
