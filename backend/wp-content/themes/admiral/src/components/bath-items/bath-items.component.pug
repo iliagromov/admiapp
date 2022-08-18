@@ -1,1 +1,27 @@
 //-bath-items
+section.bath-items
+  .wrapper
+    .bath-items-inner
+      each item,index  in [1,2,3,4,5,6]
+        .bath-item
+          h3.page__title-h3.page__title.page_regular Жилой комплекс с баней №#{index+1}
+          a.bath-item-container(href="single-bath/single-bath.html")
+            .bath-item__img 
+              img(src=`assets/images/png/archive-bath/bath-item-${index+1}.png`, alt="bath-item")
+              
+            .bath-item__text 
+              h3.page__title-h3.page__title.page_regular Аренда номера в лесном домике
+              ul
+                li 
+                  img(src="assets/images/png/archive-bath/icon_Hot.png", alt="")
+                  p.page__text Размещение на сутки
+                li 
+                  img(src="assets/images/png/archive-bath/icon_Tea.png", alt="")
+                  p.page__text Чайная станция в номере
+              h3.page__title-h3.page__title.page_regular Стоимость
+              .bath-item__text-order
+                .price 
+                  .page__title-h3.page__title.page_regular 6 000 ₽ / 
+                    span сутки
+                .page-btn.page-btn_outline Забронировать
+
