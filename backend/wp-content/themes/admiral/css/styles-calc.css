@@ -19,6 +19,19 @@
   position: absolute;
   width: 100%;
   top: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.banner_bg-shadow {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .banner_bg img {
@@ -29,8 +42,14 @@
   object-fit: cover;
 }
 
-.banner .page__title-h1 {
+.banner__title_left {
+  width: -webkit-calc(41.66667% - 24px);
+  width: calc(41.66667% - 24px);
+}
+
+.banner__title_left .page__title-h1 {
   color: #ffffff;
+  margin-bottom: 24px;
 }
 
 .banner-inner {
@@ -47,12 +66,28 @@
   -ms-flex-align: end;
   align-items: flex-end;
   position: relative;
-  z-index: 2;
+  z-index: 20;
   text-align: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+.banner-inner_center {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.banner-bath .page__text {
+  color: #fff;
 }
 
 /*info-block*/
@@ -284,6 +319,8 @@
 .callback .callback-item__name {
   text-align: right;
 }
+
+/*bath-items*/
 
 /* __debugGrid__ */
 

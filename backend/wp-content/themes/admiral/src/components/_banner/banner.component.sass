@@ -4,20 +4,32 @@ $heightBanner: calc(100vh - 100px)
   position: relative
   height: $heightBanner
   max-height: $heightBanner
-  padding-bottom: 140px 
+  padding-bottom: 140px
   .wrapper
-    height: inherit 
+    height: inherit
   &_bg
     position: absolute
     width: 100%
     top: 0
+    display: flex
+    &-shadow
+      position: absolute
+      height: 100%
+      top: 0
+      z-index: 10
+      width: 100%
+      background: rgba(0,0,0, 0.3)
     img
       width: 100%
       height: $heightBanner
       object-fit: cover
-  .page__title-h1
-    color: $color_white
-    
+  &__title
+    &_left
+      +size(5)
+      .page__title-h1
+        color: $color_white
+        margin-bottom: 24px
+
   &-inner
     box-sizing: border-box
     padding: 70px 0
@@ -25,6 +37,14 @@ $heightBanner: calc(100vh - 100px)
     display: flex
     align-items: flex-end
     position: relative
-    z-index: 2
+    z-index: 20
     text-align: center
     justify-content: center
+
+    &_center
+      align-items: center
+      justify-content: flex-start
+      text-align: left
+  &-bath
+    .page__text
+      color: #fff
