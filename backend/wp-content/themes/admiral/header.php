@@ -8,7 +8,7 @@
   <meta name="author" content="tg@gromov_ilia">
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
   <base href="<?php echo get_template_directory_uri(); ?>/">
-  <title>Title Pages</title>
+  <title><?php echo wp_get_document_title(); ?></title>
   <link rel="stylesheet" href="libs/css/swiper-bundle.min.css" type="text/css">
   <link rel="stylesheet" href="css/base-styles.css" type="text/css">
 </head>
@@ -22,15 +22,24 @@
   <header class="header">
     <div class="wrapper">
       <div class="header-inner">
-        <div class="header__logo"><a href="/"><img src="assets/images/svg/logo.svg" alt="logo"></a></div>
+        <div class="header__logo">
+          <a href="/">
+            <img src="assets/images/png/main-page/logo-admiral.png" alt="logo">
+          </a>
+        </div>
         <div class="header__nav">
-          <nav class="page-nav"> <a class="page-link" href="/">Коттеджи</a><a class="page-link" href="/">Программы</a><a
-              class="page-link" href="/">Кухня</a><a class="page-link" href="/">Впечатления</a></nav>
+          <nav class="page-nav"> 
+            <?php wp_nav_custom_menu('headerNavigation'); ?>
+            <!-- <a class="page-link" href="/">Коттеджи</a>
+            <a class="page-link" href="/">Программы</a>
+            <a class="page-link" href="/">Кухня</a>
+            <a class="page-link" href="/">Впечатления</a> -->
+          </nav>
         </div>
         <div class="header__phone">
           <div class="page-fl-aic">
-            <div class="svg-phone svg-phone-box"></div><a class="page-link" href="tel:+7 (495) 222-02-23">+7 (495)
-              222-02-23</a>
+            <div class="svg-phone svg-phone-box"></div>
+            <a class="page-link" href="tel:+7 (495) 222-02-23">+7 (495)222-02-23</a>
           </div>
         </div>
         <div class="header__menu">

@@ -11,11 +11,20 @@
   +size(12)
   margin-bottom: 20px
   &__img
+    width: 50%
     img
       display: flex
+      height: 100%
+      // object-fit: contain
+      object-fit: cover
   &__text
     padding: 48px
+    width: 50%
     &-order
+      display: flex
+      flex-wrap: wrap
+      .price
+        width: 50%
       .page__title-h3
         font-size: 18px
         span

@@ -7,6 +7,8 @@ $heightBanner: calc(100vh - 100px)
   padding-bottom: 140px
   .wrapper
     height: inherit
+  .page__title-h1
+    color: $color_white
   &_bg
     position: absolute
     width: 100%
@@ -168,11 +170,20 @@ $heightBanner: calc(100vh - 100px)
   +size(12)
   margin-bottom: 20px
   &__img
+    width: 50%
     img
       display: flex
+      height: 100%
+      // object-fit: contain
+      object-fit: cover
   &__text
     padding: 48px
+    width: 50%
     &-order
+      display: flex
+      flex-wrap: wrap
+      .price
+        width: 50%
       .page__title-h3
         font-size: 18px
         span
@@ -333,6 +344,10 @@ $heightBanner: calc(100vh - 100px)
         +size(4)
         +size-sm(4)
         +size-md(4)
+        img
+            width: 152px
+            height: 63px
+            object-fit: cover
     &__nav
         +col
         +size(4)
@@ -459,6 +474,7 @@ $heightBanner: calc(100vh - 100px)
       +row-flex
    
   &-description
+    width: 100%
     padding-bottom: 100px 
     margin-bottom: 45px
     border-bottom: 1px dashed #E5D8CE
@@ -469,6 +485,7 @@ $heightBanner: calc(100vh - 100px)
   &-more-order
     &__items
       +row-flex
+      justify-content: center
 
     &__item
       +col

@@ -4,38 +4,68 @@
     <div class="footer__nav">
       <div class="wrapper">
         <div class="footer-inner">
+          <?php /*wp_nav_custom_menu('footerNav');*/ 
+          /* $menu = wp_nav_menu([
+            'echo'           => false,
+            'theme_location' => 'header_menu',
+            'menu'           => 'header_menu',
+            'container'      => false,
+            'menu_class'     => 'main_nav--list main_nav--list-level_1 list-unstyled',
+            'link_before'    => '<span>',
+            'link_after'     => '</span>',
+            'is_mobile'      => 0,
+        ]);
+        $menu = str_replace('sub-menu', 'main_nav--list main_nav--list-level_2 list-unstyled', $menu);
+        echo $menu;*/
+          
+          ?>
+          
           <div class="footer__col">
-            <div class="page__title page_regular page__title-h4">Проживание</div><a class="page-link" href="/">Коттеджи
-              и номера</a><a class="page-link" href="/">Забронировать</a><a class="page-link" href="/">Клубная карта</a>
+            <div class="page__title page_regular page__title-h4">Проживание</div>
+              <?php wp_nav_custom_menu('footerNavCol1'); ?>
+              <?php /*<a class="page-link" href="/">Коттеджи и номера</a>
+              <a class="page-link" href="/">Забронировать</a>
+              <a class="page-link" href="/">Клубная карта</a> */?>
           </div>
           <div class="footer__col">
-            <div class="page__title page_regular page__title-h4">Бани и SPA</div><a class="page-link" href="/">SPA
-              Программы</a>
+            <div class="page__title page_regular page__title-h4">Бани и SPA</div>
+            <?php wp_nav_custom_menu('footerNavCol2'); ?>
+            <?php /* <a class="page-link" href="/">SPA Программы</a>  */?>
           </div>
           <div class="footer__col">
-            <div class="page__title page_regular page__title-h4">Кухня</div><a class="page-link" href="/">О
-              ресторане</a><a class="page-link" href="/">Меню</a><a class="page-link" href="/">Полный панисион</a><a
-              class="page-link" href="/">Винная карта</a>
+            <div class="page__title page_regular page__title-h4">Кухня</div>
+            <?php wp_nav_custom_menu('footerNavCol3'); ?>
+            <?php /* <a class="page-link" href="/">О ресторане</a>
+            <a class="page-link" href="/">Меню</a>
+            <a class="page-link" href="/">Полный панисион</a>
+            <a class="page-link" href="/">Винная карта</a> */?>
           </div>
           <div class="footer__col">
-            <div class="page__title page_regular page__title-h4">Отдых и Впечатления</div><a class="page-link"
-              href="/">Ресторан</a><a class="page-link" href="/">Летние впечатления</a><a class="page-link"
-              href="/">Зимние впечатления</a><a class="page-link" href="/">Расслабляющие процедуры</a>
+            <div class="page__title page_regular page__title-h4">Отдых и Впечатления</div>
+            <?php wp_nav_custom_menu('footerNavCol4'); ?>
+            <?php /* <a class="page-link" href="/">Ресторан</a>
+            <a class="page-link" href="/">Летние впечатления</a>
+            <a class="page-link" href="/">Зимние впечатления</a>
+            <a class="page-link" href="/">Расслабляющие процедуры</a> */?>
           </div>
           <div class="footer__col">
-            <div class="page__title page_regular page__title-h4">Информация</div><a class="page-link" href="/">Правила
-              посещения яхт-клуба</a><a class="page-link" href="/">Реквизиты</a><a class="page-link" href="/">Политика
-              конфиденциальности</a><a class="page-link" href="/">Публичная оферта</a>
+            <div class="page__title page_regular page__title-h4">Информация</div>
+            <?php wp_nav_custom_menu('footerNavCol5'); ?>
+            <?php /*<a class="page-link" href="/">Правила посещения яхт-клуба</a>
+            <a class="page-link" href="/">Реквизиты</a>
+            <a class="page-link" href="/">Политика  конфиденциальности</a>
+            <a class="page-link" href="/">Публичная оферта</a> */?>
           </div>
           <div class="footer__col footer__contacts">
             <div class="page__title page_regular page__title-h4">Контакты</div>
             <div class="page-fl-aic">
-              <div class="svg-phone svg-phone-box"></div><a class="page-link" href="tel:+7 (495) 222-02-23">+7 (495)
-                222-02-23</a>
+              <div class="svg-phone svg-phone-box"></div>
+              <a class="page-link" href="tel:+7 (495) 222-02-23">
+                +7 (495) 222-02-23</a>
             </div>
             <div class="page-fl-aic">
-              <div class="svg-mail-solid svg-mail-solid-box"></div><a class="page-link"
-                href="mailto:event@club-admiral.com">event@club-admiral.com</a>
+              <div class="svg-mail-solid svg-mail-solid-box"></div>
+              <a class="page-link"  href="mailto:event@club-admiral.com">event@club-admiral.com</a>
             </div>
             <div class="page-fl-aic">Россия, Московская обл., Мытищинский р-н., Виноградовский СО, д. Грибки,</div>
             <div class="page-fl-aic">ул. Адмиральская, вл. 1, стр.1</div>
