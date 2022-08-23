@@ -209,6 +209,10 @@ input:focus {
   outline: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* __base__ */
 
 @media screen and (min-width: 1760px) {

@@ -1,0 +1,35 @@
+/*cuisine-advantages*/
+.cuisine-advantages
+  padding-bottom: 50px
+  .page__title
+    color: $blue-500
+    // font-size: 22px
+    font-size: 16px
+  .page__text
+    font-size: 14px
+  &-inner
+    +row-flex
+
+  &__item
+    +col
+    +size(12)
+    +size-sm(6)
+    +size-md(3)
+    position: relative
+    &_bg
+      // position: absolute
+      top: 0
+      right: 0
+      text-align: right
+    &-text
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      .page-ul 
+        flex-wrap: wrap
+        list-style: disc
+        .page-li
+          display: flex
+          font-weight: normal
+          font-size: 14px
+

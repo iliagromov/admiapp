@@ -1,0 +1,25 @@
+/*cuisine-menu*/
+.cuisine-menu
+  .page__title
+      color: $blue-500
+  &-inner
+    +row-flex
+    
+  &__item
+    +col
+    +size(6)
+    +size-md(4)
+    margin-bottom: 15px
+    transition: all .5s ease
+    &:hover
+      img
+        transform: scale(1.05)
+    
+    &-img
+      display: flex
+      overflow: hidden
+      img
+        transform: scale(1)
+        transition: all .5s ease
+    &-text 
+      padding-left: 20px
