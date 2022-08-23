@@ -19,6 +19,12 @@
   color: #ffffff;
 }
 
+.banner .page__text {
+  color: #fff;
+  font-family: Philosopher-Regular;
+  padding-left: 5%;
+}
+
 .banner_bg {
   position: absolute;
   width: 100%;
@@ -88,10 +94,6 @@
   -ms-flex-pack: start;
   justify-content: flex-start;
   text-align: left;
-}
-
-.banner-bath .page__text {
-  color: #fff;
 }
 
 /*info-block*/
@@ -463,6 +465,8 @@
 .callback .callback-item__name {
   text-align: right;
 }
+
+/*cuisine*/
 
 /* __debugGrid__ */
 
