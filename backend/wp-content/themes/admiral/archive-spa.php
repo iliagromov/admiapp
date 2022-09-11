@@ -1,86 +1,80 @@
 <?php get_header(); ?>
 <!-- archive -->
 <main class="page">
-    <section class="banner banner-bath">
-      <div class="banner_bg">
-        <div class="banner_bg-shadow"></div>
-				<img src="assets/images/png/archive-bath/banner-img-spa-1.jpg" alt="banner">
-      </div>
-      <div class="wrapper">
-        <div class="banner-inner banner-inner_center">
-          <div class="banner__title_left">
-            <h1 class="page__title page_regular page__title-h1">Роскошные банные программы в клубе “Адмирал”</h1>
-            <p class="page__text">Особая атмосфера отдыха класса luxe, ароматный пар и многообразие банных процедур в исполнении опытных мастеров</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="bath-items">
-      <div class="wrapper">
-				<!--tabs-->
-        <div class="bath-items-inner">
-					<?php /*ACF*/?>
-				<?php
-	        while(have_posts()) : the_post();
-					$arhiveBlockACF = get_field('_arhive');
-					$img = $arhiveBlockACF["image-preview"];
-					$title1 = $arhiveBlockACF["title1"];
-					$title2 = $arhiveBlockACF["title2"];
-					$price = $arhiveBlockACF["pirce"];
-					$advateages = $arhiveBlockACF["advateages"];
-					// echo '<pre>';
-					// var_dump($arhiveBlockACF);
-					// echo '</pre>';
-		        ?>
+	<?php /*todo: динамический баннер для архива*/; 
+		/**Вариант сделать шаблон страницы отделно, а записи отдельно включать блоком  */
+	?>
+	<?php include(TEMPLATEPATH . "/src/components/_banner/_banner-spa.php"); ?>
 
-          <div class="bath-item">
-            <h3 class="page__title-h3 page__title page_regular"><?php the_title(); ?></h3>
-						<a
-              class="bath-item-container" 
-							href="<?php the_permalink(); ?>">
-              <div class="bath-item__img"> 
-								<img src="<?php echo $img ? $img : 'assets/images/png/archive-bath/spa-item-1.png' ?>" alt="bath-item">
-              </div>
-              <div class="bath-item__text">
-                <h3 class="page__title-h3 page__title page_regular"><?php echo $title1; ?></h3>
-                <ul>
-								<?php foreach ($advateages as $item) :
-									 if(!empty($item['text'])):
-										// echo '<pre>';
-										// var_dump($item);
-										// echo '</pre>';
-									 ?>
-									 <li> 
-										<img src="<?php echo $item['image'] ? $item['image'] : 'assets/images/png/archive-bath/icon_Hot.png'; ?>" alt="">
-                    <p class="page__text"><?php echo $item['text'] ? $item['text'] : 'Размещение на сутки'; ?></p>
-                  </li>
-								<?php endif; endforeach; ?>
-                </ul>
-                <h3 class="page__title-h3 page__title page_regular"><?php echo $title2; ?></h3>
-                <div class="bath-item__text-order">
+	<section class="bath-items">
+		<div class="wrapper">
+			<!--tabs-->
+			<div class="bath-items-inner">
+				<div class="tabs" id="tabs">
+					<div class="tav-nav">
+						<div class="tab-link is-active">
+							<div class="page-link">Программы до 6 часов</div>
+						</div>
+						<div class="tab-link">
+							<div class="page-link">Программы на сутки</div>
+						</div>
+					</div>
+					<div class="tab-content is-active">
+						<?php $args=array(
+							'posts_per_page'      => 15, 
+							'post_type'     => 'spa', 
+							'key' => 'views',
+							'orderby' => 'meta_value_num', 
+							'order'    => 'ASC',
+							'post_status' => 'publish',
+							'tax_query' => array(
+									array(
+											'taxonomy' => 'spa-mark',
+											'field' => 'slug',
+											'terms' => 'hour'
+									)
+							)
+						 );
+						
+						$cpt_query = new WP_Query($args);
+						 
+						while ($cpt_query->have_posts()) : $cpt_query->the_post(); ?> 
 
-									<?php foreach ($price as $item) :
-									 if(!empty($item['price'])):
-										// echo '<pre>';
-										// var_dump($item);
-										// echo '</pre>';
-									 ?>
-									 
-										<div class="price">
-											<div class="page__title-h3 page__title page_regular"><?php echo $item['price']; ?> ₽ /<span><?php echo $item['days']; ?></span></div>
-										</div>
-									<?php endif; endforeach; ?>
-                  <div class="page-btn page-btn_outline">Забронировать</div>
-                </div>
-              </div>
-            </a>
-          </div>
-					<?php
-	        endwhile; // End of the loop.
-	        ?>
-        </div>
-      </div>
-    </section>
-  </main>
+							<?php include(TEMPLATEPATH . "/src/components/_bath-items/_bath-item.php");?>
+        
+						<?php endwhile; ?>
+					</div>
+					<div class="tab-content ">
+					<?php $args=array(
+							'posts_per_page'      => 15, 
+							'post_type'     => 'spa', 
+							'key' => 'views',
+							'orderby' => 'meta_value_num', 
+							'order'    => 'ASC',
+							'post_status' => 'publish',
+							'tax_query' => array(
+								array(
+										'taxonomy' => 'spa-mark',
+										'field' => 'slug',
+										'terms' => 'day'
+								)
+						)
+						 );
+						
+						$cpt_query = new WP_Query($args);
+						 
+						while ($cpt_query->have_posts()) : $cpt_query->the_post(); ?> 
+
+							<?php include(TEMPLATEPATH . "/src/components/_bath-items/_bath-item.php");?>
+						<?php
+						endwhile; // End of the loop.
+						?>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+</main>
 <!-- /archive -->
 <?php get_footer(); ?>

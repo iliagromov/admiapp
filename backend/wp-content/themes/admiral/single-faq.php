@@ -87,26 +87,8 @@
               </div>
             </div>
           </div>
-          <section class="callback">
-            <div class="wrapper">
-              <div class="callback-inner">
-                <h3 class="page__title page_regular page__title-h3">Отзывы</h3>
-                <div class="callback-items">
-                  <div class="callback-item">
-                    <div class="callback-item__stars"></div>
-                    <div class="callback-item__text">
-                      <p class="page__text">«Очень рада, что мне удалось получить то самое расслабление и удовольствие,
-                        заботу и тепло — то, о чем я мечтала — кайф! Спасибо огромное Адмиральским баням за приятную
-                        обстановку, домашний уют! Ваши сотрудники просто золото! Очень приветливые! Всем спасибо!».</p>
-                    </div>
-                    <div class="callback-item__name">
-                      <div class="name">Виктория</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+          <?php include(TEMPLATEPATH . "/src/components/review/_review.php");?>
+          
           <div class="single-bath-page-information">
             <h3 class="page__title-h3 page__title page_regular">Важная информация</h3>
             <ul class="page-ul">

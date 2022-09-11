@@ -5,12 +5,20 @@ section.single-bath-page
       h3.page__title-h3.page__title.page_regular Жилой комплекс с баней №
       .single-bath-page-img
         .single-bath-page__img 
-          img(src="assets/images/png/archive-bath/single-bath-page-img-1.png", alt="")
-        .single-bath-page__img-4
-          img(src="assets/images/png/archive-bath/single-bath-page-img-22.png", alt="")
-          img(src="assets/images/png/archive-bath/single-bath-page-img-2.png", alt="")
-          img(src="assets/images/png/archive-bath/single-bath-page-img-3.png", alt="")
-          img(src="assets/images/png/archive-bath/single-bath-page-img-4.png", alt="")
+          a.single-bath-page__img-box.div1(href="assets/images/png/archive-bath/single-bath-page-img-1.png" data-slug="cat" data-fancybox="gallery")
+            img(src="assets/images/png/archive-bath/single-bath-page-img-1.png", alt="")
+          a.single-bath-page__img-box.div2(href="assets/images/png/archive-bath/single-bath-page-img-22.png" data-slug="cat" data-fancybox="gallery")
+            img(src="assets/images/png/archive-bath/single-bath-page-img-22.png", alt="")
+          a.single-bath-page__img-box.div3(href="assets/images/png/archive-bath/single-bath-page-img-2.png" data-slug="cat" data-fancybox="gallery")
+            img(src="assets/images/png/archive-bath/single-bath-page-img-2.png", alt="")
+          a.single-bath-page__img-box.div4(href="assets/images/png/archive-bath/single-bath-page-img-3.png" data-slug="cat" data-fancybox="gallery")
+            img(src="assets/images/png/archive-bath/single-bath-page-img-3.png", alt="")
+          a.single-bath-page__img-box.div5(href="assets/images/png/archive-bath/single-bath-page-img-4.png" data-slug="cat" data-fancybox="gallery")
+            img(src="assets/images/png/archive-bath/single-bath-page-img-4.png", alt="")
+          a.single-bath-page__img-box.div5(href="assets/images/png/archive-bath/single-bath-page-img-4.png" data-slug="cat" data-fancybox="gallery")
+            img(src="assets/images/png/archive-bath/single-bath-page-img-4.png", alt="")
+          a.single-bath-page__img-box.div5(href="assets/images/png/archive-bath/single-bath-page-img-4.png" data-slug="cat" data-fancybox="gallery")
+            img(src="assets/images/png/archive-bath/single-bath-page-img-4.png", alt="")
       .single-bath-page-advantages
         h3.page__title-h3.page__title.page_regular Для Вас
         .single-bath-page-advantages__lists
@@ -72,7 +80,7 @@ section.single-bath-page
                 href:"",
                 title: "Посмотреть впечатления"
               })
-      include ../callback/callback.component.pug
+      include ../_callback/callback.component.pug
       .single-bath-page-information
         h3.page__title-h3.page__title.page_regular Важная информация
         ul.page-ul 

@@ -1,0 +1,7 @@
+include ../_article-card/article-card.mixin.pug
+//-article-cards
+section.article-cards
+  .wrapper
+    .article-cards-inner
+      each card,index  in [1,2,3,4,5,6]
+        +article-card(card, index)

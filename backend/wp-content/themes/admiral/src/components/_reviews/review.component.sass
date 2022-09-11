@@ -1,0 +1,51 @@
+/*review*/
+.review
+  padding: 60px 0
+  .page__title
+    padding-bottom: 24px
+    +md-block
+      padding-left: 10%
+  &-inner
+    +row-flex
+    justify-content: center
+  &__link
+    width: 100%
+    display: flex
+    justify-content: flex-end
+    margin-top: 24px
+    .page-link
+      color: $blue-500
+
+.review-items
+  
+.review-item
+    +col
+    +size(12)
+    +size-md(8)
+    margin: 0 auto
+    padding: 44px 44px 22px 24px
+    +md-block
+      padding: 64px 64px 32px 80px
+    box-sizing: border-box
+    background: $braun-50
+    border: 1px solid $braun-50
+    box-shadow: 0px 0px 20px 10px rgba(1, 39, 104, 0.05)
+    position: relative
+    .bg
+      position: absolute
+      right: 0
+      +md-block
+        right: -50px
+      top: -50px
+    &__stars
+      margin-bottom: 24px
+    &__text
+      margin-bottom: 24px
+      .page__text
+        font-size: 18px
+        line-height: 150%
+
+    &__name
+      text-align: right
+      color: #7D4E30
+   

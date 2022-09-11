@@ -1,6 +1,8 @@
 /*info-block-cards*/
 .info-block-cards
-  padding: 100px
+  // padding: 20px
+  +md-block
+    padding: 100px
   .page__title
     color: $blue-500
 
@@ -14,16 +16,18 @@
     +size-md(5.5)
     display: flex
     flex-direction: column
-    padding-left: 40px
+    +md-block
+      padding-left: 40px
     
     .page__title
       margin-bottom: 16px
 
     .page__text
-      padding-left: 20px
       font-size: 18px
       line-height: 150%
       margin-bottom: 16px
+      +md-block
+        padding-left: 20px
 
     .page-link
       align-self: flex-end

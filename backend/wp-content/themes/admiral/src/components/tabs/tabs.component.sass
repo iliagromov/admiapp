@@ -1,0 +1,22 @@
+/*tabs*/
+
+.tabs
+  .tav-nav 
+    +row-flex
+    margin-bottom: 32px
+  .tab-link
+    +col
+    padding: 8px 16px
+    font-size: 16px
+    line-height: 150%
+    &.is-active
+      background: #E5D8CE
+      border-radius: 20px
+      .page-link
+        color: $blue-500
+
+  .tab-content
+    display: none
+    &.is-active
+      display: block
+

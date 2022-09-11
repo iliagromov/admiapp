@@ -1,45 +1,128 @@
-/*info-block-cards*/
-.info-block-cards
-  padding: 100px
-  .page__title
-    color: $blue-500
+/*article-card*/
 
-  &-inner
-    +row-flex
-    align-items: center
-    justify-content: center
+.article-card
+  +col
+  +size(12)
+  margin-bottom: 64px
+  .page__title-h3
+    font-size: 22px
+  &__img
+    +size(12)
+    +size-md(6)
+    img
+      display: flex
+      width: 100%
+      height: 100%
+      // object-fit: contain
+      object-fit: cover
   &__text
     +col
     +size(12)
-    +size-md(5.5)
-    display: flex
-    flex-direction: column
-    padding-left: 40px
+    +size-md(6)
+    padding: 10px
+
+    position: relative
+    color: initial
+    +md-block
+      padding: 48px
+    ul
+      li
+        width: 80%
+    .list
+          .page__text
+            padding-left: 10px
+            font-style: italic
+    &-icons-info
+      display: flex
+      flex-direction: column
+      +md-block
+        position: absolute
+      right: 11px
+      .icon
+        display: flex
+        align-items: center
+        margin-bottom: 10px
+
+        img
+          margin-right: 4px
+
+
+    &-order
+      display: flex
+      flex-wrap: wrap
+      .price
+        width: 50%
+      .page__title-h3
+        font-size: 18px
+        span
+          font-size: 14px
+          line-height: 150%
+          color: #8D6141
+    ul
+      li
+        display: flex
+        align-items: center
+        
+        margin-bottom: 15px
+        
+        img
+          margin-right: 10px
+  &-container
+    +row-flex
     
-    .page__title
-      margin-bottom: 16px
+    text-decoration: none
 
+    background: #FFFFFF
+
+    border: 1px solid #F5F0EB
+
+    box-shadow: 0px 0px 15px rgba(1, 39, 104, 0.1)
+    border-radius: 10px
+    // +md-block
+      // max-height: 424px
+    .page__title-h3
+      font-size: 16px
     .page__text
-      padding-left: 20px
-      font-size: 18px
-      line-height: 150%
-      margin-bottom: 16px
+      font-size: 14px
 
-    .page-link
-      align-self: flex-end
-      color: $blue-500
-  &__img
-    +col
-    +size(12)
-    +size-md(5.5)
+.page-btn_outline
+  background: #FFFFFF
 
+  display: flex
+  width: 150px
+  padding: 12px 24px
+  border: 1px solid #A87E5C
+  border-radius: 6px
+
+  flex: none
+  order: 1
+  font-weight: 400
+  font-size: 14px
+  line-height: 150%
+
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+
+  color: #8D6141
+
+/*article-cards*/
+.article-cards
+  &-inner
+    +row-flex
+
+  .page__title
+    color: $blue-500
+    margin-bottom: 20px
+    
 /*_banner*/
 $heightBanner: calc(100vh - 100px)
 .banner
   position: relative
   height: $heightBanner
   max-height: $heightBanner
-  padding-bottom: 140px
+  padding-bottom: 80px
   .wrapper
     height: inherit
   .page__title-h1
@@ -65,6 +148,9 @@ $heightBanner: calc(100vh - 100px)
       height: $heightBanner
       object-fit: cover
   &__title
+    &_bottom
+      +md-block
+        width: 85%
     &_left
       +size-md(5.5)
       .page__title-h1
@@ -86,80 +172,15 @@ $heightBanner: calc(100vh - 100px)
       align-items: center
       justify-content: flex-start
       text-align: left
+
+    &_left
+      align-items: center
+      justify-content: flex-start
+      text-align: left
+      
   &-bath
   &-cuisine
     padding-bottom: 50px
-/*info-block*/
-.info-block
-  .page__title,
-  .page__text
-    +shift-left(1)
-    +size(6)
-    +size-md(6)
-  .page__title
-    color: $blue-500
-    margin-bottom: 16px
-  .page__text
-    margin-bottom: 24px
-  &__img 
-    position: relative
-  &__link-show-more
-    position: absolute
-    right: 0
-    bottom: 0
-    z-index: 10
-    .page-link
-      color: #fff
-/*slider-banner*/
-.slider-banner
-  padding: 10px 0
-  &-slide
-    position: relative
-    &__text
-      position: absolute
-      width: 100%
-      z-index: 50
-    &-text
-      margin-top: 100px
-      +size-md(6)
-      +shift-left(1)
-      .page__title
-        color: $blue-500
-    &__img
-      position: relative
-      display: flex
-      &_bg
-        position: absolute
-        height: 100%
-        top: 0
-        z-index: 10
-        width: 100%
-        background: rgba(0,0,0, 0.3)
-      img
-        width: 100%
-
-  &__toggles
-    position: relative
-    z-index: 50
-    bottom: 24px
-    .swiper-button-next
-
-      right: 42%
-      top: -15px
-    .swiper-button-prev
-      left: 42%
-      top: -15px
-
-  &__link-show-more
-    position: absolute
-    right: 0
-    bottom: 0
-    z-index: 10
-    .page-link
-      color: #fff
-
-.slider-banner
-
 /*bath-items*/
 .bath-items
   &-inner
@@ -171,17 +192,52 @@ $heightBanner: calc(100vh - 100px)
 .bath-item
   +col
   +size(12)
-  margin-bottom: 20px
+  margin-bottom: 64px
+  .page__title-h3
+    font-size: 22px
   &__img
-    width: 50%
+    +col
+    +size(12)
+    +size-md(6)
     img
       display: flex
+      width: 100%
       height: 100%
       // object-fit: contain
       object-fit: cover
+      max-height: 424px
   &__text
-    padding: 48px
-    width: 50%
+    +col
+    +size(12)
+    +size-md(6)
+    padding: 10px
+
+    position: relative
+    color: initial
+    +md-block
+      padding: 48px
+    ul
+      li
+        width: 80%
+    .list
+          .page__text
+            padding-left: 10px
+            font-style: italic
+    &-icons-info
+      display: flex
+      flex-direction: column
+      +md-block
+        position: absolute
+      right: 11px
+      .icon
+        display: flex
+        align-items: center
+        margin-bottom: 10px
+
+        img
+          margin-right: 4px
+
+
     &-order
       display: flex
       flex-wrap: wrap
@@ -199,12 +255,11 @@ $heightBanner: calc(100vh - 100px)
         align-items: center
         
         margin-bottom: 15px
-        .page__text
-          font-size: 16px
+        
         img
           margin-right: 10px
   &-container
-    display: flex
+    +row-flex
     text-decoration: none
 
     background: #FFFFFF
@@ -213,6 +268,10 @@ $heightBanner: calc(100vh - 100px)
 
     box-shadow: 0px 0px 15px rgba(1, 39, 104, 0.1)
     border-radius: 10px
+    .page__title-h3
+      font-size: 16px
+    .page__text
+      font-size: 14px
 
 .page-btn_outline
   background: #FFFFFF
@@ -238,27 +297,315 @@ $heightBanner: calc(100vh - 100px)
 
 /*callback*/
 .callback
-  padding: 60px 0
+  padding: 30px 0
+  +md-block
+    padding: 60px 0
 
   &-inner
     +row-flex
     justify-content: center
 
-  .callback-item
+  .page-form
     +col
-    +size(8)
-    +size-md(8)
-    margin: 0 auto
-    padding: 64px 64px 32px 80px
+    +size(12)
+    +size-md(10)
+    padding: 24px
+    +md-block
+      padding: 64px
     box-sizing: border-box
     text-align: center
+
     background: $braun-50
     border: 1px solid $braun-50
     box-shadow: 0px 0px 20px 10px rgba(1, 39, 104, 0.05)
+    &.page-form-callback
+      position: relative
+    &__img
+      position: absolute
+      top: 59%
+      right: 6%
+      display: flex
+      justify-content: right
+      margin-top: -60px
+    .page-form-links
+      +row-flex
+      justify-content: center
+
+      .page-link
+        +col
+
+    .page__title
+      color: $blue-500
+      +size-md(6)
+      margin: 0 auto 32px
+
+    .page-input
+      +size-md(4)
+      margin: 0 auto 32px
+
+/*info-block*/
+.info-block
+  .page__title,
+  .page__text
+    +shift-md-left(1)
+    +size-md(6)
+  .page__title
+    color: $blue-500
+    margin-bottom: 16px
+  .page__text
+    margin-bottom: 24px
+  &__img 
+    position: relative
+  &__link-show-more
+    position: absolute
+    right: 0
+    bottom: 0
+    z-index: 10
+    .page-link
+      color: #fff
+/*info-block-cards*/
+.info-block-cards
+  // padding: 20px
+  +md-block
+    padding: 100px
+  .page__title
+    color: $blue-500
+
+  &-inner
+    +row-flex
+    align-items: center
+    justify-content: center
+  &__text
+    +col
+    +size(12)
+    +size-md(5.5)
+    display: flex
+    flex-direction: column
+    +md-block
+      padding-left: 40px
+    
+    .page__title
+      margin-bottom: 16px
+
+    .page__text
+      font-size: 18px
+      line-height: 150%
+      margin-bottom: 16px
+      +md-block
+        padding-left: 20px
+
+    .page-link
+      align-self: flex-end
+      color: $blue-500
+  &__img
+    +col
+    +size(12)
+    +size-md(5.5)
+
+/*info-block-certificates*/
+.info-block-certificates
+  padding: 60px 0
+  &-inner
+    +row-flex
+    justify-content: center
+  &__card
+    +col
+    +size(12)
+    +size-md(5.3)
+    &:nth-child(2)
+      
+      .info-block-certificates-card
+        margin-top: 60px
+  &-card
+    background: $braun-50
+    box-shadow: 0px 0px 20px 10px rgba(1, 39, 104, 0.05)
+    border-radius: 20px
+    padding: 32px
+    box-sizing: border-box
+    display: flex
+    flex-direction: column
+    .page__title
+      margin-bottom: 25px
+      font-size: 26px
+      line-height: 150%
+      padding-right: 26px
+    .page__text
+      margin-bottom: 50px
+      font-size: 20px
+      +md-block
+        padding-left: 24px
+    .page-link
+      color: $blue-500
+      font-size: 16px
+      align-self: flex-end
+    
+/*review*/
+.review
+  padding: 60px 0
+  .page__title
+    padding-bottom: 24px
+    +md-block
+      padding-left: 10%
+  &-inner
+    +row-flex
+    justify-content: center
+  &__link
+    width: 100%
+    display: flex
+    justify-content: flex-end
+    margin-top: 24px
+    .page-link
+      color: $blue-500
+
+.review-items
+  
+.review-item
+    +col
+    +size(12)
+    +size-md(8)
+    margin: 0 auto
+    padding: 44px 44px 22px 24px
+    +md-block
+      padding: 64px 64px 32px 80px
+    box-sizing: border-box
+    background: $braun-50
+    border: 1px solid $braun-50
+    box-shadow: 0px 0px 20px 10px rgba(1, 39, 104, 0.05)
+    position: relative
+    .bg
+      position: absolute
+      right: 0
+      +md-block
+        right: -50px
+      top: -50px
+    &__stars
+      margin-bottom: 24px
     &__text
+      margin-bottom: 24px
+      .page__text
+        font-size: 18px
+        line-height: 150%
+
     &__name
       text-align: right
+      color: #7D4E30
+   
+/*slider-banner*/
+.slider-banner
+  padding: 10px 0
+  &-slide
+    position: relative
+    &__text
+      position: absolute
+      width: 100%
+      z-index: 50
+    &-text
+      margin-top: 130px
+      +md-block
+        margin-top: 100px
+      +size-md(6)
+      +shift-left(1)
+      .page__title
+        font-size: 22px
+        color: $color_white
+        background-color: rgba(0,0,0,0.5)
+        display: inline
+        +md-block
+          font-size: 36px
+      .price
+        color: #fff
+        font-size: 18px
+        line-height: 26px
+        +md-block
+          font-size: 26px
+          line-height: 150%
+        background-color: rgba(0,0,0,0.5)
+        display: inline
+        span
+          font-size: 18px
+    &__img
+      position: relative
+      display: flex
+      &_bg
+        position: absolute
+        height: 100%
+        top: 0
+        z-index: 10
+        width: 100%
+        background: rgba(0,0,0, 0.3)
+        color: #fff
+        color: #fff
+        color: #fff
+        color: #fff
+      img
+        width: 100%
+        min-height: 400px
+        object-fit: contain
+        max-height: 650px
+        +md-block
+          object-fit: cover
+
+  &__toggles
+    position: relative
+    z-index: 50
+    bottom: 24px
+    .swiper-button-next
+      +md-block
+        right: 42%
+        top: -15px
+    .swiper-button-prev
+      +md-block
+        left: 42%
+        top: -15px
+
+  &__link-show-more
+    display: none
+    position: absolute
+    right: 0
+    bottom: 0
+    z-index: 10
+    .page-link
+      color: #fff
+
+.slider-banner
+
 /*cuisine*/
+/*cuisine-advantages*/
+.cuisine-advantages
+  padding-bottom: 50px
+  .page__title
+    color: $blue-500
+    // font-size: 22px
+    font-size: 16px
+  .page__text
+    font-size: 14px
+  &-inner
+    +row-flex
+
+  &__item
+    +col
+    +size(12)
+    +size-sm(6)
+    +size-md(3)
+    position: relative
+    &_bg
+      // position: absolute
+      top: 0
+      right: 0
+      text-align: right
+    &-text
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      .page-ul 
+        flex-wrap: wrap
+        list-style: disc
+        .page-li
+          display: flex
+          font-weight: normal
+          font-size: 14px
+
+
 /*cuisine-contacts*/
 
 .cuisine-contacts
@@ -296,66 +643,6 @@ $heightBanner: calc(100vh - 100px)
         margin-bottom: 15px
       .page__text
         font-size: 14px
-/*cuisine-advantages*/
-.cuisine-advantages
-  padding-bottom: 50px
-  .page__title
-    color: $blue-500
-    // font-size: 22px
-    font-size: 16px
-  .page__text
-    font-size: 14px
-  &-inner
-    +row-flex
-
-  &__item
-    +col
-    +size(12)
-    +size-sm(6)
-    +size-md(3)
-    position: relative
-    &_bg
-      // position: absolute
-      top: 0
-      right: 0
-      text-align: right
-    &-text
-      position: absolute
-      top: 50%
-      transform: translateY(-50%)
-      .page-ul 
-        flex-wrap: wrap
-        list-style: disc
-        .page-li
-          display: flex
-          font-weight: normal
-          font-size: 14px
-
-
-/*cuisine-shef*/
-/*shef*/
-.cuisine-shef
-  padding-bottom: 100px
-  &-inner
-    +row-flex
-  &-item
-    +col
-    +size(12)
-    +size-sm(4)
-    +size-md(4)
-    &__text
-      text-align: center
-      .page__title
-        color: $blue-500
-        margin-bottom: 5px
-        &.page_braun
-          color: $braun-900
-      .page__text
-        font-size: 18px
-        margin-bottom: 20px
-
-
-
 /*cuisine-menu*/
 .cuisine-menu
   .page__title
@@ -381,6 +668,30 @@ $heightBanner: calc(100vh - 100px)
         transition: all .5s ease
     &-text 
       padding-left: 20px
+/*cuisine-shef*/
+/*shef*/
+.cuisine-shef
+  padding-bottom: 100px
+  &-inner
+    +row-flex
+  &-item
+    +col
+    +size(12)
+    +size-sm(4)
+    +size-md(4)
+    &__text
+      text-align: center
+      .page__title
+        color: $blue-500
+        margin-bottom: 5px
+        &.page_braun
+          color: $braun-900
+      .page__text
+        font-size: 18px
+        margin-bottom: 20px
+
+
+
 /* __debugGrid__ */
 .debugGrid
     height: 100vh
@@ -411,13 +722,20 @@ $heightBanner: calc(100vh - 100px)
   &-inner
     +row-flex
   &__nav
+    .footer__col
+      margin-bottom: 20px
+
     .page__title
       color: $blue-500
-      margin-bottom: 32px
+      margin-bottom: 10px
+      +md-block
+        margin-bottom: 32px
     .page-link
       display: flex
       margin-bottom: 16px
-    
+      font-size: 14px
+      line-height: 150%
+
     .page-fl-aic
       margin-bottom: 16px
       color: $braun-900
@@ -431,7 +749,6 @@ $heightBanner: calc(100vh - 100px)
   &__contacts
     +size(12)
 
-  
   &__bottom
     padding-top: 40px
     border-top: 1px solid $braun-100
@@ -446,6 +763,11 @@ $heightBanner: calc(100vh - 100px)
     +size-md(4)
     display: flex
     align-items: flex-end
+    img
+      width: 153px
+      height: 100px
+      object-fit: cover
+
   &__copy
     color: $braun-900
     margin-left: 16px
@@ -455,37 +777,51 @@ $heightBanner: calc(100vh - 100px)
     +size-md(4)
     display: flex
     justify-content: flex-end
+
 .header
-    padding: 16px 0
+    padding: 16px 0 0
+    +md-block
+        padding-bottom: 16px
     background-color: $color_white
     position: sticky
     top: 0
     z-index: 100
+
     &-inner
         +row-flex
+
+        flex-wrap: nowrap
         align-items: center
         // justify-content: space-between
     &__logo
-        +col
-        +size(4)
-        +size-sm(4)
-        +size-md(4)
+        // +col
+        // +size(4)
+        // +size-sm(4)
+        // +size-md(4)
+        a
+            display: flex
         img
             width: 152px
-            height: 63px
+            height: 100px
             object-fit: cover
     &__nav
         +col
-        +size(4)
-        +size-sm(4)
-        +size-md(4)
+        // +size(4)
+        // +size-sm(4)
+        // +size-md(4)
         .page-link
             +col
+            .page-link
+            white-space: nowrap
         display: none
+        flex-grow: 1
+        text-align: center
         +sm-block
             display: block
 
     &__phone
+        .page-link
+            white-space: nowrap
     &__menu
         .menu-btn
             /* Auto layout */
@@ -502,67 +838,158 @@ $heightBanner: calc(100vh - 100px)
             border: 1px solid $braun-900
             border-radius: 50px
 
-/*info-block-certificates*/
-.info-block-certificates
-  padding: 60px 0
+/*images-menu*/
+/*impressions-menu*/
+
+.impressions-menu
+  .page__title
+    margin-bottom: 32px
+    color: $blue-500
   &-inner
-    +row-flex
-    justify-content: center
-  &__card
-    +col
-    +size(12)
-    +size-md(5.3)
-    &:nth-child(2)
-      
-      .info-block-certificates-card
-        margin-top: 60px
-  &-card
-    background: $braun-50
-    box-shadow: 0px 0px 20px 10px rgba(1, 39, 104, 0.05)
-    border-radius: 20px
-    padding: 32px
-    box-sizing: border-box
-    display: flex
-    flex-direction: column
-    .page__title
-      margin-bottom: 25px
-      font-size: 26px
-      line-height: 150%
-      padding-right: 26px
-    .page__text
-      padding-left: 24px
-      margin-bottom: 50px
-    .page-link
-      color: $blue-500
-      font-size: 16px
-      align-self: flex-end
     
-/*revies*/
-.revies
-  padding: 60px 0
-
-  &-inner
+  .images-menu-items
     +row-flex
-    justify-content: center
-
-  .page-form
-    +col
-    +size(10)
-    +size-md(10)
-    padding: 64px
-    box-sizing: border-box
-    text-align: center
-    background: $braun-50
-    border: 1px solid $braun-50
-    box-shadow: 0px 0px 20px 10px rgba(1, 39, 104, 0.05)
-    .page__title
-      color: $blue-500
-      +size-md(6)
-      margin: 0 auto 32px
-
-    .page-input
+  
+  .images-menu
+    &__item
+      +col
+      +size(6)
       +size-md(4)
-      margin: 0 auto 32px
+      margin-bottom: 15px
+      transition: all .5s ease
+      &:hover
+        img
+          transform: scale(1.05)
+      
+      &-img
+        display: flex
+        overflow: hidden
+        height: 370px
+        width: 370px
+        border-radius: 20px
+        margin-bottom: 8px
+        img
+          transform: scale(1)
+          transition: all .5s ease
+          object-fit: cover
+      &-text 
+        padding-left: 20px
+      .page__title
+        color: $blue-500
+/*menu*/
+/*menu*/
+.menu
+    position: fixed
+    // width: 100%
+    // height: 100%
+    right: 4%
+    top: 90px
+    
+
+    color: #000
+    background: #fff
+
+    /* p/2 */
+    box-shadow: 0px 0px 15px rgba(1, 39, 104, 0.1)
+    border-radius: 10px
+
+    padding: 32px 0
+    box-sizing: border-box
+
+    z-index: 1000
+    display: none
+    flex-direction: column
+    justify-content: space-between
+
+
+    &.active
+        display: flex
+        +sm-block   
+            display: block
+
+    a
+        color: #000
+.menuHeader
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-end
+    +sm-block
+        justify-content: space-between
+    
+.menuContent
+  display: flex
+  flex-direction: column
+  .page-link
+      width: 100%
+      padding: 8px 24px
+      box-sizing: border-box
+      &:hover
+        background: #F5F0EB
+  
+.menuLogo
+    display: flex
+    justify-content: center
+    width: 80%
+    margin-bottom: 13%
+    +sm-block
+        margin: 0
+        width: auto
+
+
+.menuNav
+    display: flex
+    flex-wrap: wrap
+    +sm-block
+        padding-top: 24%
+
+.menuLink
+    width: 100%
+    font-size: 24px
+    line-height: 55px
+    +sm-block
+        font-size: 36px
+        line-height: 80px
+    text-align: center
+    letter-spacing: 0.02em
+.menuConacts 
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    +sm-block   
+        width: 65%
+        padding-top: 25%
+    margin: 0 auto
+
+.menuConactsItem
+    +col()
+    +size(9)
+    +size-sm(4.5)
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-bottom: 20px
+  
+    .icon
+        min-width: 20px
+        margin-right: 23px
+    +sm-block
+        margin-bottom: 32px
+        
+    &:nth-of-type(3)
+        display: none
+        +size-sm(9)
+        +sm-block
+            display: flex
+.menuClose
+    cursor: pointer
+.menuConactsIcons 
+    display: flex
+    justify-content: center
+    padding-top: 7%
+    +sm-block
+        padding-top: 11%
+.isMenuShow
+    // overflow: hidden
 /*select-city*/
 .select-city
   display: flex
@@ -580,10 +1007,39 @@ $heightBanner: calc(100vh - 100px)
     +row-flex
   &-img
     display: flex
+    flex-wrap: wrap
+    width: 100%
   &__img
-    display: flex
-    +size(12)
-    +size-md(6)
+    // display: flex
+    display: grid
+    grid-template-columns: repeat(1, 1fr)
+    grid-template-rows: repeat(1, 1fr)
+    grid-column-gap: 0px
+    grid-row-gap: 0px
+    // +size(12)
+    // +size-md(6)
+
+    .single-bath-page__img-box
+      display: flex
+      &:first-child
+        grid-area: 1 / 1 / 3 / 3
+      &:nth-child(2)
+        grid-area: 1 / 3 / 2 / 4
+      &:nth-child(3)
+        grid-area: 1 / 4 / 2 / 5
+      &:nth-child(4)
+        grid-area: 2 / 4 / 3 / 5
+      &:nth-child(5)
+        grid-area: 2 / 3 / 3 / 4 
+      &:nth-child(n+6)
+        display: none
+      &:nth-child(n+2)
+        max-width: 350px
+        
+      img
+        object-fit: cover
+        border-radius: 40px
+
     img
       padding: 12px
       box-sizing: border-box
@@ -601,16 +1057,18 @@ $heightBanner: calc(100vh - 100px)
       margin-bottom: 24px
     &__lists
       +row-flex
-   
+
   &-description
-    width: 100%
-    padding-bottom: 100px 
+    padding-bottom: 100px
     margin-bottom: 45px
     border-bottom: 1px dashed #E5D8CE
 
     .page__text
       +size-md(10)
       font-family: Philosopher-Regular
+      font-size: 16px
+      line-height: 150%
+
   &-more-order
     &__items
       +row-flex
@@ -618,7 +1076,8 @@ $heightBanner: calc(100vh - 100px)
 
     &__item
       +col
-      +size(6)
+      +size(12)
+      +size-md(6)
       background: #FFFFFF
 
       border: 1px solid #F5F0EB
@@ -636,52 +1095,78 @@ $heightBanner: calc(100vh - 100px)
       &-img
         margin-bottom: 24px
       &-link
-        
+
         .page-link
           justify-content: flex-end
           color: $blue-500
   &-information
     .page-ul
+      flex-wrap: wrap
       > li
-        +size(4)
-
+        +size(12)
+        +size-md(4)
 
 .page-ul
-      +col
-      display: flex
+    +col
+    display: flex
 
-      > li
-        flex-direction: column
-        align-items: flex-start
-       
-        color: #8D6141
-        font-size: 16px
-        font-weight: bold
-        img
-          width: 55px
-          height: 55px
+    > li
+      flex-direction: column
+      align-items: flex-start
+
+      color: #8D6141
+      font-size: 16px
+      font-weight: bold
+      img
+        width: 55px
+        height: 55px
       ul
-          padding-top: 20px
-          padding-left: 4px
-          li
-            font-weight: normal
-            display: flex
-            align-items: center
+        padding-top: 20px
+        padding-left: 4px
+        li
+          font-weight: normal
+          display: flex
+          align-items: center
 
-            margin-bottom: 15px
-            .page__text
-              font-size: 16px
+          margin-bottom: 15px
+          .page__text
+            font-size: 16px
+
 /*social*/
 .social
   display: flex
   &-link
     // margin: 0 8px
+/*tabs*/
+
+.tabs
+  .tav-nav 
+    +row-flex
+    margin-bottom: 32px
+  .tab-link
+    +col
+    padding: 8px 16px
+    font-size: 16px
+    line-height: 150%
+    &.is-active
+      background: #E5D8CE
+      border-radius: 20px
+      .page-link
+        color: $blue-500
+
+  .tab-content
+    display: none
+    &.is-active
+      display: block
+
+
 /*ui*/
 
 /*btn*/
+/*btns*/
 /*checkbox*/
 /*datapicker*/
-/*btns*/
+/*forms*/
 /*input*/
 /*link*/
 .page-link
@@ -709,7 +1194,6 @@ $heightBanner: calc(100vh - 100px)
 /*modals*/
 /*radio*/
 /*search*/
-/*forms*/
 /*select*/
 
 *:root

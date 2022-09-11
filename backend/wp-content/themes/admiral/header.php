@@ -1,3 +1,22 @@
+<?php
+// Для общего шаблона pageTemp
+global $fieldsACF;
+$fieldsACF =  [
+    '_banner', 
+    '_info-block',
+    '_info-block-cards', 
+    '_info-block-certificates',
+    '_reviews',
+    '_slider-banner', 
+    '_slider-banner-2', 
+    '_slider-banner-3', 
+    '_callback',
+    '_callback-2',
+    '_bath-items',
+    '_article-cards',
+    '_impressions-menu',
+];
+?>
 <!DOCTYPE html>
 <html lang="ru" data-scroll="0">
 
@@ -9,6 +28,7 @@
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
   <base href="<?php echo get_template_directory_uri(); ?>/">
   <title><?php echo wp_get_document_title(); ?></title>
+  <link rel="stylesheet" href="libs/css/fancybox.css" type="text/css">
   <link rel="stylesheet" href="libs/css/swiper-bundle.min.css" type="text/css">
   <link rel="stylesheet" href="css/base-styles.css" type="text/css">
 </head>
@@ -23,7 +43,7 @@
     <div class="wrapper">
       <div class="header-inner">
         <div class="header__logo">
-          <a href="/">
+          <a href="https://gromov-studio.ru/admiral/">
             <img src="assets/images/png/main-page/logo-admiral.png" alt="logo">
           </a>
         </div>
@@ -43,12 +63,18 @@
           </div>
         </div>
         <div class="header__menu">
-          <div class="menu">
-            <div class="menu-btn">
-              <div class="svg-view-list svg-view-list-box"></div>
-            </div>
+          <div class="menu-btn headerNavBurgerMenu">
+            <div class="svg-view-list svg-view-list-box"></div>
           </div>
         </div>
       </div>
     </div>
   </header>
+  <nav class="menu">
+    <div class="menuClose"></div>
+    <div class="menuContent">
+      <?php wp_nav_custom_menu('menuNavigation'); ?>
+      <!-- <a class="page-link">Клубная карта</a>
+      <a class="page-link">Сертификаты</a>
+      <a class="page-link">Язык</a></div> -->
+  </nav>

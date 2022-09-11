@@ -1,0 +1,114 @@
+/*menu*/
+/*menu*/
+.menu
+    position: fixed
+    // width: 100%
+    // height: 100%
+    right: 4%
+    top: 90px
+    
+
+    color: #000
+    background: #fff
+
+    /* p/2 */
+    box-shadow: 0px 0px 15px rgba(1, 39, 104, 0.1)
+    border-radius: 10px
+
+    padding: 32px 0
+    box-sizing: border-box
+
+    z-index: 1000
+    display: none
+    flex-direction: column
+    justify-content: space-between
+
+
+    &.active
+        display: flex
+        +sm-block   
+            display: block
+
+    a
+        color: #000
+.menuHeader
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-end
+    +sm-block
+        justify-content: space-between
+    
+.menuContent
+  display: flex
+  flex-direction: column
+  .page-link
+      width: 100%
+      padding: 8px 24px
+      box-sizing: border-box
+      &:hover
+        background: #F5F0EB
+  
+.menuLogo
+    display: flex
+    justify-content: center
+    width: 80%
+    margin-bottom: 13%
+    +sm-block
+        margin: 0
+        width: auto
+
+
+.menuNav
+    display: flex
+    flex-wrap: wrap
+    +sm-block
+        padding-top: 24%
+
+.menuLink
+    width: 100%
+    font-size: 24px
+    line-height: 55px
+    +sm-block
+        font-size: 36px
+        line-height: 80px
+    text-align: center
+    letter-spacing: 0.02em
+.menuConacts 
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    +sm-block   
+        width: 65%
+        padding-top: 25%
+    margin: 0 auto
+
+.menuConactsItem
+    +col()
+    +size(9)
+    +size-sm(4.5)
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-bottom: 20px
+  
+    .icon
+        min-width: 20px
+        margin-right: 23px
+    +sm-block
+        margin-bottom: 32px
+        
+    &:nth-of-type(3)
+        display: none
+        +size-sm(9)
+        +sm-block
+            display: flex
+.menuClose
+    cursor: pointer
+.menuConactsIcons 
+    display: flex
+    justify-content: center
+    padding-top: 7%
+    +sm-block
+        padding-top: 11%
+.isMenuShow
+    // overflow: hidden

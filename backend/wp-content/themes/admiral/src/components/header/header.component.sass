@@ -1,34 +1,47 @@
 .header
-    padding: 16px 0
+    padding: 16px 0 0
+    +md-block
+        padding-bottom: 16px
     background-color: $color_white
     position: sticky
     top: 0
     z-index: 100
+
     &-inner
         +row-flex
+
+        flex-wrap: nowrap
         align-items: center
         // justify-content: space-between
     &__logo
-        +col
-        +size(4)
-        +size-sm(4)
-        +size-md(4)
+        // +col
+        // +size(4)
+        // +size-sm(4)
+        // +size-md(4)
+        a
+            display: flex
         img
             width: 152px
-            height: 63px
+            height: 100px
             object-fit: cover
     &__nav
         +col
-        +size(4)
-        +size-sm(4)
-        +size-md(4)
+        // +size(4)
+        // +size-sm(4)
+        // +size-md(4)
         .page-link
             +col
+            .page-link
+            white-space: nowrap
         display: none
+        flex-grow: 1
+        text-align: center
         +sm-block
             display: block
 
     &__phone
+        .page-link
+            white-space: nowrap
     &__menu
         .menu-btn
             /* Auto layout */

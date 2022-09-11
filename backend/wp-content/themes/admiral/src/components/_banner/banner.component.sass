@@ -4,7 +4,7 @@ $heightBanner: calc(100vh - 100px)
   position: relative
   height: $heightBanner
   max-height: $heightBanner
-  padding-bottom: 140px
+  padding-bottom: 80px
   .wrapper
     height: inherit
   .page__title-h1
@@ -30,6 +30,9 @@ $heightBanner: calc(100vh - 100px)
       height: $heightBanner
       object-fit: cover
   &__title
+    &_bottom
+      +md-block
+        width: 85%
     &_left
       +size-md(5.5)
       .page__title-h1
@@ -51,6 +54,12 @@ $heightBanner: calc(100vh - 100px)
       align-items: center
       justify-content: flex-start
       text-align: left
+
+    &_left
+      align-items: center
+      justify-content: flex-start
+      text-align: left
+      
   &-bath
   &-cuisine
     padding-bottom: 50px

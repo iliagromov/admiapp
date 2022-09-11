@@ -32,14 +32,15 @@
             <?php wp_nav_custom_menu('footerNavCol2'); ?>
             <?php /* <a class="page-link" href="/">SPA Программы</a>  */?>
           </div>
+          <?php /* 
           <div class="footer__col">
             <div class="page__title page_regular page__title-h4">Кухня</div>
             <?php wp_nav_custom_menu('footerNavCol3'); ?>
-            <?php /* <a class="page-link" href="/">О ресторане</a>
+            <a class="page-link" href="/">О ресторане</a>
             <a class="page-link" href="/">Меню</a>
             <a class="page-link" href="/">Полный панисион</a>
-            <a class="page-link" href="/">Винная карта</a> */?>
-          </div>
+            <a class="page-link" href="/">Винная карта</a>
+          </div> */?>
           <div class="footer__col">
             <div class="page__title page_regular page__title-h4">Отдых и Впечатления</div>
             <?php wp_nav_custom_menu('footerNavCol4'); ?>
@@ -76,8 +77,10 @@
     <div class="footer__bottom">
       <div class="wrapper">
         <div class="footer-inner">
-          <div class="footer__logo"><a href="/"><img src="assets/images/svg/logo.svg" alt="logo"></a>
-            <div class="footer__copy">© 2022 Jura Software </div>
+          <div class="footer__logo">
+            <a href="/">
+              <img src="assets/images/png/main-page/logo-admiral.png" alt="logo">
+            </a>  
           </div>
           <div class="footer__social">
             <div class="select-city">
@@ -100,9 +103,13 @@
   <link rel="stylesheet" href="css/styles-sprites.css" type="text/css">
   <script src="libs/js/_all/swiper-bundle.min.js"></script>
   <script src="libs/js/_all/store-scroll.js"></script>
+  <script src="libs/js/_all/tabs.js"></script>
+  <script src="libs/js/_all/fancybox.umd.js"></script>
   <script src="js/main.js"></script>
   <script src="/js/debuggrid/debuggrid.component.js"></script>
   <script src="/js/header/header.component.js"></script>
+  
+  <script src="js/menu/menu.component.js"></script>
 	<?php wp_footer(); ?>
 </body>
 

@@ -275,6 +275,224 @@ add_action('init', function () {
 						'with_front' => true
 				]
 		]);
+		register_taxonomy('spa-mark', ['spa'], [
+			'labels' => [
+				'name' => 'Spa метка'
+			],
+			'public' => true,
+			'rewrite' => [
+				'with_front' => false
+			]
+		]);
+	
+});
+
+
+add_action('init', function () {
+
+	register_post_type('impressions', [
+			'labels' => [
+					'name'               => 'РАЗВЛЕЧЕНИЯ',
+					'singular_name'      => 'Развлечение',
+					'add_new'            => 'Add new',
+					'add_new_item'       => 'Add new Развлечение',
+					'edit_item'          => 'Edit new Развлечение',
+					'new_item'           => 'New Развлечение',
+					'view_item'          => 'View Развлечение',
+					'search_items'       => 'Search Развлечение',
+					'not_found'          => 'Развлечение not found',
+					'not_found_in_trash' => 'Развлечение not found in trash',
+					'parent_item_colon'  => '',
+					'menu_name'          => 'РАЗВЛЕЧЕНИЯ'
+			],
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => [
+					'with_front' => true
+			]
+	]);
+	register_taxonomy('impressions-mark', ['impressions'], [
+		'labels' => [
+			'name' => 'Впечатления метка'
+		],
+		'public' => true,
+		'rewrite' => [
+			'with_front' => false
+		]
+	]);
+
+});
+
+add_action('init', function () {
+
+	register_post_type('impressions-summer', [
+			'labels' => [
+					'name'               => 'РАЗВЛЕЧЕНИЯ Лето',
+					'singular_name'      => 'Развлечение',
+					'add_new'            => 'Add new',
+					'add_new_item'       => 'Add new Развлечение',
+					'edit_item'          => 'Edit new Развлечение',
+					'new_item'           => 'New Развлечение',
+					'view_item'          => 'View Развлечение',
+					'search_items'       => 'Search Развлечение',
+					'not_found'          => 'Развлечение not found',
+					'not_found_in_trash' => 'Развлечение not found in trash',
+					'parent_item_colon'  => '',
+					'menu_name'          => 'РАЗВЛЕЧЕНИЯ Лето'
+			],
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => [
+					'with_front' => true
+			]
+	]);
+	register_taxonomy('impressions-summer-mark', ['impressions-summer'], [
+		'labels' => [
+			'name' => 'Впечатления метка'
+		],
+		'public' => true,
+		'rewrite' => [
+			'with_front' => false
+		]
+	]);
+
+});
+
+add_action('init', function () {
+
+	register_post_type('impressions-winter', [
+			'labels' => [
+					'name'               => 'РАЗВЛЕЧЕНИЯ Зима',
+					'singular_name'      => 'Развлечение',
+					'add_new'            => 'Add new',
+					'add_new_item'       => 'Add new Развлечение',
+					'edit_item'          => 'Edit new Развлечение',
+					'new_item'           => 'New Развлечение',
+					'view_item'          => 'View Развлечение',
+					'search_items'       => 'Search Развлечение',
+					'not_found'          => 'Развлечение not found',
+					'not_found_in_trash' => 'Развлечение not found in trash',
+					'parent_item_colon'  => '',
+					'menu_name'          => 'РАЗВЛЕЧЕНИЯ Зима'
+			],
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => [
+					'with_front' => true
+			]
+	]);
+	register_taxonomy('impressions-winter-mark', ['impressions-winter'], [
+		'labels' => [
+			'name' => 'Впечатления метка'
+		],
+		'public' => true,
+		'rewrite' => [
+			'with_front' => false
+		]
+	]);
+
+});
+
+
+
+
+add_action('init', function () {
+
+	register_post_type('review', [
+			'labels' => [
+					'name'               => 'Отзывы',
+					'singular_name'      => 'Отзыв',
+					'add_new'            => 'Add new',
+					'add_new_item'       => 'Add new review',
+					'edit_item'          => 'Edit new review',
+					'new_item'           => 'New review',
+					'view_item'          => 'View review',
+					'search_items'       => 'Search reviews',
+					'not_found'          => 'reviews not found',
+					'not_found_in_trash' => 'reviews not found in trash',
+					'parent_item_colon'  => '',
+					'menu_name'          => 'Отзывы'
+			],
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => [
+					'with_front' => true
+			]
+	]);
+});
+
+add_action('init', function () {
+
+	register_post_type('slider-banner', [
+			'labels' => [
+					'name'               => 'Слайдер',
+					'singular_name'      => 'Слайд',
+					'add_new'            => 'Add new',
+					'add_new_item'       => 'Add new slide',
+					'edit_item'          => 'Edit new slide',
+					'new_item'           => 'New slide',
+					'view_item'          => 'View slide',
+					'search_items'       => 'Search slides',
+					'not_found'          => 'slides not found',
+					'not_found_in_trash' => 'slides not found in trash',
+					'parent_item_colon'  => '',
+					'menu_name'          => 'Слайдер'
+			],
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => [
+					'with_front' => true
+			]
+	]);
+});
+
+add_action('init', function () {
+
+	register_post_type('yachting', [
+			'labels' => [
+					'name'               => 'Яхтинг',
+					'singular_name'      => 'Яхтинг',
+					'add_new'            => 'Add new',
+					'add_new_item'       => 'Add new Статью',
+					'edit_item'          => 'Edit new Статью',
+					'new_item'           => 'New Статья',
+					'view_item'          => 'View Статью',
+					'search_items'       => 'Search Статью',
+					'not_found'          => 'Статья not found',
+					'not_found_in_trash' => 'Статья not found in trash',
+					'parent_item_colon'  => '',
+					'menu_name'          => 'Яхтинг'
+			],
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => [
+					'with_front' => true
+			]
+	]);
+});
+add_action('init', function () {
+
+	register_post_type('events', [
+			'labels' => [
+					'name'               => 'Мероприятия',
+					'singular_name'      => 'Мероприятия',
+					'add_new'            => 'Add new',
+					'add_new_item'       => 'Add new Статью',
+					'edit_item'          => 'Edit new Статью',
+					'new_item'           => 'New Статья',
+					'view_item'          => 'View Статью',
+					'search_items'       => 'Search Статью',
+					'not_found'          => 'Статья not found',
+					'not_found_in_trash' => 'Статья not found in trash',
+					'parent_item_colon'  => '',
+					'menu_name'          => 'Мероприятия'
+			],
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => [
+					'with_front' => true
+			]
+	]);
 });
 
 

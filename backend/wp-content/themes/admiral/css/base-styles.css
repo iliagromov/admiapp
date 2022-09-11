@@ -215,8 +215,9 @@ a {
 
 /* __base__ */
 
-@media screen and (min-width: 1760px) {
+@media screen and (min-width: 1024px) {
   .wrapper {
-    max-width: 1600px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }

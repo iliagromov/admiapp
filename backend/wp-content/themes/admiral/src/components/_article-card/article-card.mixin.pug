@@ -1,0 +1,34 @@
+//-article-card
+mixin article-card(item, index)
+  .article-card
+    h3.page__title-h3.page__title.page_regular Жилой комплекс с баней №#{index+1}
+    a.article-card-container(href="single-bath/single-bath.html")
+      .article-card__img 
+        img(src=`assets/images/png/archive-bath/bath-item-${index+1}.png`, alt="bath-item")
+        
+      .article-card__text
+        .article-card__text-icons-info
+          .icon
+            img(src="assets/images/svg/user-group.svg", alt="")
+            span.page__text 6 персон
+          .icon
+            img(src="assets/images/svg/home.svg", alt="")
+            span.page__text 120 кв.м
+
+        h3.page__title-h3.page__title.page_regular Аренда номера в лесном домике
+        ul
+          li 
+            img(src="assets/images/png/archive-bath/icon_Hot.png", alt="")
+            p.page__text Размещение на сутки
+          li 
+            img(src="assets/images/png/archive-bath/icon_Tea.png", alt="")
+            p.page__text Чайная станция в номере
+          li.list
+            .page__text Стоимость дополнительного размещения гостей (до 4 персон) без программы — 10 000 ₽/чел
+        h3.page__title-h3.page__title.page_regular Стоимость
+        .article-card__text-order
+          .price 
+            .page__title-h3.page__title.page_regular 6 000 ₽ / 
+              span сутки
+          .page-btn.page-btn_outline Забронировать
+

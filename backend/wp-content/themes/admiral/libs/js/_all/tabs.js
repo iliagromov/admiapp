@@ -99,24 +99,16 @@ function tab () {
 //     tabContentContainers: '.tab-content'
 // });
 
-// Initialise Set 1
-setTimeout(()=>{
-    tab();
-    var myTabs = tabs({
-        el: '#tabs',
-        tabNavigationLinks: '.tab-link',
-        tabContentContainers: '.tab-content'
-    });
-    if(myTabs){
-        myTabs.init();
-        //hotFix
-        const tabLinks = document.querySelectorAll('.tab-link');
-        if(tabLinks){
-            tabLinks[1].click();
-        }
-      
-    }
- },100);
+tab();
+var myTabs = tabs({
+    el: '#tabs',
+    tabNavigationLinks: '.tab-link',
+    tabContentContainers: '.tab-content'
+});
+if(myTabs){
+    myTabs.init();
+    
+}
 
 // // Initialise Set 2 
 // myTabs2.init();

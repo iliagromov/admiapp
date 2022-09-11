@@ -5,16 +5,9 @@
       <div class="wrapper">
         <div class="single-bath-page-inner">
           <h3 class="page__title-h3 page__title page_regular">
-          <?php the_title() ?></h3>
-          <div class="single-bath-page-img">
-            <div class="single-bath-page__img"> 
-                <img src="assets/images/png/archive-bath/single-bath-page-img-1.png"
-                alt=""></div>
-            <div class="single-bath-page__img-4"><img src="assets/images/png/archive-bath/single-bath-page-img-22.png"
-                alt=""><img src="assets/images/png/archive-bath/single-bath-page-img-2.png" alt=""><img
-                src="assets/images/png/archive-bath/single-bath-page-img-3.png" alt=""><img
-                src="assets/images/png/archive-bath/single-bath-page-img-4.png" alt=""></div>
-          </div>
+            <?php the_title() ?>
+          </h3>
+          <?php include(TEMPLATEPATH . "/src/components/single-bath-page/_single-bath-page-img.php");?>
           <div class="single-bath-page-advantages">
             <h3 class="page__title-h3 page__title page_regular">Для Вас</h3>
             <div class="single-bath-page-advantages__lists">
@@ -87,11 +80,14 @@
           <div class="single-bath-page-information">
             <h3 class="page__title-h3 page__title page_regular">Важная информация</h3>
             <ul class="page-ul">
-              <li>Бронирование домов<ul>
-                  <li> <img src="assets/icons/svg/spriteSVG.svg#check-circle" alt="">
+              <li>Бронирование домов
+                <ul>
+                  <li> 
+                    <img src="assets/icons/svg/spriteSVG.svg#check-circle" alt="">
                     <p class="page__text">Прибытие: 15:00 - 22.00</p>
                   </li>
-                  <li> <img src="assets/icons/svg/spriteSVG.svg#check-circle" alt="">
+                  <li> 
+                    <img src="assets/icons/svg/spriteSVG.svg#check-circle" alt="">
                     <p class="page__text">Выезд: 12.00</p>
                   </li>
                   <li> <img src="assets/icons/svg/spriteSVG.svg#noun-no-smoking-1322400" alt="">
@@ -102,7 +98,9 @@
                   </li>
                 </ul>
               </li>
-              <li>Правила отмены<ul>
+
+              <li>Правила отмены
+                <ul>
                   <li> <img src="assets/icons/svg/spriteSVG.svg#exclamation-circle" alt="">
                     <p class="page__text">Для возврата оплаты за проживание отмена производится не позже, чем за 3 суток
                     </p>
@@ -112,7 +110,9 @@
                   </li>
                 </ul>
               </li>
-              <li>Здоровье и безопасность<ul>
+
+              <li>Здоровье и безопасность
+                <ul>
                   <li> <img src="assets/icons/svg/spriteSVG.svg#noun-virus-1182496" alt="">
                     <p class="page__text">Применяются правила социального дистанцирования и другие рекомендации,
                       связанные с пандемией</p>
@@ -125,26 +125,7 @@
               </li>
             </ul>
           </div>
-          <section class="callback">
-            <div class="wrapper">
-              <div class="callback-inner">
-                <h3 class="page__title page_regular page__title-h3">Отзывы</h3>
-                <div class="callback-items">
-                  <div class="callback-item">
-                    <div class="callback-item__stars"></div>
-                    <div class="callback-item__text">
-                      <p class="page__text">«Очень рада, что мне удалось получить то самое расслабление и удовольствие,
-                        заботу и тепло — то, о чем я мечтала — кайф! Спасибо огромное Адмиральским баням за приятную
-                        обстановку, домашний уют! Ваши сотрудники просто золото! Очень приветливые! Всем спасибо!».</p>
-                    </div>
-                    <div class="callback-item__name">
-                      <div class="name">Виктория</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+          <?php include(TEMPLATEPATH . "/src/components/review/_review.php");?>
           
         </div>
       </div>

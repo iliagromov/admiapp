@@ -4,7 +4,7 @@
 */
 get_header();
 ?>
- <main class="page">
+  <main class="page">
     <section class="single-bath-page">
       <div class="wrapper">
         <div class="single-bath-page-inner">

@@ -5,13 +5,20 @@
   &-inner
     +row-flex
   &__nav
+    .footer__col
+      margin-bottom: 20px
+
     .page__title
       color: $blue-500
-      margin-bottom: 32px
+      margin-bottom: 10px
+      +md-block
+        margin-bottom: 32px
     .page-link
       display: flex
       margin-bottom: 16px
-    
+      font-size: 14px
+      line-height: 150%
+
     .page-fl-aic
       margin-bottom: 16px
       color: $braun-900
@@ -25,7 +32,6 @@
   &__contacts
     +size(12)
 
-  
   &__bottom
     padding-top: 40px
     border-top: 1px solid $braun-100
@@ -40,6 +46,11 @@
     +size-md(4)
     display: flex
     align-items: flex-end
+    img
+      width: 153px
+      height: 100px
+      object-fit: cover
+
   &__copy
     color: $braun-900
     margin-left: 16px

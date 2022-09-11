@@ -3,7 +3,8 @@
 <main class="page">
     <section class="banner banner-bath">
       <div class="banner_bg">
-        <div class="banner_bg-shadow"></div><img src="assets/images/png/archive-bath/banner-img-spa.png" alt="banner">
+        <div class="banner_bg-shadow"></div>
+        <img src="assets/images/png/archive-bath/banner-img-spa.png" alt="banner">
       </div>
       <div class="wrapper">
         <div class="banner-inner banner-inner_center">
