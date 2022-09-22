@@ -15,6 +15,7 @@ $fieldsACF =  [
     '_bath-items',
     '_article-cards',
     '_impressions-menu',
+    '_order-form',
 ];
 ?>
 <!DOCTYPE html>
@@ -44,7 +45,7 @@ $fieldsACF =  [
       <div class="header-inner">
         <div class="header__logo">
           <a href="https://gromov-studio.ru/admiral/">
-            <img src="assets/images/png/main-page/logo-admiral.png" alt="logo">
+            <img src="assets/images/png/main-page/logo-admiral-min.svg" alt="logo">
           </a>
         </div>
         <div class="header__nav">
@@ -68,13 +69,14 @@ $fieldsACF =  [
           </div>
         </div>
       </div>
+      <nav class="menu">
+        <div class="menuClose"></div>
+        <div class="menuContent">
+          <div class="menuContent_desktop">
+            <?php wp_nav_custom_menu('menuNavigation'); ?></div>
+          <div class="menuContent_mobile">
+            <?php wp_nav_custom_menu('menuNavigationMobile'); ?></div>
+      </nav>
     </div>
   </header>
-  <nav class="menu">
-    <div class="menuClose"></div>
-    <div class="menuContent">
-      <?php wp_nav_custom_menu('menuNavigation'); ?>
-      <!-- <a class="page-link">Клубная карта</a>
-      <a class="page-link">Сертификаты</a>
-      <a class="page-link">Язык</a></div> -->
-  </nav>
+  

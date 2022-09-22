@@ -111,6 +111,8 @@
 .article-cards
   &-inner
     +row-flex
+    .tabs
+      width: 100%
 
   .page__title
     color: $blue-500
@@ -127,10 +129,14 @@ $heightBanner: calc(100vh - 100px)
     height: inherit
   .page__title-h1
     color: $color_white
+    background-color: rgba(0,0,0,0.5)
+    display: inline
   .page__text
       color: #fff
       font-family: Philosopher-Regular
       padding-left: 5%
+      background-color: rgba(0,0,0,0.5)
+      display: inline
   &_bg
     position: absolute
     width: 100%
@@ -343,6 +349,7 @@ $heightBanner: calc(100vh - 100px)
       +size-md(4)
       margin: 0 auto 32px
 
+/*certificates*/
 /*info-block*/
 .info-block
   .page__title,
@@ -439,6 +446,48 @@ $heightBanner: calc(100vh - 100px)
       font-size: 16px
       align-self: flex-end
     
+/*callback*/
+.order-form
+  padding: 80px 0 40px
+  width: 100%
+  &-inner
+    +row-flex
+    justify-content: center
+  &-container
+    +col
+    +size(6)
+    background: #FFFFFF
+    border: 1px solid #F5F0EB
+    box-shadow: 0px 0px 15px rgba(1, 39, 104, 0.1)
+    border-radius: 10px
+    display: flex
+    align-items: center
+    justify-content: space-around
+    padding: 24px
+    box-sizing: border-box
+    &__price
+      .price
+        span
+          font-size: 14px
+          line-height: 150%
+          color: #8D6141
+      .page__title
+        font-size: 18px
+        line-height: 150%
+        margin-bottom: 0 !important
+
+    &__btn
+
+      .page-btn
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 12px 24px
+        color: #fff
+        background: #A87E5C
+        border-radius: 6px
+        font-size: 14px
+
 /*review*/
 .review
   padding: 60px 0
@@ -449,6 +498,17 @@ $heightBanner: calc(100vh - 100px)
   &-inner
     +row-flex
     justify-content: center
+  
+  &__toggles
+    .swiper-button-prev,
+    .swiper-button-next
+      color: #012768
+      border: 1px solid #012768 !important
+
+    .swiper-button-next:after, 
+    .swiper-button-prev:after
+      color: #012768 !important
+
   &__link
     width: 100%
     display: flex
@@ -459,10 +519,12 @@ $heightBanner: calc(100vh - 100px)
 
 .review-items
   
-.review-item
-    +col
     +size(12)
     +size-md(8)
+    overflow: inherit
+
+.review-item
+    +col
     margin: 0 auto
     padding: 44px 44px 22px 24px
     +md-block
@@ -503,7 +565,6 @@ $heightBanner: calc(100vh - 100px)
       margin-top: 130px
       +md-block
         margin-top: 100px
-      +size-md(6)
       +shift-left(1)
       .page__title
         font-size: 22px
@@ -532,11 +593,8 @@ $heightBanner: calc(100vh - 100px)
         top: 0
         z-index: 10
         width: 100%
-        background: rgba(0,0,0, 0.3)
-        color: #fff
-        color: #fff
-        color: #fff
-        color: #fff
+        // background: rgba(0,0,0, 0.3)
+        // color: #fff
       img
         width: 100%
         min-height: 400px
@@ -652,7 +710,7 @@ $heightBanner: calc(100vh - 100px)
     
   &__item
     +col
-    +size(6)
+    +size(12)
     +size-md(4)
     margin-bottom: 15px
     transition: all .5s ease
@@ -786,6 +844,8 @@ $heightBanner: calc(100vh - 100px)
     position: sticky
     top: 0
     z-index: 100
+    .wrapper
+        position: relative
 
     &-inner
         +row-flex
@@ -846,21 +906,25 @@ $heightBanner: calc(100vh - 100px)
     margin-bottom: 32px
     color: $blue-500
   &-inner
-    
+
   .images-menu-items
     +row-flex
-  
+
   .images-menu
     &__item
       +col
-      +size(6)
+      +size(12)
       +size-md(4)
       margin-bottom: 15px
       transition: all .5s ease
+      display: flex
+      flex-direction: column
+      align-items: center
+
       &:hover
         img
           transform: scale(1.05)
-      
+
       &-img
         display: flex
         overflow: hidden
@@ -872,17 +936,27 @@ $heightBanner: calc(100vh - 100px)
           transform: scale(1)
           transition: all .5s ease
           object-fit: cover
-      &-text 
+      &-text
         padding-left: 20px
       .page__title
         color: $blue-500
+
 /*menu*/
 /*menu*/
 .menu
-    position: fixed
+	+to($break_sm)
+		width: 100%
+		height: 100%
+		z-index: 100
+		position: fixed
+		align-items: center
+		justify-content: center
+.menu
+    position: absolute
     // width: 100%
     // height: 100%
-    right: 4%
+    // right: 4%
+    right: 0
     top: 90px
     
 
@@ -917,8 +991,23 @@ $heightBanner: calc(100vh - 100px)
         justify-content: space-between
     
 .menuContent
+	&_desktop,
+	&_mobile
+		flex-direction: column
+.menuContent
   display: flex
   flex-direction: column
+  &_desktop
+    display: none
+    +md-block
+      display: flex
+  &_mobile
+    display: flex
+    +md-block
+      display: none
+
+
+
   .page-link
       width: 100%
       padding: 8px 24px
@@ -1052,24 +1141,35 @@ $heightBanner: calc(100vh - 100px)
         padding: 12px
         box-sizing: border-box
   &-advantages
+    width: 100%
     padding: 24px 0
     .page__title-h3
       margin-bottom: 24px
     &__lists
       +row-flex
+      .page__title
+        +col
+        margin-left: 24px
+        width: 100%
+      .page-ul
+        width: 100%
+        > li
+          +size(12)
+          +size-md(4)
 
   &-description
+    width: 100%
     padding-bottom: 100px
     margin-bottom: 45px
     border-bottom: 1px dashed #E5D8CE
 
     .page__text
       +size-md(10)
-      font-family: Philosopher-Regular
       font-size: 16px
       line-height: 150%
 
   &-more-order
+    width: 100%
     &__items
       +row-flex
       justify-content: center
@@ -1100,6 +1200,7 @@ $heightBanner: calc(100vh - 100px)
           justify-content: flex-end
           color: $blue-500
   &-information
+    width: 100%
     .page-ul
       flex-wrap: wrap
       > li

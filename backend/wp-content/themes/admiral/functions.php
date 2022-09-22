@@ -33,6 +33,7 @@ if (is_admin()) {
 add_action('after_setup_theme', function () {
 	register_nav_menu('headerNavigation', 'Header navigation');
 	register_nav_menu('menuNavigation', 'Catalog navigation');
+	register_nav_menu('menuNavigationMobile', 'Catalog navigation мобильные');
 	register_nav_menu('footerNavCol1', 'Footer Проживание');
 	register_nav_menu('footerNavCol2', 'Footer Бани');
 	register_nav_menu('footerNavCol3', 'Footer Кухня');
@@ -204,6 +205,8 @@ function filter_menu_a_class($atts, $item, $args, $depth) {
     return $atts;
 }
 
+// FIXME: вынести в файл
+
 add_action('init', function () {
 
 		register_post_type('faq', [
@@ -232,18 +235,18 @@ add_action('init', function () {
 
 		register_post_type('bath', [
 				'labels' => [
-						'name'               => 'ПРОЖИВАНИЕ',
-						'singular_name'      => 'ПРОЖИВАНИЕ',
+						'name'               => 'Проживание',
+						'singular_name'      => 'Проживание',
 						'add_new'            => 'Add new',
-						'add_new_item'       => 'Add new bath',
-						'edit_item'          => 'Edit new bath',
-						'new_item'           => 'New bath',
-						'view_item'          => 'View bath',
-						'search_items'       => 'Search bath',
-						'not_found'          => 'bath not found',
-						'not_found_in_trash' => 'bath not found in trash',
+						'add_new_item'       => 'Add new Проживание',
+						'edit_item'          => 'Edit new Проживание',
+						'new_item'           => 'New Проживание',
+						'view_item'          => 'View Проживание',
+						'search_items'       => 'Search Проживание',
+						'not_found'          => 'Проживание not found',
+						'not_found_in_trash' => 'Проживание not found in trash',
 						'parent_item_colon'  => '',
-						'menu_name'          => 'ПРОЖИВАНИЕ'
+						'menu_name'          => 'Проживание'
 				],
 				'public' => true,
 				'has_archive' => true,
@@ -256,8 +259,8 @@ add_action('init', function () {
 
 		register_post_type('spa', [
 				'labels' => [
-						'name'               => 'SPA-ПРОГРАММЫ',
-						'singular_name'      => 'SPA-ПРОГРАММА',
+						'name'               => 'SPA-Программы',
+						'singular_name'      => 'SPA-Программа',
 						'add_new'            => 'Add new',
 						'add_new_item'       => 'Add new spa',
 						'edit_item'          => 'Edit new spa',
@@ -267,7 +270,7 @@ add_action('init', function () {
 						'not_found'          => 'spa not found',
 						'not_found_in_trash' => 'spa not found in trash',
 						'parent_item_colon'  => '',
-						'menu_name'          => 'SPA-ПРОГРАММЫ'
+						'menu_name'          => 'SPA-Программы'
 				],
 				'public' => true,
 				'has_archive' => true,
@@ -292,7 +295,7 @@ add_action('init', function () {
 
 	register_post_type('impressions', [
 			'labels' => [
-					'name'               => 'РАЗВЛЕЧЕНИЯ',
+					'name'               => 'Развлечения',
 					'singular_name'      => 'Развлечение',
 					'add_new'            => 'Add new',
 					'add_new_item'       => 'Add new Развлечение',
@@ -303,7 +306,7 @@ add_action('init', function () {
 					'not_found'          => 'Развлечение not found',
 					'not_found_in_trash' => 'Развлечение not found in trash',
 					'parent_item_colon'  => '',
-					'menu_name'          => 'РАЗВЛЕЧЕНИЯ'
+					'menu_name'          => 'Развлечения'
 			],
 			'public' => true,
 			'has_archive' => true,
@@ -313,7 +316,7 @@ add_action('init', function () {
 	]);
 	register_taxonomy('impressions-mark', ['impressions'], [
 		'labels' => [
-			'name' => 'Впечатления метка'
+			'name' => 'Развлечения метка'
 		],
 		'public' => true,
 		'rewrite' => [
@@ -323,75 +326,6 @@ add_action('init', function () {
 
 });
 
-add_action('init', function () {
-
-	register_post_type('impressions-summer', [
-			'labels' => [
-					'name'               => 'РАЗВЛЕЧЕНИЯ Лето',
-					'singular_name'      => 'Развлечение',
-					'add_new'            => 'Add new',
-					'add_new_item'       => 'Add new Развлечение',
-					'edit_item'          => 'Edit new Развлечение',
-					'new_item'           => 'New Развлечение',
-					'view_item'          => 'View Развлечение',
-					'search_items'       => 'Search Развлечение',
-					'not_found'          => 'Развлечение not found',
-					'not_found_in_trash' => 'Развлечение not found in trash',
-					'parent_item_colon'  => '',
-					'menu_name'          => 'РАЗВЛЕЧЕНИЯ Лето'
-			],
-			'public' => true,
-			'has_archive' => true,
-			'rewrite' => [
-					'with_front' => true
-			]
-	]);
-	register_taxonomy('impressions-summer-mark', ['impressions-summer'], [
-		'labels' => [
-			'name' => 'Впечатления метка'
-		],
-		'public' => true,
-		'rewrite' => [
-			'with_front' => false
-		]
-	]);
-
-});
-
-add_action('init', function () {
-
-	register_post_type('impressions-winter', [
-			'labels' => [
-					'name'               => 'РАЗВЛЕЧЕНИЯ Зима',
-					'singular_name'      => 'Развлечение',
-					'add_new'            => 'Add new',
-					'add_new_item'       => 'Add new Развлечение',
-					'edit_item'          => 'Edit new Развлечение',
-					'new_item'           => 'New Развлечение',
-					'view_item'          => 'View Развлечение',
-					'search_items'       => 'Search Развлечение',
-					'not_found'          => 'Развлечение not found',
-					'not_found_in_trash' => 'Развлечение not found in trash',
-					'parent_item_colon'  => '',
-					'menu_name'          => 'РАЗВЛЕЧЕНИЯ Зима'
-			],
-			'public' => true,
-			'has_archive' => true,
-			'rewrite' => [
-					'with_front' => true
-			]
-	]);
-	register_taxonomy('impressions-winter-mark', ['impressions-winter'], [
-		'labels' => [
-			'name' => 'Впечатления метка'
-		],
-		'public' => true,
-		'rewrite' => [
-			'with_front' => false
-		]
-	]);
-
-});
 
 
 
@@ -403,13 +337,13 @@ add_action('init', function () {
 					'name'               => 'Отзывы',
 					'singular_name'      => 'Отзыв',
 					'add_new'            => 'Add new',
-					'add_new_item'       => 'Add new review',
-					'edit_item'          => 'Edit new review',
-					'new_item'           => 'New review',
-					'view_item'          => 'View review',
-					'search_items'       => 'Search reviews',
-					'not_found'          => 'reviews not found',
-					'not_found_in_trash' => 'reviews not found in trash',
+					'add_new_item'       => 'Add new Отзыв',
+					'edit_item'          => 'Edit new Отзыв',
+					'new_item'           => 'New Отзыв',
+					'view_item'          => 'View Отзыв',
+					'search_items'       => 'Search Отзыв',
+					'not_found'          => 'Отзыв not found',
+					'not_found_in_trash' => 'Отзыв not found in trash',
 					'parent_item_colon'  => '',
 					'menu_name'          => 'Отзывы'
 			],
@@ -428,13 +362,13 @@ add_action('init', function () {
 					'name'               => 'Слайдер',
 					'singular_name'      => 'Слайд',
 					'add_new'            => 'Add new',
-					'add_new_item'       => 'Add new slide',
-					'edit_item'          => 'Edit new slide',
-					'new_item'           => 'New slide',
-					'view_item'          => 'View slide',
-					'search_items'       => 'Search slides',
-					'not_found'          => 'slides not found',
-					'not_found_in_trash' => 'slides not found in trash',
+					'add_new_item'       => 'Add new Слайд',
+					'edit_item'          => 'Edit new Слайд',
+					'new_item'           => 'New Слайд',
+					'view_item'          => 'View Слайд',
+					'search_items'       => 'Search Слайд',
+					'not_found'          => 'Слайд not found',
+					'not_found_in_trash' => 'Слайд not found in trash',
 					'parent_item_colon'  => '',
 					'menu_name'          => 'Слайдер'
 			],

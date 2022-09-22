@@ -8,6 +8,17 @@
   &-inner
     +row-flex
     justify-content: center
+  
+  &__toggles
+    .swiper-button-prev,
+    .swiper-button-next
+      color: #012768
+      border: 1px solid #012768 !important
+
+    .swiper-button-next:after, 
+    .swiper-button-prev:after
+      color: #012768 !important
+
   &__link
     width: 100%
     display: flex
@@ -18,10 +29,12 @@
 
 .review-items
   
-.review-item
-    +col
     +size(12)
     +size-md(8)
+    overflow: inherit
+
+.review-item
+    +col
     margin: 0 auto
     padding: 44px 44px 22px 24px
     +md-block

@@ -6,10 +6,10 @@
 	?>
 	<?php include(TEMPLATEPATH . "/src/components/_banner/_banner-spa.php"); ?>
 
-	<section class="bath-items">
+	<section class="article-cards">
 		<div class="wrapper">
 			<!--tabs-->
-			<div class="bath-items-inner">
+			<div class="article-cards-inner">
 				<div class="tabs" id="tabs">
 					<div class="tav-nav">
 						<div class="tab-link is-active">
@@ -39,9 +39,9 @@
 						$cpt_query = new WP_Query($args);
 						 
 						while ($cpt_query->have_posts()) : $cpt_query->the_post(); ?> 
-
-							<?php include(TEMPLATEPATH . "/src/components/_bath-items/_bath-item.php");?>
-        
+<?php
+          include(TEMPLATEPATH . "/src/components/_article-card/_article-card.php");
+        ?>
 						<?php endwhile; ?>
 					</div>
 					<div class="tab-content ">
@@ -64,8 +64,9 @@
 						$cpt_query = new WP_Query($args);
 						 
 						while ($cpt_query->have_posts()) : $cpt_query->the_post(); ?> 
-
-							<?php include(TEMPLATEPATH . "/src/components/_bath-items/_bath-item.php");?>
+						<?php
+          include(TEMPLATEPATH . "/src/components/_article-card/_article-card.php");
+        ?>
 						<?php
 						endwhile; // End of the loop.
 						?>

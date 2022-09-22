@@ -45,30 +45,14 @@ if (!empty($blockACF) && $blockACF["isShow"]) : ?>
               </a>
             <?php endforeach; ?>
           </div>
-          <?php endif;?>
+        <?php endif;?>
 
           <div class="images-menu-items">
-
-            <?php /*$args=array(
-								'posts_per_page'      => 15, 
-								'post_type'     => 'impressions', 
-								'key' => 'views',
-								'orderby' => 'meta_value_num', 
-								'order'    => 'ASC',
-								'post_status' => 'publish',
-							);
-							
-							$cpt_query = new WP_Query($args);
-							
-							while ($cpt_query->have_posts()) {
-                $cpt_query->the_post();
-                include(TEMPLATEPATH . "/src/components/impressions-menu/_impressions-item.php");
-              }
-*/
-            ?>
             <?php
-            foreach ($articles as $post) {
-              include(TEMPLATEPATH . "/src/components/_impressions-item/_impressions-item.php");
+            if(!empty($articles)) {
+              foreach ($articles as $post) {
+                include(TEMPLATEPATH . "/src/components/_impressions-item/_impressions-item.php");
+              }
             }
             ?>
           </div>

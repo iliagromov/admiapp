@@ -1,83 +1,164 @@
-<?php get_header(); ?>
-<!-- single impressions-->
-<main class="page">
-    <section class="single-bath-page">
-      <div class="wrapper">
-        <div class="single-bath-page-inner">
-          <h3 class="page__title-h3 page__title page_regular">
-            <?php the_title() ?>
-          </h3>
-          <?php include(TEMPLATEPATH . "/src/components/single-bath-page/_single-bath-page-img.php");?>
-          <div class="single-bath-page-description">
-            <h3 class="page__title-h3 page__title page_regular">Описание</h3>
-            <div class="page__text">
-                <?php the_content(); ?>
-            </div>
-          </div>
+<?php get_header();
 
-          <div class="single-bath-page-information">
-            <h3 class="page__title-h3 page__title page_regular">Важная информация</h3>
-            <ul class="page-ul">
-              <?php /*foreach($importantInformation): */?>
-              <li>Вам будет полезно подружиться с парной, если вы:
-                <ul>
-                  <li> 
-                    <img src="assets/icons/svg/spriteSVG.svg#thumb-up" alt="">
-                    <p class="page__text">хотите укрепить иммунитет и почувствовать себя моложе;</p>
-                  </li>
-                  <li> 
-                    <img src="assets/icons/svg/spriteSVG.svg#thumb-up" alt="">
-                    <p class="page__text">восстанавливаетесь после простудного заболевания;</p>
-                  </li>
-                  <li> 
-                    <img src="assets/icons/svg/spriteSVG.svg#thumb-up" alt="">
-                    <p class="page__text">ощущаете стресс и страдаете бессонницей;</p>
-                  </li>
-                  <li> 
-                    <img src="assets/icons/svg/spriteSVG.svg#thumb-up" alt="">
-                    <p class="page__text">мучаетесь остеохондрозом;</p>
-                  </li>
-                  <li> 
-                    <img src="assets/icons/svg/spriteSVG.svg#thumb-up" alt="">
-                    <p class="page__text">испытываете болевые ощущения в мышцах и суставах;</p>
-                  </li>
-                  <li> 
-                    <img src="assets/icons/svg/spriteSVG.svg#thumb-up" alt="">
-                    <p class="page__text">хотите избавиться от лишней жидкости и отеков.</p>
-                  </li>
+// $arhiveBlockACF = get_field('_arhive');
+$singleBlockACF = get_field('_single-page')['fields'];
+
+$gallary = $singleBlockACF["gallary"];
+$advantages = $singleBlockACF["advantages"];
+$moreOrder = $singleBlockACF["more-order"];
+$information = $singleBlockACF["information"];
+
+?>
+<!-- single bath-->
+
+<main class="page">
+  <section class="single-bath-page">
+    <div class="wrapper">
+      <div class="single-bath-page-inner">
+        <h3 class="page__title-h3 page__title page_regular">
+          <?php the_title() ?>
+        </h3>
+
+        <?php include(TEMPLATEPATH . "/src/components/single-bath-page/_single-bath-page-img.php"); ?>
+
+        <?php /*advantages*/ ?>
+        <div class="single-bath-page-advantages">
+          <h3 class="page__title-h3 page__title page_regular">Для Вас</h3>
+          <div class="single-bath-page-advantages__lists">
+            <?php 
+            if(!empty($advantages['lists'])):
+            foreach ($advantages['lists'] as $listItem) : ?>
+              <h5 class="page__title-h5 page__title page_regular"><?php echo $listItem['title']; ?></h5>
+              <?php if ($listItem['items']) : ?>
+                <ul class="page-ul">
+                  <?php foreach ($listItem['items'] as $item) : ?>
+                    <li><?php echo $item['title']; ?>
+                      <ul>
+                        <?php
+                        if (!empty($item['items2'])) :
+                          foreach ($item['items2'] as $list) : ?>
+                            <li>
+                              <img src="<?php echo $list['image'] ? $list['image']  : 'assets/icons/svg/spriteSVG.svg#check-circle' ?>" alt="image">
+                              <p class="page__text"><?php echo $list['text'] ?></p>
+                            </li>
+                        <?php
+                          endforeach;
+                        endif; ?>
+                      </ul>
+                    </li>
+                  <?php endforeach; ?>
+
                 </ul>
-            
-              <li> Когда нужно проконсультироваться с нашим специалистом перед процедурой:
+              <?php endif; ?>
+            <?php endforeach; 
+            endif;?>
+
+          </div>
+        </div>
+        <?php /*advantages*/ ?>
+
+        <div class="single-bath-page-description">
+          <h3 class="page__title-h3 page__title page_regular">Описание</h3>
+          <div class="page__text">
+            <?php the_content() ?>
+          </div>
+        </div>
+        <?php /*$moreOrder*/ ?>
+        <div class="single-bath-page-more-order">
+          <h3 class="page__title-h3 page__title page_regular">Заказажите дополнительно</h3>
+          <div class="single-bath-page-more-order__items">
+            <?php if (!empty($moreOrder['items'])) :
+              foreach ($moreOrder['items'] as $item)
+
+            ?>
+              <div class="single-bath-page-more-order__item">
+                <h3 class="page__title-h3 page__title page_regular"><?php echo $item['title']; ?></h3>
+                <p class="page__text"><?php echo $item['text']; ?></p>
+                <div class="single-bath-page-more-order__item-img">
+                  <img src="<?php echo $item['image']; ?>" alt="">
+                </div>
+                <div class="single-bath-page-more-order__item-link">
+                  <a class="page-link page-link_arrow" href="<?php echo $item['link']; ?>">Посмотреть меню
+                    <div class="svg-cheveron-right svg-cheveron-right-box"></div>
+                  </a>
+                </div>
+              </div>
+            <?php endif; ?>
+          </div>
+        </div>
+        <?php /*$moreOrder*/ ?>
+
+        <?php /*include(TEMPLATEPATH . "/src/components/review/_review.php"); */ ?>
+        <?php /*$information*/ ?>
+        <div class="single-bath-page-information">
+          <h3 class="page__title-h3 page__title page_regular">Важная информация</h3>
+
+          <?php if ($information['items']) : ?>
+
+            <ul class="page-ul">
+              <?php foreach ($information['items'] as $item) : ?>
+                <li><?php echo $item['title']; ?>
                   <ul>
-                    <li> 
-                      <img src="assets/icons/svg/spriteSVG.svg#hand" alt="">
-                      <p class="page__text">вы имеете хронические заболевания в фазе обострения;</p>
+                    <?php
+                    if (!empty($item['items2'])) :
+                      foreach ($item['items2'] as $list) : ?>
+                        <li>
+                          <img src="<?php echo $list['image'] ? $list['image']  : 'assets/icons/svg/spriteSVG.svg#check-circle' ?>" alt="image">
+                          <p class="page__text"><?php echo $list['text'] ?></p>
+                        </li>
+                    <?php endforeach;
+                    endif; ?>
+                  </ul>
+                </li>
+              <?php endforeach; ?>
+
+            </ul>
+            <?php else : ?>
+                  <ul class="page-ul">
+                    <li>Бронирование домов<ul>
+                        <li> <img src="assets/icons/svg/spriteSVG.svg#check-circle" alt="">
+                          <p class="page__text">Прибытие: 15:00 - 22.00</p>
+                        </li>
+                        <li> <img src="assets/icons/svg/spriteSVG.svg#check-circle" alt="">
+                          <p class="page__text">Выезд: 12.00</p>
+                        </li>
+                        <li> <img src="assets/icons/svg/spriteSVG.svg#noun-no-smoking-1322400" alt="">
+                          <p class="page__text">Курение в доме запрещено</p>
+                        </li>
+                        <li> <img src="assets/icons/svg/spriteSVG.svg#noun-no-smoking-1322400" alt="">
+                          <p class="page__text">Размещение с животными запрещено</p>
+                        </li>
+                      </ul>
                     </li>
-                    <li> 
-                      <img src="assets/icons/svg/spriteSVG.svg#hand" alt="">
-                      <p class="page__text">у вас грыжа в позвоночнике или незалеченная травма;</p>
+                    <li>Правила отмены<ul>
+                        <li> <img src="assets/icons/svg/spriteSVG.svg#exclamation-circle" alt="">
+                          <p class="page__text">Для возврата оплаты за проживание отмена производится не позже, чем за 3 суток
+                          </p>
+                        </li>
+                        <li> <img src="assets/icons/svg/spriteSVG.svg#exclamation-circle" alt="">
+                          <p class="page__text">За отмену бронирования меньше, чем за 3 суток, взимается компенсация</p>
+                        </li>
+                      </ul>
                     </li>
-                    <li> 
-                      <img src="assets/icons/svg/spriteSVG.svg#hand" alt="">
-                      <p class="page__text">вы перенесли инфаркт или инсульт;</p>
-                    </li>
-                    <li> 
-                      <img src="assets/icons/svg/spriteSVG.svg#hand" alt="">
-                      <p class="page__text">имеете сердечно-сосудистые заболевания: гипертонию, варикоз, тромбофлебит, атеросклероз;</p>
-                    </li>
-                    <li> 
-                      <img src="assets/icons/svg/spriteSVG.svg#hand" alt="">
-                      <p class="page__text">вы наблюдаетесь у онколога;</p>
+                    <li>Здоровье и безопасность<ul>
+                        <li> <img src="assets/icons/svg/spriteSVG.svg#noun-virus-1182496" alt="">
+                          <p class="page__text">Применяются правила социального дистанцирования и другие рекомендации,
+                            связанные с пандемией</p>
+                        </li>
+                        <li> <img src="assets/icons/svg/spriteSVG.svg#credit-card" alt="">
+                          <p class="page__text">Залог за сохранность имущества: если вы нанесете ущерб жилью, вам придется
+                            заплатить до 10 000₽</p>
+                        </li>
+                      </ul>
                     </li>
                   </ul>
-              </li>
-            </ul>
-          </div>
-          
-          
+                <?php endif; ?>
         </div>
+        <?php /*$information*/ ?>
+        <?php include(TEMPLATEPATH . "/src/components/_order-form/_order-form.php"); ?>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+</main>
 <!-- /single -->
 <?php get_footer(); ?>

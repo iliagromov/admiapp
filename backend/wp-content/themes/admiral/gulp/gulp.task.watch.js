@@ -16,7 +16,7 @@ gulp.task('watch', gulp.series('build', function _watch(done) {
 			// tunnel: true
 		});
 	}
-	gulp.watch(path.src + path.icons, gulp.series('sprite'));
+	// gulp.watch(path.src + path.icons, gulp.series('sprite'));
 	gulp.watch(path.src + path.images, gulp.series('images'));
 	gulp.watch(path.src + path.fonts + '**/*', gulp.series('fonts'));
 	gulp.watch(path.src + path.libs + '**/*', gulp.series('libs'));

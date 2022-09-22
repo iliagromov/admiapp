@@ -32,6 +32,7 @@ if (!empty($fieldACF) && $fieldACF["isShow"]) :
         <div class="banner-inner banner-inner_left">
           <div class="banner__title_left">
             <h1 class="page__title page_regular page__title-h1"><?php echo $title; ?></h1>
+            <br>
             <p class="page__text"><?php echo $text; ?></p>
           </div>
         </div>

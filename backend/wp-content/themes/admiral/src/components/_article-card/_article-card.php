@@ -17,7 +17,10 @@ $blockPrice = $fieldsACF["block-price"];
 // echo '</pre>';
 ?>
   <div class="article-card">
+    <a href="<?php the_permalink(); ?>">
+
     <h3 class="page__title-h3 page__title page_regular"><?php the_title(); ?></h3>
+    </a>
     
     <a class="article-card-container" href="<?php the_permalink(); ?>">
       
@@ -46,7 +49,7 @@ $blockPrice = $fieldsACF["block-price"];
         
         <ul>
           <?php 
-            if(!empty($blockAdvantages)):
+            if(!empty($blockAdvantages['advantages'])):
             foreach ($blockAdvantages['advantages'] as $advateage) :
             if (!empty($advateage['icon'])) :
           ?>
@@ -69,7 +72,7 @@ $blockPrice = $fieldsACF["block-price"];
         
         <div class="article-card__text-order">
           <?php 
-          if(!empty($blockPrice)):
+          if(!empty($blockPrice['prices'])):
           foreach ($blockPrice['prices'] as $price) :
             if (!empty($price['price'])) :
           ?>

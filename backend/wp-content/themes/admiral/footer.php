@@ -79,7 +79,7 @@
         <div class="footer-inner">
           <div class="footer__logo">
             <a href="/">
-              <img src="assets/images/png/main-page/logo-admiral.png" alt="logo">
+              <img src="assets/images/png/main-page/logo-admiral-min.svg" alt="logo">
             </a>  
           </div>
           <div class="footer__social">
