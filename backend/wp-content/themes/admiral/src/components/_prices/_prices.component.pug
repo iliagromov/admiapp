@@ -1,0 +1,66 @@
+//-_prices
+mixin blockServices(arr)
+  each item in arr
+      each service in item.services
+        .prices-item-service
+          h4.page__title.page__title-h4.page_regular=service.title
+          p.page__text Перед парением померьте давление, воздержитесь от алкоголя и плотной еды.
+          ul.prices-item-service__lists
+            each list in service.lists
+              li.prices-item-service__list
+                .prices-item-service__col
+                  .prices-item-service__col_text
+                    .prices-item-service__title=list.title
+                    .prices-item-service__description=list.description
+                .prices-item-service__price.page_regular=list.price 
+                  span / #{list.priceText}
+                  span / #{list.person}
+section.prices
+  .wrapper
+    h2.page__title-h2.page__title.page_regular Меню банного клуба «Адмирал»
+    .prices-inner
+      +blockServices(
+         [
+          {
+            services: [
+              {
+                title: ' Аренда дома со спа-программой:',
+                lists: [
+                  {
+                    title: 'Аренда коттеджа без программы',
+                    description: 'teststteststteststteststteststteststteststtes tstteststteststtestst',
+                    person: '1 person',
+                    price: '30 000 ₽'
+                    
+                  },
+                  {
+                    title: 'Аренда коттеджа без программы',
+                    description: '',
+                    price: '30 000 ₽',
+                    priceText: 'час',
+                  },
+                ]
+              }
+            ]
+          },
+          {
+            services: [
+              {
+                title: ' Аренда дома со спа-программой:',
+                lists: [
+                  {
+                    title: 'Аренда коттеджа без программы',
+                    description: '',
+                    price: '30 000 ₽'
+                  },
+                  {
+                    title: 'Аренда коттеджа без программы',
+                    description: '',
+                    price: '30 000 ₽'
+                  },
+                ]
+              }
+            ]
+          },
+        ]
+      )

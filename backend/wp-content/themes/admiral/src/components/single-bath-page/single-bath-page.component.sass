@@ -29,8 +29,27 @@
         grid-area: 1 / 4 / 2 / 5
       &:nth-child(4)
         grid-area: 2 / 4 / 3 / 5
+        position: relative
+        &::after
+          font-size: 26px
+          line-height: 140%
+          font-weight: bold
+          content: '+2'
+          position: absolute
+          width: 100%
+          height: 100%
+          text-align: center
+          display: flex
+          align-items: center
+          justify-content: center
+          text-shadow: black
+          color: #fff
+          background-color: rgba(0, 0, 0, 0.2)
+          border-radius: 40px
       &:nth-child(5)
         grid-area: 2 / 3 / 3 / 4 
+        
+
       &:nth-child(n+6)
         display: none
       &:nth-child(n+2)
@@ -65,8 +84,15 @@
       .page-ul
         width: 100%
         > li
+      .page-ul_lv-2
+        +row-flex
+        li
+          +col
           +size(12)
           +size-md(4)
+
+
+
 
   &-description
     width: 100%
@@ -96,15 +122,18 @@
       box-shadow: 0px 0px 15px rgba(1, 39, 104, 0.1)
       border-radius: 20px
       padding: 32px
+      margin-bottom: 20px
       .page__title
         color: #A87E5C
         margin-bottom: 16px
       .page__text
         color: #A87E5C
-        font-size: 14px
+        font-size: 16px
         margin-bottom: 24px
       &-img
         margin-bottom: 24px
+        img
+          width: 100%
       &-link
 
         .page-link
@@ -121,6 +150,7 @@
 .page-ul
     +col
     display: flex
+    flex-wrap: wrap
 
     > li
       flex-direction: column
@@ -130,8 +160,9 @@
       font-size: 16px
       font-weight: bold
       img
-        width: 55px
-        height: 55px
+        max-width: 55px
+        max-height: 55px
+        margin: 5px
       ul
         padding-top: 20px
         padding-left: 4px
@@ -139,7 +170,7 @@
           font-weight: normal
           display: flex
           align-items: center
-
-          margin-bottom: 15px
+          padding-bottom: 15px
+          box-sizing: border-box
           .page__text
             font-size: 16px

@@ -23,17 +23,21 @@ $information = $singleBlockACF["information"];
 
         <?php /*advantages*/ ?>
         <div class="single-bath-page-advantages">
-          <h3 class="page__title-h3 page__title page_regular">Для Вас</h3>
+          <h3 class="page__title-h3 page__title page_regular"><?php echo $advantages['title']; ?></h3>
           <div class="single-bath-page-advantages__lists">
             <?php 
             if(!empty($advantages['lists'])) :
               foreach ($advantages['lists'] as $listItem) : ?>
+
+              <?php if(!empty($listItem['title'])) : ?>
               <h5 class="page__title-h5 page__title page_regular"><?php echo $listItem['title']; ?></h5>
+              <?php endif;?>
+
               <?php if ($listItem['items']) : ?>
-                <ul class="page-ul">
+                <ul class="page-ul page-ul_lv-1">
                   <?php foreach ($listItem['items'] as $item) : ?>
                     <li><?php echo $item['title']; ?>
-                      <ul>
+                      <ul class="page-ul_lv-2">
                         <?php
                         if (!empty($item['items2'])) :
                           foreach ($item['items2'] as $list) : ?>
@@ -43,8 +47,8 @@ $information = $singleBlockACF["information"];
                             </li>
                         <?php
                           endforeach;
-                        endif; ?>
-                      </ul>
+                        endif; ?></ul>
+                      
                     </li>
                   <?php endforeach; ?>
 
@@ -68,22 +72,13 @@ $information = $singleBlockACF["information"];
           <h3 class="page__title-h3 page__title page_regular">Заказажите дополнительно</h3>
           <div class="single-bath-page-more-order__items">
             <?php if (!empty($moreOrder['items'])) :
-              foreach ($moreOrder['items'] as $item)
+              foreach ($moreOrder['items'] as $item):
 
             ?>
-              <div class="single-bath-page-more-order__item">
-                <h3 class="page__title-h3 page__title page_regular"><?php echo $item['title']; ?></h3>
-                <p class="page__text"><?php echo $item['text']; ?></p>
-                <div class="single-bath-page-more-order__item-img">
-                  <img src="<?php echo $item['image']; ?>" alt="">
-                </div>
-                <div class="single-bath-page-more-order__item-link">
-                  <a class="page-link page-link_arrow" href="<?php echo $item['link']; ?>">Посмотреть меню
-                    <div class="svg-cheveron-right svg-cheveron-right-box"></div>
-                  </a>
-                </div>
-              </div>
-            <?php endif; ?>
+              <?php include(TEMPLATEPATH . "/src/components/_more-order/_more-order-item.php"); ?>
+            <?php 
+            endforeach;
+          endif; ?>
           </div>
         </div>
         <?php /*$moreOrder*/ ?>

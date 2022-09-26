@@ -16,6 +16,9 @@ $fieldsACF =  [
     '_article-cards',
     '_impressions-menu',
     '_order-form',
+    '_certificates',
+    '_more-order',
+    '_prices'
 ];
 ?>
 <!DOCTYPE html>

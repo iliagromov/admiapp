@@ -1,5 +1,5 @@
 .header
-    padding: 16px 0 0
+    padding: 16px 0 10px
     +md-block
         padding-bottom: 16px
     background-color: $color_white
@@ -23,9 +23,13 @@
         a
             display: flex
         img
-            width: 152px
-            height: 100px
+            transform: scale(1.2)
+            max-width: 152px
+            max-height: 100px
+            width: 100%
             object-fit: cover
+            +md-block
+                transform: scale(1)
     &__nav
         +col
         // +size(4)

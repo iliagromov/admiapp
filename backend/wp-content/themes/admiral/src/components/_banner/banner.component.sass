@@ -2,11 +2,14 @@
 $heightBanner: calc(100vh - 100px)
 .banner
   position: relative
-  height: $heightBanner
-  max-height: $heightBanner
   padding-bottom: 80px
+  +md-block
+    height: $heightBanner
+    max-height: $heightBanner
   .wrapper
     height: inherit
+    // position: absolute
+    bottom: 23px
   .page__title-h1
     color: $color_white
     background-color: rgba(0,0,0,0.5)
@@ -14,14 +17,16 @@ $heightBanner: calc(100vh - 100px)
   .page__text
       color: #fff
       font-family: Philosopher-Regular
-      padding-left: 5%
+      // padding-left: 5%
       background-color: rgba(0,0,0,0.5)
       display: inline
   &_bg
-    position: absolute
+    // position: absolute
+    position: relative
     width: 100%
     top: 0
     display: flex
+    // background-color: rgba(115, 161, 248, 0.2)
     &-shadow
       position: absolute
       height: 100%
@@ -31,14 +36,28 @@ $heightBanner: calc(100vh - 100px)
       background: rgba(0,0,0, 0.3)
     img
       width: 100%
-      height: $heightBanner
-      object-fit: cover
+      object-fit: contain
+      +md-block
+        height: $heightBanner
+      // object-fit: cover
   &__title
     &_bottom
+      .page__title
+        +to($break_sm)
+          font-size: 18px
+      .page__text 
+        +to($break_sm)
+          font-size: 14px
       +md-block
         width: 85%
+        margin: 0 auto
     &_left
-      +size-md(5.5)
+      .page__title
+        +to($break_sm)
+          font-size: 18px
+      .page__text 
+        +to($break_sm)
+          font-size: 14px
       .page__title-h1
         color: $color_white
         margin-bottom: 24px
@@ -46,23 +65,36 @@ $heightBanner: calc(100vh - 100px)
   &-inner
     box-sizing: border-box
     padding: 70px 0
-    height: 100%
+    // height: 100%
+    
+    height: auto
     display: flex
     align-items: flex-end
     position: relative
     z-index: 20
-    text-align: center
+    
     justify-content: center
+
+    position: absolute
+    width: 100%
+    .wrapper
+      width: 100%
+    
 
     &_center
       align-items: center
       justify-content: flex-start
-      text-align: left
+      text-align: center
+      bottom: 12px
+      +md-block
+        bottom: 70px
 
     &_left
       align-items: center
       justify-content: flex-start
       text-align: left
+      top: 50%
+      transform: translate(0, -50%)
       
   &-bath
   &-cuisine

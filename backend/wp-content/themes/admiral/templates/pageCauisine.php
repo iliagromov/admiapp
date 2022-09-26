@@ -7,12 +7,14 @@ get_header();
 <main class="page">
   <section class="banner banner-cuisine">
     <div class="banner_bg">
-      <div class="banner_bg-shadow"></div><img src="assets/images/png/cuisine/img-banner-cuisine.png" alt="banner">
+      <img src="assets/images/png/cuisine/img-banner-cuisine.png" alt="banner">
     </div>
-    <div class="wrapper">
-      <div class="banner-inner banner-inner_center">
+    <div class="banner-inner banner-inner_left">
+      <div class="wrapper">
+     
         <div class="banner__title_left">
           <h1 class="page__title page_regular page__title-h1">Ресторан авторской кухни и здоровой еды</h1>
+          <br>
           <p class="page__text">На территории банного комплекса есть сервис доставки блюд из ресторана с сервировкой в
             коттедже. </p>
         </div>

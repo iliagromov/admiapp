@@ -1,4 +1,0 @@
-2022-08-22T18:59:42+00:00 CRITICAL syntax error, unexpected ''menu'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home/hp/Projects/admiral.io/backend/wp-content/themes/admiral/footer.php on line 10
-
-2022-08-22T19:00:00+00:00 CRITICAL syntax error, unexpected ''menu'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home/hp/Projects/admiral.io/backend/wp-content/themes/admiral/footer.php on line 10
-

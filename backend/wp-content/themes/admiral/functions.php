@@ -427,6 +427,15 @@ add_action('init', function () {
 					'with_front' => true
 			]
 	]);
+	register_taxonomy('events-mark', ['events'], [
+		'labels' => [
+			'name' => 'Мероприятие Метка'
+		],
+		'public' => true,
+		'rewrite' => [
+			'with_front' => false
+		]
+	]);
 });
 
 

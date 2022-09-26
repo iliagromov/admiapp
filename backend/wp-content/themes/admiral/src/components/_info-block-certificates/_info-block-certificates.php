@@ -15,7 +15,7 @@ $items = $fields['items'];
         <div class="info-block-certificates-card">
           <h3 class="page__title page_regular page__title-h3"><?php echo $item['title']; ?></h3>
           <p class="page__text"><?php echo $item['text']; ?> </p>
-          <a class="page-link page-link_arrow" href="">Забронировать коттедж
+          <a class="page-link page-link_arrow" href="<?php echo $item['link']['url']; ?> "><?php echo $item['link']['title']; ?>
             <div class="svg-cheveron-right svg-cheveron-right-box"></div>
           </a>
           <div class="info-block-certificates-card__img">

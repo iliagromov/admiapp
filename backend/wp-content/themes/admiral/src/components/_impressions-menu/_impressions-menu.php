@@ -31,25 +31,25 @@ if (!empty($blockACF) && $blockACF["isShow"]) : ?>
       <h3 class="page__title page_regular page__title-h3">Виды впечатлений</h3>
       <div class="impressions-menu-inner">
         <div class="tabs">
-         <?php if(!empty($blockACF['_isLinks'])) : ?>
-          <div class="tav-nav ">
-            <?php foreach($blockACF['_links'] as $link): 
-            // echo '<pre>';
-            // var_dump($link["link"]);
-            // echo '</pre>';
-            $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-            // echo $actual_link;
+          <?php if (!empty($blockACF['_isLinks'])) : ?>
+            <div class="tav-nav ">
+              <?php foreach ($blockACF['_links'] as $link) :
+                // echo '<pre>';
+                // var_dump($link["link"]);
+                // echo '</pre>';
+                $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                // echo $actual_link;
               ?>
-              <a class="tab-link <?php echo $actual_link == $link["link"] ? 'is-active'  : ''?>" href="<?php echo $link["link"];?>">
-                <div class="page-link"><?php echo $link["title"];?></div>
-              </a>
-            <?php endforeach; ?>
-          </div>
-        <?php endif;?>
+                <a class="tab-link <?php echo $actual_link == $link["link"] ? 'is-active'  : '' ?>" href="<?php echo $link["link"]; ?>">
+                  <div class="page-link"><?php echo $link["title"]; ?></div>
+                </a>
+              <?php endforeach; ?>
+            </div>
+          <?php endif; ?>
 
           <div class="images-menu-items">
             <?php
-            if(!empty($articles)) {
+            if (!empty($articles)) {
               foreach ($articles as $post) {
                 include(TEMPLATEPATH . "/src/components/_impressions-item/_impressions-item.php");
               }
