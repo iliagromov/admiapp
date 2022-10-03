@@ -122,10 +122,14 @@ get_header();
         <div class="cuisine-contacts__text">
           <h3 class="page__title page_regular page__title-h3">Рестораны на территории</h3>
           <p class="page__text">В шаговой доступности от банного комплексаесть два ресторана:</p>
-          <div class="cuisine-contacts__text-item"><span>«Дикий Койот»: <a class="page-link" href="tel:+7 (977) 697-82-49"> +7 (977) 697-82-49</a></span>
+          <div class="cuisine-contacts__text-item">
+            <span>«Nachile»: <a class="page-link" href="tel:+7 (499) 325-35-35">+7 (499) 325-35-35</a></span>
             <div class="page__text">Пн-Суб: 11.00-21.00, Вс: 11.00-20.00</div>
           </div>
-          <div class="cuisine-contacts__text-item"><span>«YACHTLOUNGE CAFE BAR»: <a class="page-link" href="tel:+7 (977) 697-54-45"> +7 (977) 697-54-45</a></span>
+          <div class="cuisine-contacts__text-item"><span>«Парус»: <a class="page-link" href="tel:+7 (499) 325-42-85">+7 (499) 325-42-85</a></span>
+            <div class="page__text">Пн-Суб: 11.00-21.00, Вс: 11.00-20.00</div>
+          </div>
+          <div class="cuisine-contacts__text-item"><span>«Surf Bar»: <a class="page-link" href="tel:+7 (499) 325-42-82">+7 (499) 325-42-82</a></span>
             <div class="page__text">Пн-Суб: 11.00-21.00, Вс: 11.00-20.00</div>
           </div>
         </div>
@@ -182,15 +186,6 @@ get_header();
     </div>
     <div class="slider-banner__link-show-more"><a class="page-link page-link_arrow" href="/">Больше программ<div class="svg-cheveron-right svg-cheveron-right-box"></div></a></div>
   </section>
-  <section class="revies">
-    <div class="wrapper">
-      <div class="revies-inner">
-        <from class="page-form">
-          <h3 class="page__title page_regular page__title-h3">Подпишитесь и будьте в курсе наших акций
-            и спецпредложений</h3><input class="page-input" type="tel" placeholder="Тедефон"><button class="page__btn page_broun-outline">Подписаться</button>
-        </from>
-      </div>
-    </div>
-  </section>
+  <?php include(TEMPLATEPATH . "/src/components/callback/_callback-2.php");?>
 </main>
 <?php get_footer(); ?>

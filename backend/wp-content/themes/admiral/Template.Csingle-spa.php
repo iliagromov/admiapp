@@ -1,5 +1,12 @@
-<?php get_header(); ?>
-<!-- single-->
+<?php get_header(); 
+$singleBlockACF = get_field('_single-page')['fields'];
+
+$gallary = $singleBlockACF["gallary"];
+$advantages = $singleBlockACF["advantages"];
+$moreOrder = $singleBlockACF["more-order"];
+$information = $singleBlockACF["information"];
+?>
+<!-- single spa-->
 <main class="page">
   <section class="single-bath-page">
     <div class="wrapper">
@@ -17,17 +24,21 @@
         </div>
         <?php /*advantages*/ ?>
         <div class="single-bath-page-advantages">
-          <h3 class="page__title-h3 page__title page_regular">Для Вас</h3>
+          <h3 class="page__title-h3 page__title page_regular"><?php echo $advantages['title']; ?></h3>
           <div class="single-bath-page-advantages__lists">
             <?php 
-            if(!empty($advantages['lists'])):
-            foreach ($advantages['lists'] as $listItem) : ?>
+            if(!empty($advantages['lists'])) :
+              foreach ($advantages['lists'] as $listItem) : ?>
+
+              <?php if(!empty($listItem['title'])) : ?>
               <h5 class="page__title-h5 page__title page_regular"><?php echo $listItem['title']; ?></h5>
+              <?php endif;?>
+
               <?php if ($listItem['items']) : ?>
-                <ul class="page-ul">
+                <ul class="page-ul page-ul_lv-1">
                   <?php foreach ($listItem['items'] as $item) : ?>
                     <li><?php echo $item['title']; ?>
-                      <ul>
+                      <ul class="page-ul_lv-2">
                         <?php
                         if (!empty($item['items2'])) :
                           foreach ($item['items2'] as $list) : ?>
@@ -37,8 +48,8 @@
                             </li>
                         <?php
                           endforeach;
-                        endif; ?>
-                      </ul>
+                        endif; ?></ul>
+                      
                     </li>
                   <?php endforeach; ?>
 
@@ -50,6 +61,7 @@
           </div>
         </div>
         <?php /*advantages*/ ?>
+
         <?php /*$information*/ ?>
         <div class="single-bath-page-information">
           <h3 class="page__title-h3 page__title page_regular">Важная информация</h3>

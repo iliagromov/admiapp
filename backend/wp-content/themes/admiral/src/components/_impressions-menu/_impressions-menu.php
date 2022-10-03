@@ -4,6 +4,9 @@
  *  Блок "Карточки превью с таб-меню"
  */
 $blockACF = get_field('_impressions-menu');
+$postType = $blockACF['fields']['articles'];
+// var_dump($postType);
+
 // TODO: определять post_type
 $allArticles = get_posts(array(
   'numberposts' => -1,
@@ -25,23 +28,26 @@ $acfFieldsAr = get_fields();
 // echo '</pre>';
 
 if (!empty($blockACF) && $blockACF["isShow"]) : ?>
-
+  <!--impressions-menu-->
   <section class="impressions-menu">
     <div class="wrapper">
-      <h3 class="page__title page_regular page__title-h3">Виды впечатлений</h3>
+      <h3 class="page__title page_regular page__title-h3"><?php echo $blockACF['fields']['title'];?></h3>
       <div class="impressions-menu-inner">
         <div class="tabs">
           <?php if (!empty($blockACF['_isLinks'])) : ?>
             <div class="tav-nav ">
               <?php foreach ($blockACF['_links'] as $link) :
+                
                 // echo '<pre>';
                 // var_dump($link["link"]);
                 // echo '</pre>';
                 $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-                // echo $actual_link;
+                // echo $actual_link ;
+                // echo '<br>';
+                // echo  $link["link"]['url'];
               ?>
-                <a class="tab-link <?php echo $actual_link == $link["link"] ? 'is-active'  : '' ?>" href="<?php echo $link["link"]; ?>">
-                  <div class="page-link"><?php echo $link["title"]; ?></div>
+                <a class="tab-link <?php echo $actual_link == $link["link"]['url'] ? 'is-active'  : '' ?>" href="<?php echo $link["link"]['url']; ?>">
+                  <div class="page-link"><?php echo $link['link']["title"]; ?></div>
                 </a>
               <?php endforeach; ?>
             </div>
@@ -51,8 +57,10 @@ if (!empty($blockACF) && $blockACF["isShow"]) : ?>
             <?php
             if (!empty($articles)) {
               foreach ($articles as $post) {
+                setup_postdata($post);
                 include(TEMPLATEPATH . "/src/components/_impressions-item/_impressions-item.php");
               }
+              wp_reset_postdata();
             }
             ?>
           </div>

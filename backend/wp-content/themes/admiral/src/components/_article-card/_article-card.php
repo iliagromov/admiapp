@@ -10,6 +10,7 @@ $image = $fieldsACF["image-preview"];
 
 $blockPerson = $fieldsACF["block-person"];
 $blockAdvantages = $fieldsACF["block-advantages"];
+$blockDescripion = $fieldsACF["block-description"];
 $blockPrice = $fieldsACF["block-price"];
 
 // echo '<pre>';
@@ -67,9 +68,17 @@ $blockPrice = $fieldsACF["block-price"];
         endif;?>
         </ul>
 
+        <?php if(!empty($blockDescripion['title'])):?>
+          <h3 class="page__title-h3 page__title page_regular"><?php echo $blockDescripion['title']; ?></h3>
+        <?php endif;?>
+        <?php if(!empty($blockDescripion['description'])):?>
+          <div class="page__text"><?php echo $blockDescripion['description']; ?></div>
+        <?php endif;?>
 
-        <h3 class="page__title-h3 page__title page_regular"><?php echo $blockPrice['title']; ?></h3>
-        
+        <?php if(!empty($blockPrice['title'])):?>
+          <h3 class="page__title-h3 page__title page_regular"><?php echo $blockPrice['title']; ?></h3>
+        <?php endif;?>
+
         <div class="article-card__text-order">
           <?php 
           if(!empty($blockPrice['prices'])):

@@ -10,6 +10,9 @@
         "md": {
             "width": "1024px"
         },
+        "mmd": {
+            "width": "1440px"
+        },
         "lg": {
             "width": "1760px"
         }

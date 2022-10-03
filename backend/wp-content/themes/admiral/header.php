@@ -18,7 +18,8 @@ $fieldsACF =  [
     '_order-form',
     '_certificates',
     '_more-order',
-    '_prices'
+    '_prices',
+    '_block-html'
 ];
 ?>
 <!DOCTYPE html>
@@ -48,7 +49,7 @@ $fieldsACF =  [
       <div class="header-inner">
         <div class="header__logo">
           <a href="https://gromov-studio.ru/admiral/">
-            <img src="assets/images/png/main-page/logo-admiral-min.svg" alt="logo">
+            <img src="assets/images/png/main-page/logo-header-brown.png" alt="logo">
           </a>
         </div>
         <div class="header__nav">
@@ -63,7 +64,7 @@ $fieldsACF =  [
         <div class="header__phone">
           <div class="page-fl-aic">
             <div class="svg-phone svg-phone-box"></div>
-            <a class="page-link" href="tel:+7 (495) 222-02-23">+7 (495)222-02-23</a>
+            <a class="page-link" href="tel:+7 (499) 325-35-35">+7 (499) 325-35-35</a>
           </div>
         </div>
         <div class="header__menu">

@@ -61,15 +61,19 @@
             <div class="page__title page_regular page__title-h4">Контакты</div>
             <div class="page-fl-aic">
               <div class="svg-phone svg-phone-box"></div>
-              <a class="page-link" href="tel:+7 (495) 222-02-23">
-                +7 (495) 222-02-23</a>
+              <a class="page-link" href="tel:+7 (499) 325-35-35">
+              +7 (499) 325-35-35</a>
             </div>
             <div class="page-fl-aic">
               <div class="svg-mail-solid svg-mail-solid-box"></div>
               <a class="page-link"  href="mailto:event@club-admiral.com">event@club-admiral.com</a>
             </div>
-            <div class="page-fl-aic">Россия, Московская обл., Мытищинский р-н., Виноградовский СО, д. Грибки,</div>
-            <div class="page-fl-aic">ул. Адмиральская, вл. 1, стр.1</div>
+            <div class="page-fl-aic">
+              <div class="svg-home svg-home-box"></div> 
+              <p>Россия, Московская обл., Мытищинский р-н., Виноградовский СО, д. Грибки, ул. Адмиральская, вл. 1, стр.1</p>
+              
+            </div>
+            <div class="page-fl-aic"></div>
           </div>
         </div>
       </div>
@@ -79,7 +83,7 @@
         <div class="footer-inner">
           <div class="footer__logo">
             <a href="/">
-              <img src="assets/images/png/main-page/logo-admiral-min.svg" alt="logo">
+              <img src="assets/images/png/main-page/logo-admira-footer.svg" alt="logo">
             </a>  
           </div>
           <div class="footer__social">

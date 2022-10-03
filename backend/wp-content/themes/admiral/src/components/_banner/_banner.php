@@ -17,7 +17,7 @@ if (!empty($fieldACF) && $fieldACF["isShow"]) :
 ?>
   <section class="banner">
     <div class="banner_bg">
-      <img src="<?php echo $img ? $img : 'assets/images/png/main-page/Banner.png' ?>" alt="banner">
+      <img src="<?php echo $img ? $img : '' ?>" alt="banner">
     </div>
 
 

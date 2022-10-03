@@ -7,21 +7,29 @@
     color: inherit
 
     &-h1
-      font-size: 26px
+      font-size: 18px
       line-height: 120%
+      +sm-block
+        font-size: 26px
       +md-block
-        // font-size: 56px
+        font-size: 32px
+      +lg-block
         font-size: 42px
 
     &-h2
-      font-size: 36px
+      font-size: 18px
       line-height: 120%
+      +sm-block
+        font-size: 26px
       +md-block
-        font-size: 48px
+        font-size: 32px
 
     &-h3
-      font-size: 26px
       line-height: 150%
+      font-size: 18px
+      line-height: 120%
+      +sm-block
+        font-size: 26px
       color: $blue-500
 
     &-h4
@@ -31,9 +39,12 @@
       /* identical to box height, or 119% */
 
   &__text
-    font-size: 22px
+    
     line-height: 150%
     color: $braun-900
+    font-size: 14px
+    +md-block
+      font-size: 18px
 
 .page-fl-aic
   display: flex

@@ -8,8 +8,9 @@ if (!empty($bannerACF) && $bannerACF["isShow"]) :
    <section class="banner">
       <div class="banner_bg">
         <img src="assets/images/png/impressions/img-impressions-rest.png" alt="banner"></div>
-      <div class="wrapper">
         <div class="banner-inner banner-inner_left">
+        <div class="wrapper">
+        
           <div class="banner__title_left">
             <h1 class="page__title page_regular page__title-h1">
               Процедуры для расслабления

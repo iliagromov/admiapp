@@ -22,41 +22,50 @@
     .page-fl-aic
       margin-bottom: 16px
       color: $braun-900
+      font-size: 14px
+      line-height: 150%
       .page-link
         margin: 0
+
   &__col
     +col
     +size(6)
     +size-sm(3)
     +size-md(2)
-  &__contacts
-    +size(12)
+    &.footer__contacts
+      +size(12) 
+      +size-sm(3)
+      +size-md(3)
+      .page-fl-aic
+        p
+          width: 100%
+
 
   &__bottom
     padding-top: 40px
     border-top: 1px solid $braun-100
 
     .footer-inner
-      align-items: flex-end
+      align-items: center
       justify-content: space-between
 
   &__logo
     +col
-    +size(12)
+    +size(6)
     +size-md(4)
     display: flex
     align-items: flex-end
     img
       width: 153px
       height: 100px
-      object-fit: cover
+    
 
   &__copy
     color: $braun-900
     margin-left: 16px
   &__social
     +col
-    +size(12)
+    +size(6)
     +size-md(4)
     display: flex
     justify-content: flex-end

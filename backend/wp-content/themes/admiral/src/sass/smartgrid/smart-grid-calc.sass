@@ -4,18 +4,21 @@ $atom: (100% / $columns)
 $break_xs: 480px
 $break_sm: 768px
 $break_md: 1024px
+$break_mmd: 1440px
 $break_lg: 1760px
 
 $offset: 24px
 $offset_xs: $offset
 $offset_sm: $offset
 $offset_md: $offset
+$offset_mmd: $offset
 $offset_lg: $offset
 
 $offset_one_side: ($offset / 2)
 $offset_xs_one_side: ($offset_xs / 2)
 $offset_sm_one_side: ($offset_sm / 2)
 $offset_md_one_side: ($offset_md / 2)
+$offset_mmd_one_side: ($offset_mmd / 2)
 $offset_lg_one_side: ($offset_lg / 2)
 
 $fields: 24px
@@ -80,6 +83,10 @@ $fields: 24px
 =size-md($n)
     $val: 100% / $columns * $n
     +md(width, #{calc(#{$val} - #{$offset_md})})
+
+=size-mmd($n)
+    $val: 100% / $columns * $n
+    +mmd(width, #{calc(#{$val} - #{$offset_mmd})})
 
 =size-lg($n)
     $val: 100% / $columns * $n
@@ -189,6 +196,32 @@ $fields: 24px
     $val: 100% / $columns * $n
     +md(padding-right, #{calc(#{$val} + #{$offset_md_one_side})})
 
+=shift-mmd($n)
+    $val: 100% / $columns * $n
+    +mmd(margin-left, #{calc(#{$val} + #{$offset_mmd_one_side})})
+    +mmd(margin-right, #{calc(#{$val} + #{$offset_mmd_one_side})})
+
+=shift-mmd-left($n)
+    $val: 100% / $columns * $n
+    +mmd(margin-left, #{calc(#{$val} + #{$offset_mmd_one_side})})
+
+=shift-mmd-right($n)
+    $val: 100% / $columns * $n
+    +mmd(margin-right, #{calc(#{$val} + #{$offset_mmd_one_side})})
+
+=shift-mmd-padding($n)
+    $val: 100% / $columns * $n
+    +mmd(padding-left, #{calc(#{$val} + #{$offset_mmd_one_side})})
+    +mmd(padding-right, #{calc(#{$val} + #{$offset_mmd_one_side})})
+
+=shift-mmd-padding-left($n)
+    $val: 100% / $columns * $n
+    +mmd(padding-left, #{calc(#{$val} + #{$offset_mmd_one_side})})
+
+=shift-mmd-padding-right($n)
+    $val: 100% / $columns * $n
+    +mmd(padding-right, #{calc(#{$val} + #{$offset_mmd_one_side})})
+
 =shift-lg($n)
     $val: 100% / $columns * $n
     +lg(margin-left, #{calc(#{$val} + #{$offset_lg_one_side})})
@@ -237,6 +270,14 @@ $fields: 24px
 
 =md-block()
     @media screen and (min-width: $break_md)
+        @content
+
+=mmd($name, $value)
+    @media screen and (min-width: $break_mmd)
+        #{$name}: $value
+
+=mmd-block()
+    @media screen and (min-width: $break_mmd)
         @content
 
 =lg($name, $value)

@@ -438,8 +438,42 @@ add_action('init', function () {
 	]);
 });
 
+add_action('init', function () {
+
+	register_post_type('sales', [
+			'labels' => [
+					'name'               => 'Акции',
+					'singular_name'      => 'Акции',
+					'add_new'            => 'Add new',
+					'add_new_item'       => 'Add new Акцию',
+					'edit_item'          => 'Edit new Акцию',
+					'new_item'           => 'New Акция',
+					'view_item'          => 'View Акцию',
+					'search_items'       => 'Search Акцию',
+					'not_found'          => 'Акция not found',
+					'not_found_in_trash' => 'Акция not found in trash',
+					'parent_item_colon'  => '',
+					'menu_name'          => 'Акции'
+			],
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => [
+					'with_front' => true
+			]
+	]);
+});
+
+
 
 add_action( 'after_setup_theme', 'mywoo_add_woocommerce_support' );
 	function mywoo_add_woocommerce_support() {
 		add_theme_support( 'woocommerce' );
 	}
+
+	/**
+ * Registers an editor stylesheet for the theme.
+ */
+function wpdocs_theme_add_editor_styles() {
+    add_editor_style( 'custom-editor-style.css' );
+}
+add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );

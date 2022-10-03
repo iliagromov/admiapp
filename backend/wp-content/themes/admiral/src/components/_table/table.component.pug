@@ -1,0 +1,48 @@
+//-table
+mixin tableRow(props)
+  .table-block__row 
+    div #{props.title}
+    div 
+      ul
+        each lsit in props.lists
+          li #{lsit}
+    div #{props.price}
+
+mixin tabelRows(arr)
+  each row in arr
+    +tableRow(row)
+
+section.table
+  .wrapper
+    .table-inner
+      .table-block
+        <table width="100%">
+          <tbody>
+            <tr><td><strong>Вместимость</strong>:</td><td>Для дневной прогулки или банкета&nbsp; — 15 чел</td></tr><tr><td>&nbsp;</td><td>Для ночлега и отдыха — 3 каюты и сауна</td></tr><tr><td><strong>Стоимость:</strong></td><td>1 час — 35 000&nbsp;руб./час</td></tr><tr><td>&nbsp;</td><td>Свыше 4-х часов — 30 000 руб./час</td></tr><tr><td>&nbsp;</td><td>Свыше 6-и часов — 25 000 руб./ час</td></tr><tr><td>&nbsp;</td><td>Одни сутки (24 часа) — 350 000 руб.</td></tr><tr><td>&nbsp;</td><td>Свыше одних суток — 300 000 руб./ сутки</td></tr></tbody></table>
+        .table-block__head
+          .table-block__row 
+            div Название
+            div Услуги
+            div Цена
+        .table-block__body
+          +tabelRows([
+            {
+              title: 'Название1',
+              lists: [
+                'Охраняемая стоянка у причала на воде',
+                'Подключение электроэнергии и воды',
+                'Встреча при отходе/подходе при швартовке',
+                'Хранение прицепа',
+                'Пользование инфраструктурой клуба включая бассейны',
+              ],
+              price: '10000 руб.'
+            },
+             {
+              title: 'Название1',
+              lists: [
+                'Охраняемая стоянка у причала на воде',
+              ],
+              price: '10000 руб.'
+            },
+          ])
+         

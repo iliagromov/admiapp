@@ -1,0 +1,24 @@
+/*table*/
+.table
+  &-inner
+    +row-flex
+  &-block
+    width: 100%
+    border: 1px solid $braun-900
+    
+    &__head
+      
+    &__body
+      .table-block__row
+        &:last-child
+          border-bottom:  none
+    &__row
+      display: flex
+      border-bottom: 1px solid $braun-900
+    
+      div
+        width: 33%
+        
+        border-right:  1px solid $braun-900
+        &:last-child
+           border-right:  none

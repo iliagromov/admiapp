@@ -4,8 +4,6 @@
   +col
   +size(12)
   margin-bottom: 64px
-  .page__title-h3
-    font-size: 22px
   &__img
     +size(12)
     +size-md(6)
@@ -68,7 +66,8 @@
         img
           margin-right: 10px
   &-container
-    +row-flex
+    display: flex
+    flex-wrap: wrap
     
     text-decoration: none
 
@@ -156,28 +155,18 @@ $heightBanner: calc(100vh - 100px)
       background: rgba(0,0,0, 0.3)
     img
       width: 100%
-      object-fit: contain
+      // object-fit: contain 
       +md-block
         height: $heightBanner
       // object-fit: cover
   &__title
     &_bottom
-      .page__title
-        +to($break_sm)
-          font-size: 18px
-      .page__text 
-        +to($break_sm)
-          font-size: 14px
+      
       +md-block
         width: 85%
         margin: 0 auto
     &_left
-      .page__title
-        +to($break_sm)
-          font-size: 18px
-      .page__text 
-        +to($break_sm)
-          font-size: 14px
+      max-width: 50%
       .page__title-h1
         color: $color_white
         margin-bottom: 24px
@@ -336,6 +325,7 @@ $heightBanner: calc(100vh - 100px)
 /*callback*/
 .callback
   padding: 30px 0
+  width: 100%
   +md-block
     padding: 60px 0
 
@@ -462,7 +452,6 @@ $heightBanner: calc(100vh - 100px)
       margin-bottom: 16px
 
     .page__text
-      font-size: 18px
       line-height: 150%
       margin-bottom: 16px
       +md-block
@@ -485,7 +474,7 @@ $heightBanner: calc(100vh - 100px)
   &__card
     +col
     +size(12)
-    +size-md(5.3)
+    +size-md(5)
     &:nth-child(2)
       
       .info-block-certificates-card
@@ -500,12 +489,10 @@ $heightBanner: calc(100vh - 100px)
     flex-direction: column
     .page__title
       margin-bottom: 25px
-      font-size: 26px
-      line-height: 150%
+      
       padding-right: 26px
     .page__text
       margin-bottom: 50px
-      font-size: 20px
       +md-block
         padding-left: 24px
     .page-link
@@ -522,17 +509,27 @@ $heightBanner: calc(100vh - 100px)
     justify-content: center
   &-container
     +col
-    +size(6)
+    +size(12)
+    +size-md(6)
     background: #FFFFFF
     border: 1px solid #F5F0EB
     box-shadow: 0px 0px 15px rgba(1, 39, 104, 0.1)
     border-radius: 10px
     display: flex
+    flex-wrap: wrap
+    text-align: center
     align-items: center
-    justify-content: space-around
     padding: 24px
     box-sizing: border-box
+    justify-content: center
+    +md-block
+      justify-content: space-around
     &__price
+      width: 100%
+      margin-bottom: 20px
+      +md-block
+        width: auto
+        margin-bottom: 0
       .price
         span
           font-size: 14px
@@ -544,7 +541,7 @@ $heightBanner: calc(100vh - 100px)
         margin-bottom: 0 !important
 
     &__btn
-
+      width: auto
       .page-btn
         display: flex
         align-items: center
@@ -701,23 +698,14 @@ $heightBanner: calc(100vh - 100px)
         margin-top: 100px
       +shift-left(1)
       .page__title
-        font-size: 22px
         color: $color_white
         background-color: rgba(0,0,0,0.5)
         display: inline
-        +md-block
-          font-size: 36px
       .price
         color: #fff
-        font-size: 18px
-        line-height: 26px
-        +md-block
-          font-size: 26px
-          line-height: 150%
         background-color: rgba(0,0,0,0.5)
         display: inline
-        span
-          font-size: 18px
+
     &__img
       position: relative
       display: flex
@@ -761,6 +749,30 @@ $heightBanner: calc(100vh - 100px)
 
 .slider-banner
 
+/*table*/
+.table
+  &-inner
+    +row-flex
+  &-block
+    width: 100%
+    border: 1px solid $braun-900
+    
+    &__head
+      
+    &__body
+      .table-block__row
+        &:last-child
+          border-bottom:  none
+    &__row
+      display: flex
+      border-bottom: 1px solid $braun-900
+    
+      div
+        width: 33%
+        
+        border-right:  1px solid $braun-900
+        &:last-child
+           border-right:  none
 /*cuisine*/
 /*cuisine-advantages*/
 .cuisine-advantages
@@ -931,41 +943,50 @@ $heightBanner: calc(100vh - 100px)
     .page-fl-aic
       margin-bottom: 16px
       color: $braun-900
+      font-size: 14px
+      line-height: 150%
       .page-link
         margin: 0
+
   &__col
     +col
     +size(6)
     +size-sm(3)
     +size-md(2)
-  &__contacts
-    +size(12)
+    &.footer__contacts
+      +size(12) 
+      +size-sm(3)
+      +size-md(3)
+      .page-fl-aic
+        p
+          width: 100%
+
 
   &__bottom
     padding-top: 40px
     border-top: 1px solid $braun-100
 
     .footer-inner
-      align-items: flex-end
+      align-items: center
       justify-content: space-between
 
   &__logo
     +col
-    +size(12)
+    +size(6)
     +size-md(4)
     display: flex
     align-items: flex-end
     img
       width: 153px
       height: 100px
-      object-fit: cover
+    
 
   &__copy
     color: $braun-900
     margin-left: 16px
   &__social
     +col
-    +size(12)
+    +size(6)
     +size-md(4)
     display: flex
     justify-content: flex-end
@@ -995,13 +1016,11 @@ $heightBanner: calc(100vh - 100px)
         a
             display: flex
         img
-            transform: scale(1.2)
+            // transform: scale(1.2)
             max-width: 152px
             max-height: 100px
             width: 100%
             object-fit: cover
-            +md-block
-                transform: scale(1)
     &__nav
         +col
         // +size(4)
@@ -1066,8 +1085,10 @@ $heightBanner: calc(100vh - 100px)
       &-img
         display: flex
         overflow: hidden
-        height: 370px
-        width: 370px
+        max-height: 370px
+        max-width: 370px
+        height: 100%
+        width: 100%
         border-radius: 20px
         margin-bottom: 8px
         img
@@ -1226,6 +1247,9 @@ $heightBanner: calc(100vh - 100px)
     font-size: 14px
     line-height: 150%
 /*single-bath-page*/
+.fancybox__caption
+  font-size: 20px
+
 .single-bath-page
   &-inner
     .page__title
@@ -1248,6 +1272,7 @@ $heightBanner: calc(100vh - 100px)
 
     .single-bath-page__img-box
       display: flex
+      position: relative
       &:first-child
         grid-area: 1 / 1 / 3 / 3
       &:nth-child(2)
@@ -1255,8 +1280,10 @@ $heightBanner: calc(100vh - 100px)
       &:nth-child(3)
         grid-area: 1 / 4 / 2 / 5
       &:nth-child(4)
-        grid-area: 2 / 4 / 3 / 5
-        position: relative
+        grid-area: 2 / 3 / 3 / 5
+
+      &:nth-child(5)
+        grid-area: 2 / 4 / 3 / 4
         &::after
           font-size: 26px
           line-height: 140%
@@ -1273,15 +1300,12 @@ $heightBanner: calc(100vh - 100px)
           color: #fff
           background-color: rgba(0, 0, 0, 0.2)
           border-radius: 40px
-      &:nth-child(5)
-        grid-area: 2 / 3 / 3 / 4 
-        
 
       &:nth-child(n+6)
         display: none
       &:nth-child(n+2)
         max-width: 350px
-        
+
       img
         object-fit: cover
         border-radius: 40px
@@ -1302,6 +1326,38 @@ $heightBanner: calc(100vh - 100px)
     padding: 24px 0
     .page__title-h3
       margin-bottom: 24px
+    &__blocks
+      +row-flex
+      .single-bath-page-advantage
+        +col
+        +size(6)
+        +size-sm(6)
+        +size-md(3)
+        max-width: 187.25px
+        margin-bottom: 15px
+        border: 1px solid #E5D8CE
+        border-radius: 10px
+        padding: 16px
+
+        &__icons
+          margin-bottom: 8px
+          img
+            width: 24px
+            height: 24px
+
+        &__title
+          .page__title-h6
+            font-weight: bold
+            font-size: 14px
+            line-height: 150%
+            margin-bottom: 8px
+            color: #8D6141
+
+        &__text
+          .page__text
+            font-size: 14px
+            line-height: 150%
+
     &__lists
       +row-flex
       .page__title
@@ -1318,9 +1374,6 @@ $heightBanner: calc(100vh - 100px)
           +size(12)
           +size-md(4)
 
-
-
-
   &-description
     width: 100%
     padding-bottom: 100px
@@ -1331,6 +1384,13 @@ $heightBanner: calc(100vh - 100px)
       +size-md(10)
       font-size: 16px
       line-height: 150%
+    ul
+      padding-left: 25px
+      margin-bottom: 20px
+      li
+        list-style: disc
+    p
+      margin-bottom: 20px
 
   &-more-order
     width: 100%
@@ -1375,32 +1435,32 @@ $heightBanner: calc(100vh - 100px)
         +size-md(4)
 
 .page-ul
-    +col
-    display: flex
-    flex-wrap: wrap
+  +col
+  display: flex
+  flex-wrap: wrap
 
-    > li
-      flex-direction: column
-      align-items: flex-start
+  > li
+    flex-direction: column
+    align-items: flex-start
 
-      color: #8D6141
-      font-size: 16px
-      font-weight: bold
-      img
-        max-width: 55px
-        max-height: 55px
-        margin: 5px
-      ul
-        padding-top: 20px
-        padding-left: 4px
-        li
-          font-weight: normal
-          display: flex
-          align-items: center
-          padding-bottom: 15px
-          box-sizing: border-box
-          .page__text
-            font-size: 16px
+    color: #8D6141
+    font-size: 16px
+    font-weight: bold
+    img
+      max-width: 55px
+      max-height: 55px
+      margin: 5px
+    ul
+      padding-top: 20px
+      padding-left: 4px
+      li
+        font-weight: normal
+        display: flex
+        align-items: center
+        padding-bottom: 15px
+        box-sizing: border-box
+        .page__text
+          font-size: 16px
 
 /*social*/
 .social

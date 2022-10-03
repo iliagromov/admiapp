@@ -55,7 +55,7 @@ if (!empty($fieldACF) && $fieldACF["isShow"]) :
             wp_reset_postdata(); ?>
           </div>
         </div>
-        <div class="review__link"><a class="page-link page-link_arrow" href="">Все отзывы<div class="svg-cheveron-right svg-cheveron-right-box"></div></a></div>
+        <div class="review__link"><a class="page-link page-link_arrow" href="https://gromov-studio.ru/admiral/review/">Все отзывы<div class="svg-cheveron-right svg-cheveron-right-box"></div></a></div>
       </div>
     </div>
   </section>

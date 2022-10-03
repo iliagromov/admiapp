@@ -1,5 +1,6 @@
 <?php
-$articles = get_field('_slider-banner');
+$fieldACF = get_field('_slider-banner');
+$fieldsACF = get_fields();
 $all_posts = get_posts(array(
   'numberposts' => -1,
   'category'    => 0,
@@ -13,9 +14,9 @@ $all_posts = get_posts(array(
   'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
 ));
 
-$posts =  $articles['_slides'] ? $articles['_slides'] : $all_posts;
+$posts =  $fieldACF['_slides'] ? $fieldACF['_slides'] : $all_posts;
 // echo '<pre>';
-// var_dump($articles['slides']);
+// var_dump($fieldACF);
 // echo '</pre>';
 if (!empty($fieldACF) && $fieldACF["isShow"]) :
 ?>
@@ -42,7 +43,7 @@ if (!empty($fieldACF) && $fieldACF["isShow"]) :
                   <?php echo $title; ?>
                 </div>
                 <br>
-                <div class="price">
+                <div class="page__text price">
                   <span>
                     <?php echo $text; ?>
                   </span>

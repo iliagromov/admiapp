@@ -13,7 +13,7 @@
 				<div class="tabs" id="tabs">
 					<div class="tav-nav">
 						<div class="tab-link is-active">
-							<div class="page-link">Программы до 6 часов</div>
+							<div class="page-link">Программы до 8 часов</div>
 						</div>
 						<div class="tab-link">
 							<div class="page-link">Программы на сутки</div>

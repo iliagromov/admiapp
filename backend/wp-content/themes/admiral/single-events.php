@@ -9,7 +9,7 @@ $moreOrder = $singleBlockACF["more-order"];
 $information = $singleBlockACF["information"];
 
 ?>
-<!-- single -->
+<!-- single events-->
 
 <main class="page">
   <section class="single-bath-page">
@@ -20,7 +20,13 @@ $information = $singleBlockACF["information"];
         </h3>
 
         <?php include(TEMPLATEPATH . "/src/components/single-bath-page/_single-bath-page-img.php"); ?>
+        <div class="single-bath-page-description">
 
+          <h3 class="page__title-h3 page__title page_regular">Описание</h3>
+          <div class="page__text">
+            <?php the_content() ?>
+          </div>
+        </div>
         <?php /*advantages*/
         if ($advantages['isShow']) :
         ?>
@@ -98,13 +104,7 @@ $information = $singleBlockACF["information"];
         endif;
         /*advantages*/ ?>
 
-        <div class="single-bath-page-description">
-
-          <h3 class="page__title-h3 page__title page_regular">Описание</h3>
-          <div class="page__text">
-            <?php the_content() ?>
-          </div>
-        </div>
+       
 
         <?php
         /*$moreOrder*/
@@ -199,7 +199,7 @@ $information = $singleBlockACF["information"];
         endif;
         /*$information*/ ?>
         <?php include(TEMPLATEPATH . "/src/components/_order-form/_order-form.php"); ?>
-        <?php include(TEMPLATEPATH . "/src/components/_callback/_callback.php"); ?>
+        <?php include(TEMPLATEPATH . "/src/components/_callback-2/_callback-2.php"); ?>
       </div>
     </div>
   </section>

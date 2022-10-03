@@ -36,28 +36,18 @@ $heightBanner: calc(100vh - 100px)
       background: rgba(0,0,0, 0.3)
     img
       width: 100%
-      object-fit: contain
+      // object-fit: contain 
       +md-block
         height: $heightBanner
       // object-fit: cover
   &__title
     &_bottom
-      .page__title
-        +to($break_sm)
-          font-size: 18px
-      .page__text 
-        +to($break_sm)
-          font-size: 14px
+      
       +md-block
         width: 85%
         margin: 0 auto
     &_left
-      .page__title
-        +to($break_sm)
-          font-size: 18px
-      .page__text 
-        +to($break_sm)
-          font-size: 14px
+      max-width: 50%
       .page__title-h1
         color: $color_white
         margin-bottom: 24px

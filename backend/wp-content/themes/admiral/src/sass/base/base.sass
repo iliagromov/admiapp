@@ -3,7 +3,11 @@
 /* __base__ */
 .wrapper
   +wrapper()
-  +md-block
+  +to($break_mmd)
+    max-width: 1100px
+    padding-left: 24px
+    padding-right: 24px
+  +mmd-block
     padding-left: 24px
     padding-right: 24px
     
@@ -32,6 +36,8 @@ body
   // background: #ccc
   // margin: 0
 
+strong
+  font-weight: bold
 a, button
   cursor: pointer
   &:focus
