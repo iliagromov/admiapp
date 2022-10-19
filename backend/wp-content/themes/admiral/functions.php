@@ -30,6 +30,31 @@ if (is_admin()) {
 	include('configure/admin.php');
 }
 
+define('THEME_JS', get_template_directory_uri() . '/js');
+define('THEME_NONCE', '_admiral');
+
+
+// Подключаем скрипты
+add_action('wp_enqueue_scripts', 'theme_scripts');
+function theme_scripts() {
+	 wp_deregister_script('jquery');
+
+    wp_register_script('jquery', get_template_directory_uri() . '/js/jquery-3.3.1.min.js', [], '3.3.1', true);
+    wp_enqueue_script('jquery');
+
+		wp_enqueue_script('inputmask', THEME_JS  . '/jquery.inputmask.js', [], null, true);
+		wp_enqueue_script('binding', THEME_JS  . '/inputmask.binding.js', [], null, true);
+
+    wp_enqueue_script('ajax-form', THEME_JS  . '/ajax-form.min.js', [], null, true);
+    
+   
+		wp_localize_script( 'ajax-form', 'ajax_form_object', array(
+			'url'   => admin_url( 'admin-ajax.php' ),
+			'nonce' => wp_create_nonce( 'ajax-form-nonce' ),
+		) );
+}
+
+
 add_action('after_setup_theme', function () {
 	register_nav_menu('headerNavigation', 'Header navigation');
 	register_nav_menu('menuNavigation', 'Catalog navigation');
@@ -50,8 +75,10 @@ function wp_nav_custom_menu($menu_name)
 
 		$menu_list = '' . "\n";
 		foreach ((array) $menu_items as $key => $menu_item) {
-
-			$title = $menu_item->title;
+			// echo '<pre>';
+			// var_dump($menu_item);
+			// echo '</pre>';
+			$title = $menu_item->post_title ? $menu_item->post_title : $menu_item->title;
 			$url = $menu_item->url;
 			$menu_list .= "\t\t\t\t\t" . '<a class="page-link" href="' . $url . '">' . $title . '</a>' . "\n";
 		}
@@ -477,3 +504,104 @@ function wpdocs_theme_add_editor_styles() {
     add_editor_style( 'custom-editor-style.css' );
 }
 add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
+
+add_action( 'wp_ajax_ajax_form_action', 'ajax_action_callback' );
+add_action( 'wp_ajax_nopriv_ajax_form_action', 'ajax_action_callback' );
+
+function ajax_action_callback() {
+
+	// Массив ошибок
+	$errors = [];
+
+	// Если не прошла проверка nonce, то блокируем отправку
+	if ( !wp_verify_nonce( $_POST['nonce'], 'ajax-form-nonce' ) ) {
+		wp_die( 'Данные отправлены с некорректного адреса' );
+	}
+
+	// Проверяем на спам. Если скрытое поле заполнено или снят чек, то блокируем отправку
+	if ( $_POST['form_anticheck'] === false || !empty( $_POST['form_submitted'] ) ) {
+		wp_die( 'bye' );
+	}
+
+
+	// Проверяем поле имени, если пустое, то пишем сообщение в массив ошибок
+	if ( empty( $_POST['form_name'] ) || !isset( $_POST['form_name'] ) ) {
+		$errors['name'] = 'Пожалуйста, введите ваше имя.';
+	} else {
+		$form_name = sanitize_text_field( $_POST['form_name'] );
+	}
+
+	// Проверяем поле ввода телефона, если пустое, то пишем сообщение в массив ошибок
+	if ( empty( $_POST['form_tel'] ) || !isset( $_POST['form_tel'] ) ) {
+		$errors['tel'] = 'Пожалуйста, введите номер телефона';
+	} else {
+		$form_tel = sanitize_text_field( $_POST['form_tel'] );
+	}
+
+
+	// Проверяем массив ошибок, если не пустой, то передаем сообщение. Иначе отправляем письмо
+	if ( $errors ) {
+
+		wp_send_json_error( $errors );
+
+	} else {
+
+		// Узнаем с какого сайта пришло письмо
+		$home_url = wp_parse_url( home_url() );
+		$subject = 'Письмо с сайта ' . $home_url['host'];
+
+		// Указываем адресаты
+		$email_to = 'ilia.workproffile@gmail.com';
+		$email_to2 = 'admiralbany2022@gmail.com';
+		$email_to3 = 'admiralwebs@yandex.ru';
+
+		$email_from = get_option( 'admin_email' );
+		$url = $_POST['url'];
+		$utm = $_POST['utm'];
+
+		// Собираем письмо
+		$body  = 'Имя: ' . $form_name . '<br> Телефон: ' . $form_tel . '<br> Ссылка:' . $url . '<br> UTM:' . $utm;
+
+		$headers = array('Content-Type: text/html; charset=UTF-8');
+		// $headers = 'From: ' . $home_url['host'] . ' <' . $email_from . '>' . "\r\n" . 'Reply-To: ' . $email_from;
+
+		// Отправляем
+		wp_mail( $email_to, $subject, $body, $headers );
+		wp_mail( $email_to2, $subject, $body, $headers );
+		wp_mail( $email_to3, $subject, $body, $headers );
+		// wp_mail( $email_to, $subject, $body, $headers );
+
+		// Отправляем сообщение об успешной отправке
+		$message_success = 'Собщение отправлено. В ближайшее время мы с вами свяжемся';
+		wp_send_json_success( $message_success );
+	}
+
+	// Убиваем процесс ajax
+	wp_die();
+
+}
+
+// Ajax-отправка формы обратной связи
+// add_action('wp_ajax_order', 'orderFormHandler');
+// add_action('wp_ajax_nopriv_order', 'orderFormHandler');
+
+// function orderFormHandler() {
+//     if(!wp_verify_nonce($_POST['_wpnonce'], THEME_NONCE))
+//         die('Stop hacker!');
+
+//     $name = sanitize_text_field($_POST['Name']);
+//     $phone = sanitize_text_field($_POST['Phone']);
+//     $email = sanitize_email($_POST['Email']);
+  
+//     $to = 'ilia.workproffile@gmail.com';
+//     $subject = 'Форма обратного звонка';
+//     $body = 'ФИО: '.$name.' <br> Телефон: '.$phone.' <br> Email: '.$email;
+//     $headers = array('Content-Type: text/html; charset=UTF-8');
+
+// 		wp_mail( $to, $subject, $body, $headers );
+// 		wp_send_json_success([
+// 				'message' => 'Спасибо за заявку!',
+// 				'data'    => 'main',
+// 				'utm'     => 'main',
+// 		]);
+// }

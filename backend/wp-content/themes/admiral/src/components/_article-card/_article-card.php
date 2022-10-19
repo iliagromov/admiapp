@@ -12,19 +12,19 @@ $blockPerson = $fieldsACF["block-person"];
 $blockAdvantages = $fieldsACF["block-advantages"];
 $blockDescripion = $fieldsACF["block-description"];
 $blockPrice = $fieldsACF["block-price"];
+$isLink = $blockDescripion["isLink"];
 
 // echo '<pre>';
 // var_dump($blockPerson);
 // echo '</pre>';
 ?>
   <div class="article-card">
-    <a href="<?php the_permalink(); ?>">
+    <a href="<?php echo $isLink ? the_permalink() : 'javascript:void(0)'; ?>">
 
-    <h3 class="page__title-h3 page__title page_regular"><?php the_title(); ?></h3>
+      <h3 class="page__title-h3 page__title page_regular"><?php the_title(); ?></h3>
     </a>
     
-    <a class="article-card-container" href="<?php the_permalink(); ?>">
-      
+    <a class="article-card-container" href="<?php echo $isLink ? the_permalink() : 'javascript:void(0)'; ?>">
       <div class="article-card__img">
         <img src="<?php echo $image ? $image : 'assets/images/png/archive-bath/spa-item-1.png' ?>" alt="article-image">
       </div>
@@ -95,7 +95,7 @@ $blockPrice = $fieldsACF["block-price"];
         endif;?>
         </div>
 
-        <div class="page-btn page-btn_outline">Забронировать</div>
+        <button class="page-btn page-btn_outline js-open-modal js-get-utm" data-modal='modalCallback' data-utm="<?php the_title(); ?>" >Забронировать</button>
       
       </div>
 

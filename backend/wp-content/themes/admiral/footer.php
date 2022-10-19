@@ -66,7 +66,7 @@
             </div>
             <div class="page-fl-aic">
               <div class="svg-mail-solid svg-mail-solid-box"></div>
-              <a class="page-link"  href="mailto:event@club-admiral.com">event@club-admiral.com</a>
+              <a class="page-link"  href="mailto:info@club-admiral.com">info@club-admiral.com</a>
             </div>
             <div class="page-fl-aic">
               <div class="svg-home svg-home-box"></div> 
@@ -75,15 +75,11 @@
             </div>
             <div class="page-fl-aic"></div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <div class="wrapper">
-        <div class="footer-inner">
+          <div class="footer__col footer__bottom">
           <div class="footer__logo">
             <a href="/">
-              <img src="assets/images/png/main-page/logo-admira-footer.svg" alt="logo">
+              <img src="assets/images/png/main-page/logo-footer.png" alt="logo">
+              <!-- <img src="assets/images/png/main-page/logo-footer.svg" alt="logo"> -->
             </a>  
           </div>
           <div class="footer__social">
@@ -91,27 +87,34 @@
               <div class="svg-globe-solid svg-globe-solid-box"></div>
               <p class="page__text">Русский (RU)</p>
             </div>
-            <div class="social"><a class="social-link" href="">
+            <div class="social">
+              <a class="social-link" href="https://vk.com/yacht_club_admiral" target="_blank">
+                <div class="svg-vk svg-vk-box"></div>
+              </a>
+              <a class="social-link"  href="https://wa.me/79895793606" target="_blank">
                 <div class="svg-watsapp svg-watsapp-box"></div>
-              </a><a class="social-link" href="">
-                <div class="svg-telegramm svg-vk svg-box"></div>
-              </a><a class="social-link" href="">
+              </a>
+              <a class="social-link" href="https://t.me/admiral_yacht_club" target="_blank">
                 <div class="svg-telegramm svg-telegramm-box"></div>
-              </a></div>
+              </a>
+
+            </div>
+          </div>
           </div>
         </div>
       </div>
     </div>
   </footer>
+  <?php include(TEMPLATEPATH . "/src/components/modal/modal.php"); ?>
+  <div class="overlay js-overlay-modal"></div>
   <link rel="stylesheet" href="css/styles-calc.css" type="text/css">
   <link rel="stylesheet" href="css/styles-sprites.css" type="text/css">
+  <script src="libs/js/_all/modal.js"></script>
   <script src="libs/js/_all/swiper-bundle.min.js"></script>
   <script src="libs/js/_all/store-scroll.js"></script>
   <script src="libs/js/_all/tabs.js"></script>
   <script src="libs/js/_all/fancybox.umd.js"></script>
   <script src="js/main.js"></script>
-  <script src="/js/debuggrid/debuggrid.component.js"></script>
-  <script src="/js/header/header.component.js"></script>
   
   <script src="js/menu/menu.component.js"></script>
 	<?php wp_footer(); ?>

@@ -1,10 +1,12 @@
 <?php
 $fieldACF = get_field('_order-form');
 if (!empty($fieldACF) && $fieldACF["isShow"]) :
-$shortcode = $fieldACF['shortcode'];
-$payments = $fieldACF['payments'];
-$price = $payments['price'];
-$hour = $payments['hour'];
+  $shortcode = $fieldACF['shortcode'];
+  $payments = $fieldACF['payments'];
+  $price = $payments['price'];
+  $hour = $payments['hour'];
+  $isLink = $payments['isLink'];
+  $link = $payments['link'];
 
 ?>
   <!--_order-form-->
@@ -18,7 +20,11 @@ $hour = $payments['hour'];
             </div>
           </div>
           <div class="order-form-container__btn">
-            <a class="page-btn" href="">Забронировать </a>
+            <?php if ($isLink) : ?>
+              <a class="page-btn" href="<?php echo $link; ?>" target="_blank">Забронировать </a>
+            <?php else : ?>
+              <a class="page-btn js-open-modal" data-modal='modalCallback' href="">Забронировать </a>
+            <?php endif; ?>
           </div>
         </div>
       </div>

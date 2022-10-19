@@ -72,6 +72,9 @@ if (!empty($blockACF) && $blockACF["isShow"]) : ?>
           <div class="images-menu-items">
             <?php
             if (!empty($fields['_articles'])) {
+              // echo '<pre>';
+              // var_dump($fields['_articles']);
+              // echo '</pre>';
               foreach ($fields['_articles'] as $post) {
                 setup_postdata($post);
                 include(TEMPLATEPATH . "/src/components/_article-card/_article-card.php");

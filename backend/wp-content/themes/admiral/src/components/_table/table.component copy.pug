@@ -1,0 +1,46 @@
+//-table
+mixin tableRow(props)
+  .table-block__row 
+    div #{props.title}
+    div 
+      ul
+        each lsit in props.lists
+          li #{lsit}
+    div #{props.price}
+
+mixin tabelRows(arr)
+  each row in arr
+    +tableRow(row)
+
+section.table
+  .wrapper
+    .table-inner
+      h2.page__title-h2 Стоимость стоянки катеров, яхт, гидроциклов
+      .table-block
+        .table-block__head
+          .table-block__row 
+            div Название
+            div Услуги
+            div Цена
+        .table-block__body
+          +tabelRows([
+            {
+              title: 'Название1',
+              lists: [
+                'Охраняемая стоянка у причала на воде',
+                'Подключение электроэнергии и воды',
+                'Встреча при отходе/подходе при швартовке',
+                'Хранение прицепа',
+                'Пользование инфраструктурой клуба включая бассейны',
+              ],
+              price: '10000 руб.'
+            },
+             {
+              title: 'Название1',
+              lists: [
+                'Охраняемая стоянка у причала на воде',
+              ],
+              price: '10000 руб.'
+            },
+          ])
+         

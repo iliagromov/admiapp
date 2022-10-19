@@ -1,0 +1,52 @@
+2022-10-06T13:40:29+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Post as array in /home/hp/Projects/admiral.io/backend/wp-content/themes/admiral/functions.php:57
+Stack trace:
+#0 /home/hp/Projects/admiral.io/backend/wp-content/themes/admiral/header.php(59): wp_nav_custom_menu()
+#1 /home/hp/Projects/admiral.io/backend/wp-includes/template.php(770): require_once('/home/hp/Projec...')
+#2 /home/hp/Projects/admiral.io/backend/wp-includes/template.php(716): load_template()
+#3 /home/hp/Projects/admiral.io/backend/wp-includes/general-template.php(48): locate_template()
+#4 /home/hp/Projects/admiral.io/backend/wp-content/themes/admiral/templates/pageTemplate.php(5): get_header()
+#5 /home/hp/Projects/admiral.io/backend/wp-includes/template-loader.php(106): include('/home/hp/Projec...')
+#6 /home/hp/Projects/admiral.io/backend/wp-blog-header.php(19): require_once('/home/hp/Projec...')
+#7 /home/hp/Projects/admiral.io/backend/index.php(17): require('/home/hp/Projec...')
+#8 {main}
+  thrown in /home/hp/Projects/admiral.io/backend/wp-content/themes/admiral/functions.php on line 57
+
+2022-10-06T14:30:15+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Post as array in /home/hp/Projects/admiral.io/backend/wp-content/themes/admiral/functions.php:56
+Stack trace:
+#0 /home/hp/Projects/admiral.io/backend/wp-content/themes/admiral/header.php(59): wp_nav_custom_menu()
+#1 /home/hp/Projects/admiral.io/backend/wp-includes/template.php(770): require_once('/home/hp/Projec...')
+#2 /home/hp/Projects/admiral.io/backend/wp-includes/template.php(716): load_template()
+#3 /home/hp/Projects/admiral.io/backend/wp-includes/general-template.php(48): locate_template()
+#4 /home/hp/Projects/admiral.io/backend/wp-content/themes/admiral/templates/pageTemplate.php(5): get_header()
+#5 /home/hp/Projects/admiral.io/backend/wp-includes/template-loader.php(106): include('/home/hp/Projec...')
+#6 /home/hp/Projects/admiral.io/backend/wp-blog-header.php(19): require_once('/home/hp/Projec...')
+#7 /home/hp/Projects/admiral.io/backend/index.php(17): require('/home/hp/Projec...')
+#8 {main}
+  thrown in /home/hp/Projects/admiral.io/backend/wp-content/themes/admiral/functions.php on line 56
+
+2022-10-06T14:30:19+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Post as array in /home/hp/Projects/admiral.io/backend/wp-content/themes/admiral/functions.php:56
+Stack trace:
+#0 /home/hp/Projects/admiral.io/backend/wp-content/themes/admiral/header.php(59): wp_nav_custom_menu()
+#1 /home/hp/Projects/admiral.io/backend/wp-includes/template.php(770): require_once('/home/hp/Projec...')
+#2 /home/hp/Projects/admiral.io/backend/wp-includes/template.php(716): load_template()
+#3 /home/hp/Projects/admiral.io/backend/wp-includes/general-template.php(48): locate_template()
+#4 /home/hp/Projects/admiral.io/backend/wp-content/themes/admiral/templates/pageTemplate.php(5): get_header()
+#5 /home/hp/Projects/admiral.io/backend/wp-includes/template-loader.php(106): include('/home/hp/Projec...')
+#6 /home/hp/Projects/admiral.io/backend/wp-blog-header.php(19): require_once('/home/hp/Projec...')
+#7 /home/hp/Projects/admiral.io/backend/index.php(17): require('/home/hp/Projec...')
+#8 {main}
+  thrown in /home/hp/Projects/admiral.io/backend/wp-content/themes/admiral/functions.php on line 56
+
+2022-10-06T14:30:27+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Post as array in /home/hp/Projects/admiral.io/backend/wp-content/themes/admiral/functions.php:56
+Stack trace:
+#0 /home/hp/Projects/admiral.io/backend/wp-content/themes/admiral/header.php(59): wp_nav_custom_menu()
+#1 /home/hp/Projects/admiral.io/backend/wp-includes/template.php(770): require_once('/home/hp/Projec...')
+#2 /home/hp/Projects/admiral.io/backend/wp-includes/template.php(716): load_template()
+#3 /home/hp/Projects/admiral.io/backend/wp-includes/general-template.php(48): locate_template()
+#4 /home/hp/Projects/admiral.io/backend/wp-content/themes/admiral/templates/pageTemplate.php(5): get_header()
+#5 /home/hp/Projects/admiral.io/backend/wp-includes/template-loader.php(106): include('/home/hp/Projec...')
+#6 /home/hp/Projects/admiral.io/backend/wp-blog-header.php(19): require_once('/home/hp/Projec...')
+#7 /home/hp/Projects/admiral.io/backend/index.php(17): require('/home/hp/Projec...')
+#8 {main}
+  thrown in /home/hp/Projects/admiral.io/backend/wp-content/themes/admiral/functions.php on line 56
+

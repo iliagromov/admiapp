@@ -19,7 +19,8 @@ $fieldsACF =  [
     '_certificates',
     '_more-order',
     '_prices',
-    '_block-html'
+    '_block-html',
+    '_table'
 ];
 ?>
 <!DOCTYPE html>
@@ -36,20 +37,44 @@ $fieldsACF =  [
   <link rel="stylesheet" href="libs/css/fancybox.css" type="text/css">
   <link rel="stylesheet" href="libs/css/swiper-bundle.min.css" type="text/css">
   <link rel="stylesheet" href="css/base-styles.css" type="text/css">
+  
+  <link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <!---->
+  <?php wp_head(); ?>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WWF8L7HPG0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-WWF8L7HPG0');
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <meta name="yandex-verification" content="c5b87436f0957cfb">
+  <script async="" src="https://mc.yandex.ru/metrika/tag.js"></script>
+  <script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(30586067, "init", { id:30586067, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });</script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/30586067" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
 </head>
 
 <body <?php body_class(); ?>>
-  <!-- FIXME: add variables class-->
-  <!-- <button class="debugGrid-btn debugGrid-btn__create"
-    onclick="debugGridCreate()"></button><button class="debugGrid-btn debugGrid-btn__remove debugGrid-btn__hidden"
-    onclick="debugGridRemove()"></button> -->
+
   <div class="debugGrid debugGrid__z-index-negative"></div>
   <header class="header">
     <div class="wrapper">
       <div class="header-inner">
         <div class="header__logo">
-          <a href="https://gromov-studio.ru/admiral/">
-            <img src="assets/images/png/main-page/logo-header-brown.png" alt="logo">
+          <a href="/">
+            <img src="assets/images/png/main-page/logo-header.png" alt="logo">
+            <!-- <img src="assets/images/png/main-page/logo-header.svg" alt="logo"> -->
           </a>
         </div>
         <div class="header__nav">

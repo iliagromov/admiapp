@@ -15,9 +15,15 @@ $information = $singleBlockACF["information"];
   <section class="single-bath-page">
     <div class="wrapper">
       <div class="single-bath-page-inner">
-        <h3 class="page__title-h3 page__title page_regular">
+        <div class="single-bath-page__title">
+          <button onclick="javascript:history.back()" class="link-back page-link-back">
+            <img src="assets/images/svg/icon-cheveron-left.svg" alt="icon">
+          </button>
+          <h3 class="page__title-h3 page__title page_regular">
           <?php the_title() ?>
         </h3>
+        </div>
+       
 
         <?php include(TEMPLATEPATH . "/src/components/single-bath-page/_single-bath-page-img.php"); ?>
 
@@ -105,6 +111,8 @@ $information = $singleBlockACF["information"];
             <?php the_content() ?>
           </div>
         </div>
+
+        <?php include(TEMPLATEPATH . "/src/components/_table/_table.php"); ?>
 
         <?php
         /*$moreOrder*/

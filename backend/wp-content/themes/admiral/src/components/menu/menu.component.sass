@@ -15,10 +15,10 @@
     // right: 4%
     right: 0
     top: 90px
-    
-
-    color: #000
-    background: #fff
+    background: rgba(0,0,0,.5)
+    +sm-block
+        color: #000
+        background: #fff
 
     /* p/2 */
     box-shadow: 0px 0px 15px rgba(1, 39, 104, 0.1)
@@ -38,8 +38,6 @@
         +sm-block   
             display: block
 
-    a
-        color: #000
 .menuHeader
     display: flex
     flex-wrap: wrap
@@ -54,13 +52,19 @@
 .menuContent
   display: flex
   flex-direction: column
+
   &_desktop
     display: none
-    +md-block
+    +sm-block
       display: flex
   &_mobile
     display: flex
-    +md-block
+    background: #fff
+    padding: 45px
+    box-shadow: 0px 0px 15px rgba(1, 39, 104, 0.1)
+    border-radius: 10px
+
+    +sm-block
       display: none
 
 

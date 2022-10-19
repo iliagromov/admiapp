@@ -10,9 +10,6 @@
   +mmd-block
     padding-left: 24px
     padding-right: 24px
-    
-  +lg-block
-    // max-width: 1600px
 
 +scrollbar($color_scrollbar-track, $color_scrollbar-thumb)
 
@@ -27,14 +24,14 @@
   
 @font-face 
   +font(Roboto, Roboto-Regular)
+
 @font-face 
   +font(Roboto, Roboto-Bold)
 
 
 body 
+  color: $braun-900
   font-family: $fontRegular
-  // background: #ccc
-  // margin: 0
 
 strong
   font-weight: bold
@@ -49,5 +46,12 @@ input
   &:focus
       outline: none
 a
+  color: $braun-900
   text-decoration: none
+
+h1,h2,h3,h4,h5,h6
+  color: $blue-500
+p
+  color: $braun-900
+
 /* __base__ */

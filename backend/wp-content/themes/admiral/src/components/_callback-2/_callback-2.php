@@ -13,15 +13,15 @@ $shortcode = $fieldACF['shortcode'];
         <div class="page-form-links">
           <div class="page-fl-aic">
             <div class="svg-phone svg-phone-box"></div>
-            <div class="page-link">Заказать звонок </div>
+            <div class="page-link js-open-modal" data-modal='modalCallback' >Заказать звонок </div>
           </div>
           <div class="page-fl-aic">
             <div class="svg-mail-solid svg-mail-solid-box"></div>
-            <div class="page-link">Написать на почту</div>
+            <a class="page-link" href="mailto:info@club-admiral.com">Написать на почту</a>
           </div>
           <div class="page-fl-aic">
             <div class="svg-whatsapp svg-whatsapp-box"></div>
-            <div class="page-link">Написать в Whats app</div>
+            <a class="page-link" href="https://wa.me/79895793606" target="_blank">Написать в Whats app</a>
           </div>
         </div>
         <div class="page-form__img">

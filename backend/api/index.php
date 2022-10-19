@@ -25,7 +25,7 @@ function getResult(){
       "merchantId": "NADEZHDA03013935",
       "preAuth": false,
       "source": {
-        "amount": 1,
+        "amount": 129900,
         "currency": "398",
         "remoteId": "RID_01",
         "description": "Покупка Курса в рассрочку"

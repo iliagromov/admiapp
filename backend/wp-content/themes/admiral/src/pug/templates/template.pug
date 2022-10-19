@@ -25,6 +25,9 @@ html(lang="ru" data-scroll='0')
         include ../../components/menu/menu.component.pug
         block content
         include ../../components/footer/footer.component.pug
+        include ../../components/modal/modalCallback.component.pug
+        //- for modals overlay
+        .overlay.js-overlay-modal
 
         block style
             //- link(rel="stylesheet", href="css/viewport/mobileFirst-"+viewportWidth+"px.css", type="text/css")
@@ -37,6 +40,7 @@ html(lang="ru" data-scroll='0')
         block script
             script(src="libs/js/_all/swiper-bundle.min.js")
             script(src="libs/js/_all/store-scroll.js")
+            script(src="libs/js/_all/modal.js")
             script(src="libs/js/_all/tabs.js")
             script(src="libs/js/_all/fancybox.umd.js")
             script(src="js/main.js")

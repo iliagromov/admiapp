@@ -1,0 +1,43 @@
+//-table
+mixin tableRow(props)
+  .table-block__row 
+    div #{props.title}
+    div 
+      ul
+        each lsit in props.lists
+          li #{lsit}
+    div #{props.price}
+
+mixin tabelRows(arr)
+  each row in arr
+    +tableRow(row)
+
+section.table
+  .wrapper
+    .table-inner
+      .table-block
+        table
+          tbody
+            tr
+              td
+                strong Вместимость:
+              td Для дневной прогулки или банкета  — 15 чел
+            tr
+              td &nbsp;
+              td Для ночлега и отдыха — 3 каюты и сауна
+            tr
+              td
+                strong Стоимость:
+              td 1 час — 35 000 руб./час
+            tr
+              td &nbsp;
+              td Свыше 4-х часов — 30 000 руб./час
+            tr
+              td &nbsp;
+              td Свыше 6-и часов — 25 000 руб./ час
+            tr
+              td &nbsp;
+              td Одни сутки (24 часа) — 350 000 руб.
+            tr
+              td &nbsp;
+              td Свыше одних суток — 300 000 руб./ сутки

@@ -39,7 +39,7 @@ $heightBanner: calc(100vh - 100px)
       // object-fit: contain 
       +md-block
         height: $heightBanner
-      // object-fit: cover
+        object-fit: cover
   &__title
     &_bottom
       
@@ -47,7 +47,8 @@ $heightBanner: calc(100vh - 100px)
         width: 85%
         margin: 0 auto
     &_left
-      max-width: 50%
+      +md-block
+        max-width: 50%
       .page__title-h1
         color: $color_white
         margin-bottom: 24px

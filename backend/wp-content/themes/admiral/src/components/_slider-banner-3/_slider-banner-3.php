@@ -29,12 +29,14 @@ if (!empty($fieldACF) && $fieldACF["isShow"]) :
         $acfFields = get_field('_slider-banner-fields');
         $title = $acfFields['title'];
         $text = $acfFields['text'];
+
+        $link = $acfFields['link'];
         $bg = $acfFields['bg'] ? $acfFields['bg']  : 'assets/images/png/main-page/img-баня.jpg';
         // echo '<pre>';
         // var_dump($acfFields);
         // echo '</pre>';
       ?>
-        <div class="swiper-slide slider-banner-slide">
+        <a class="swiper-slide slider-banner-slide"  href="<?php echo $link ? $link : 'javascript:void(0)';?>">
           <div class="slider-banner-slide__text">
             <div class="wrapper">
               <div class="slider-banner-slide-text">
@@ -54,7 +56,7 @@ if (!empty($fieldACF) && $fieldACF["isShow"]) :
             <div class="slider-banner-slide__img_bg"></div>
             <img src="<?php echo $bg; ?>" alt="banner-spa">
           </div>
-        </div>
+      </a>
       <?php endforeach;
       wp_reset_postdata(); ?>
 

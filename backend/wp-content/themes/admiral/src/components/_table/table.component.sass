@@ -1,24 +1,48 @@
 /*table*/
 .table
+  width: 100%
+  margin-bottom: 40px
   &-inner
     +row-flex
   &-block
     width: 100%
-    border: 1px solid $braun-900
-    
+
+    border: 1px solid rgba(0,0,0,.1)
+    table
+      border-collapse: separate
+      border-spacing: 0
+      border-width: 1px 0 0 1px
+      margin: 0 0 1.5em
+      width: 100%
+      border: 1px solid rgba(0,0,0,.1)
+      th,
+      td
+        padding: 8px
+        text-align: left
+        border-width: 0 1px 1px 0
+      td
+        border: 1px solid rgba(0,0,0,.1)
+
     &__head
-      
+
     &__body
       .table-block__row
         &:last-child
-          border-bottom:  none
+          border-bottom: none
     &__row
       display: flex
-      border-bottom: 1px solid $braun-900
-    
+     
+      border-bottom: 1px solid rgba(0,0,0,.1)
+
       div
         width: 33%
-        
-        border-right:  1px solid $braun-900
+        padding: 8px
+
+        border-right: 1px solid rgba(0,0,0,.1)
         &:last-child
-           border-right:  none
+          border-right: none
+
+        ul
+          padding-left: 10px
+          li
+            list-style: disc

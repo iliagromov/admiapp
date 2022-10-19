@@ -39,25 +39,30 @@
       .page-fl-aic
         p
           width: 100%
+          font-family: Roboto-Regular
 
 
   &__bottom
-    padding-top: 40px
-    border-top: 1px solid $braun-100
-
+    display: flex
+    
+    align-items: center
+    justify-content: flex-start
+    
+    width: 100% !important
+    +md-block
+      margin-top: -60px
+      margin-bottom: -25px
     .footer-inner
-      align-items: center
-      justify-content: space-between
 
   &__logo
     +col
-    +size(6)
-    +size-md(4)
+    +size(8)
+    +size-md(8)
     display: flex
     align-items: flex-end
     img
-      width: 153px
-      height: 100px
+      max-width: 153px
+      max-height: 100px
     
 
   &__copy
@@ -65,7 +70,8 @@
     margin-left: 16px
   &__social
     +col
-    +size(6)
-    +size-md(4)
     display: flex
     justify-content: flex-end
+    flex-direction: column
+    +sm-block
+      flex-direction: row

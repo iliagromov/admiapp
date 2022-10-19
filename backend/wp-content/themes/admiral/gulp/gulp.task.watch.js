@@ -17,9 +17,9 @@ gulp.task('watch', gulp.series('build', function _watch(done) {
 		});
 	}
 	// gulp.watch(path.src + path.icons, gulp.series('sprite'));
-	gulp.watch(path.src + path.images, gulp.series('images'));
-	gulp.watch(path.src + path.fonts + '**/*', gulp.series('fonts'));
-	gulp.watch(path.src + path.libs + '**/*', gulp.series('libs'));
+	// gulp.watch(path.src + path.images, gulp.series('images'));
+	// gulp.watch(path.src + path.fonts + '**/*', gulp.series('fonts'));
+	// gulp.watch(path.src + path.libs + '**/*', gulp.series('libs'));
 
 	gulp.watch(path.src + path.html, gulp.series('html'));
 	gulp.watch(path.src + path.pug, gulp.series('pug'));

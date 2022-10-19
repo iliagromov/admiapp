@@ -158,7 +158,7 @@ $heightBanner: calc(100vh - 100px)
       // object-fit: contain 
       +md-block
         height: $heightBanner
-      // object-fit: cover
+        object-fit: cover
   &__title
     &_bottom
       
@@ -166,7 +166,8 @@ $heightBanner: calc(100vh - 100px)
         width: 85%
         margin: 0 auto
     &_left
-      max-width: 50%
+      +md-block
+        max-width: 50%
       .page__title-h1
         color: $color_white
         margin-bottom: 24px
@@ -339,7 +340,7 @@ $heightBanner: calc(100vh - 100px)
     +size-md(10)
     padding: 24px
     +md-block
-      padding: 64px
+      padding: 44px
     box-sizing: border-box
     text-align: center
 
@@ -361,10 +362,16 @@ $heightBanner: calc(100vh - 100px)
 
       .page-link
         +col
+    .notification_warning 
+      font-size: 14px
+      color: red
+    .notification_accept
+      font-size: 14px
+      text-align: center
+      color: #012768
 
     .page__title
       color: $blue-500
-      +size-md(6)
       margin: 0 auto 32px
 
     .page-input
@@ -407,6 +414,7 @@ $heightBanner: calc(100vh - 100px)
 
 /*info-block*/
 .info-block
+  cursor: pointer
   .page__title,
   .page__text
     +shift-md-left(1)
@@ -675,13 +683,12 @@ $heightBanner: calc(100vh - 100px)
       margin-bottom: 24px
     &__text
       margin-bottom: 24px
-      .page__text
-        font-size: 18px
-        line-height: 150%
 
     &__name
       text-align: right
       color: #7D4E30
+      span
+        color: #7D4E30
    
 /*slider-banner*/
 .slider-banner
@@ -721,9 +728,10 @@ $heightBanner: calc(100vh - 100px)
         width: 100%
         min-height: 400px
         object-fit: contain
-        max-height: 650px
+        max-height: 469px
         +md-block
           object-fit: cover
+          max-height: 500px
 
   &__toggles
     position: relative
@@ -751,28 +759,53 @@ $heightBanner: calc(100vh - 100px)
 
 /*table*/
 .table
+  width: 100%
+  margin-bottom: 40px
   &-inner
     +row-flex
   &-block
     width: 100%
-    border: 1px solid $braun-900
-    
+
+    border: 1px solid rgba(0,0,0,.1)
+    table
+      border-collapse: separate
+      border-spacing: 0
+      border-width: 1px 0 0 1px
+      margin: 0 0 1.5em
+      width: 100%
+      border: 1px solid rgba(0,0,0,.1)
+      th,
+      td
+        padding: 8px
+        text-align: left
+        border-width: 0 1px 1px 0
+      td
+        border: 1px solid rgba(0,0,0,.1)
+
     &__head
-      
+
     &__body
       .table-block__row
         &:last-child
-          border-bottom:  none
+          border-bottom: none
     &__row
       display: flex
-      border-bottom: 1px solid $braun-900
-    
+     
+      border-bottom: 1px solid rgba(0,0,0,.1)
+
       div
         width: 33%
-        
-        border-right:  1px solid $braun-900
+        padding: 8px
+
+        border-right: 1px solid rgba(0,0,0,.1)
         &:last-child
-           border-right:  none
+          border-right: none
+
+        ul
+          padding-left: 10px
+          li
+            list-style: disc
+
 /*cuisine*/
 /*cuisine-advantages*/
 .cuisine-advantages
@@ -960,25 +993,30 @@ $heightBanner: calc(100vh - 100px)
       .page-fl-aic
         p
           width: 100%
+          font-family: Roboto-Regular
 
 
   &__bottom
-    padding-top: 40px
-    border-top: 1px solid $braun-100
-
+    display: flex
+    
+    align-items: center
+    justify-content: flex-start
+    
+    width: 100% !important
+    +md-block
+      margin-top: -60px
+      margin-bottom: -25px
     .footer-inner
-      align-items: center
-      justify-content: space-between
 
   &__logo
     +col
-    +size(6)
-    +size-md(4)
+    +size(8)
+    +size-md(8)
     display: flex
     align-items: flex-end
     img
-      width: 153px
-      height: 100px
+      max-width: 153px
+      max-height: 100px
     
 
   &__copy
@@ -986,10 +1024,11 @@ $heightBanner: calc(100vh - 100px)
     margin-left: 16px
   &__social
     +col
-    +size(6)
-    +size-md(4)
     display: flex
     justify-content: flex-end
+    flex-direction: column
+    +sm-block
+      flex-direction: row
 
 .header
     padding: 16px 0 10px
@@ -1007,7 +1046,7 @@ $heightBanner: calc(100vh - 100px)
 
         flex-wrap: nowrap
         align-items: center
-        // justify-content: space-between
+        justify-content: space-between
     &__logo
         // +col
         // +size(4)
@@ -1019,8 +1058,8 @@ $heightBanner: calc(100vh - 100px)
             // transform: scale(1.2)
             max-width: 152px
             max-height: 100px
-            width: 100%
-            object-fit: cover
+            // width: 100%
+            // object-fit: cover
     &__nav
         +col
         // +size(4)
@@ -1117,10 +1156,10 @@ $heightBanner: calc(100vh - 100px)
     // right: 4%
     right: 0
     top: 90px
-    
-
-    color: #000
-    background: #fff
+    background: rgba(0,0,0,.5)
+    +sm-block
+        color: #000
+        background: #fff
 
     /* p/2 */
     box-shadow: 0px 0px 15px rgba(1, 39, 104, 0.1)
@@ -1140,8 +1179,6 @@ $heightBanner: calc(100vh - 100px)
         +sm-block   
             display: block
 
-    a
-        color: #000
 .menuHeader
     display: flex
     flex-wrap: wrap
@@ -1156,13 +1193,19 @@ $heightBanner: calc(100vh - 100px)
 .menuContent
   display: flex
   flex-direction: column
+
   &_desktop
     display: none
-    +md-block
+    +sm-block
       display: flex
   &_mobile
     display: flex
-    +md-block
+    background: #fff
+    padding: 45px
+    box-shadow: 0px 0px 15px rgba(1, 39, 104, 0.1)
+    border-radius: 10px
+
+    +sm-block
       display: none
 
 
@@ -1238,6 +1281,186 @@ $heightBanner: calc(100vh - 100px)
         padding-top: 11%
 .isMenuShow
     // overflow: hidden
+/*modal*/
+.overlay
+    opacity: 0
+    visibility: hidden
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, .7)
+    z-index: 500
+    transition: .3s all
+    &.active
+        opacity: 1
+        visibility: visible
+
+.modal
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+    max-width: 904px
+    max-height: 568px
+    width: 90%
+    height: 90%
+    background: #fff
+    border: 1px solid $braun-50
+    box-shadow: 0px 0px 20px 10px rgba(1, 39, 104, 0.05)
+
+    opacity: 0
+    visibility: hidden
+    overflow: scroll
+    z-index: 1000
+
+    padding: 24px 22px
+    padding: 60px 34px
+    box-sizing: border-box
+
+    &.active
+        opacity: 1
+        visibility: visible
+
+.modalContent
+    max-height: inherit
+    .page__text
+      text-align: center
+    .page-form
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-wrap: wrap
+      align-self: center
+      flex-direction: column
+      padding-top: 10%
+      +md-block
+        width: 50%
+        margin: 0 auto
+      .page-input
+        margin-bottom: 14px
+        width: 100%
+      label
+        width: 100%
+    .notification_warning 
+        font-size: 14px
+        color: red
+    .notification_accept
+      text-align: center
+      color: #012768
+
+.modalLocation
+    overflow: scroll
+    max-width: 1140px
+    max-height: 1117px
+    .page__title-h2
+        margin-bottom: 50px
+
+.modalLocationSearch
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    margin-bottom: 70px
+    .page__input-search
+        width: 45%
+        +md-block
+            width: 45%
+        +lg-block
+            width: 45%
+
+        input
+            width: 100%
+.modalLocationCurrentText
+    color: rgba(0, 0, 0, 0.3)
+    +md-block
+        margin-left: 60px
+    +lg-block
+        margin-left: 60px
+        
+.modalLocationCurrentCity
+    color: rgba(0, 0, 0, 1)
+.modalLocationItems
+    display: flex
+    flex-wrap: wrap
+    
+    max-height: inherit
+    +md-block
+        flex-direction: column
+    +lg-block
+        flex-direction: column
+
+.modalLocationItem
+    +col
+    +size(6)
+    +size-sm(6)
+    +size-md(4)
+    +size-lg(4)
+    margin-bottom: 50px
+    white-space: nowrap
+    a
+        display: block
+        color: #000000
+        width: 100%
+        font-size: 20px
+        line-height: 135%
+        margin-bottom: 20px
+        &:hover
+            opacity: 0.5
+
+.modalLocationItemLetter
+    text-transform: uppercase
+    font-size: 60px
+    line-height: 135%
+    margin-bottom: 20px
+
+
+.modalCallback
+    max-height: 630px
+    overflow: scroll
+    .page__form
+        +row-flex
+        .checkbox
+            display: flex
+            align-items: center
+            width: 100%
+            margin-bottom: 20px
+            input
+                min-width: 15px
+                width: 15px
+                height: 15px
+        
+        
+    .page__title-h2
+        text-align: center
+        margin-bottom: 20px
+    .page__input
+        +col
+        +size(12)
+        +size-md(6)
+        +size-lg(6)
+        margin-bottom: 20px
+
+    .page__textarea
+        +col
+        +size(12)
+        height: 150px
+        resize: none
+        margin-bottom: 20px
+    
+.modalClose
+    position: absolute
+    top: 24px
+    right: 23px
+    border: none
+    background-color: transparent
+    z-index: 100
+    padding: 0
+
+.isModalShow
+    overflow: hidden
+
 /*select-city*/
 .select-city
   display: flex
@@ -1254,12 +1477,20 @@ $heightBanner: calc(100vh - 100px)
   &-inner
     .page__title
       color: $blue-500
-      margin-bottom: 20px
     +row-flex
   &-img
     display: flex
     flex-wrap: wrap
     width: 100%
+  &__title
+    display: flex
+    align-items: center
+    margin-bottom: 20px
+    .page-link-back
+      display: flex
+      margin-right: 8px
+      background: transparent
+      border: none
   &__img
     // display: flex
     display: grid
@@ -1288,12 +1519,12 @@ $heightBanner: calc(100vh - 100px)
           font-size: 26px
           line-height: 140%
           font-weight: bold
-          content: '+2'
+          content: var(--img-box-count)
           position: absolute
           width: 100%
           height: 100%
           text-align: center
-          display: flex
+          display:  var(--img-box-count-display)
           align-items: center
           justify-content: center
           text-shadow: black
@@ -1304,7 +1535,9 @@ $heightBanner: calc(100vh - 100px)
       &:nth-child(n+6)
         display: none
       &:nth-child(n+2)
-        max-width: 350px
+        max-width: 170px
+        +md-block
+          max-width: 350px
 
       img
         object-fit: cover
@@ -1496,7 +1729,6 @@ $heightBanner: calc(100vh - 100px)
 /*btns*/
 /*checkbox*/
 /*datapicker*/
-/*forms*/
 /*input*/
 /*link*/
 .page-link
@@ -1521,6 +1753,7 @@ $heightBanner: calc(100vh - 100px)
   &_arrow
     display: flex
     align-items: center
+/*forms*/
 /*modals*/
 /*radio*/
 /*search*/

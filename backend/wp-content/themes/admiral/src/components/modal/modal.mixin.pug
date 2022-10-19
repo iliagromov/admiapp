@@ -1,0 +1,6 @@
+//-modal-mixin
+mixin modal(dataModalName)
+    section.modal(data-modal=dataModalName class=dataModalName ) 
+        button.modalClose.icon-close.js-modal-close
+        .modalContent 
+            block
