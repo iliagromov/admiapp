@@ -1,4 +1,0 @@
-2022-09-10T12:57:01+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF), expecting end of file in /home/hp/Projects/admiral.io/backend/wp-content/themes/admiral/src/components/_article-cards/_article-cards.php on line 101
-
-2022-09-10T12:57:19+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF), expecting end of file in /home/hp/Projects/admiral.io/backend/wp-content/themes/admiral/src/components/_article-cards/_article-cards.php on line 101
-

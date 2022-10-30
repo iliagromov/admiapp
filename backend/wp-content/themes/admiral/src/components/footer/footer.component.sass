@@ -24,6 +24,15 @@
       color: $braun-900
       font-size: 14px
       line-height: 150%
+      &.page-fl-aic__block
+        flex-direction: column
+        align-items: flex-start
+
+      &-block
+        display: flex
+        .page__text
+          font-size: 10px
+
       .page-link
         margin: 0
 
@@ -33,7 +42,7 @@
     +size-sm(3)
     +size-md(2)
     &.footer__contacts
-      +size(12) 
+      +size(12)
       +size-sm(3)
       +size-md(3)
       .page-fl-aic
@@ -41,13 +50,12 @@
           width: 100%
           font-family: Roboto-Regular
 
-
   &__bottom
     display: flex
-    
+
     align-items: center
     justify-content: flex-start
-    
+
     width: 100% !important
     +md-block
       margin-top: -60px
@@ -63,7 +71,6 @@
     img
       max-width: 153px
       max-height: 100px
-    
 
   &__copy
     color: $braun-900

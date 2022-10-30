@@ -15,16 +15,3 @@ const swiperSliderBanner = new Swiper('.js--slider-banner', {
     crossFade: true
   },
 });
-
-document.addEventListener('DOMContentLoaded', function() {
-  let utms =  document.querySelectorAll('.js-get-utm');
-  
-  utms && utms.forEach(function(item){
-      /* Назначаем каждой кнопке обработчик клика */
-      item.addEventListener('click', function(e) {
-        let modalUtm = this.getAttribute('data-utm');
-        window.utm = modalUtm;
-      })
-  })
-})
-

@@ -1,3 +1,5 @@
+small 
+    opacity: 1 !important
 .header
     padding: 16px 0 10px
     +md-block
@@ -20,6 +22,9 @@
         // +size(4)
         // +size-sm(4)
         // +size-md(4)
+        margin-left: -5px
+        +sm-block
+            margin-left: 0
         a
             display: flex
         img
@@ -33,19 +38,35 @@
         // +size(4)
         // +size-sm(4)
         // +size-md(4)
-        .page-link
-            +col
-            .page-link
-            white-space: nowrap
+        
         display: none
         flex-grow: 1
         text-align: center
         +sm-block
             display: block
+        .page-link
+            +col
+            white-space: nowrap
 
     &__phone
+        margin-left: -16px
+        +sm-block
+            margin-left: 0
         .page-link
             white-space: nowrap
+            small 
+                opacity: 1 !important
+        
+        .page-fl-aic
+            font-size: 14px
+            line-height: 150%
+            &.page-fl-aic__block
+                flex-direction: column
+                align-items: flex-start
+            &-block
+                display: flex
+                .page__text
+                    font-size: 10px
     &__menu
         .menu-btn
             /* Auto layout */

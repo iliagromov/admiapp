@@ -7,7 +7,7 @@ get_header();
 <main class="page">
   <section class="banner banner-cuisine">
     <div class="banner_bg">
-      <img src="assets/images/png/cuisine/img-banner-cuisine.png" alt="banner">
+      <img src="/wp-content/uploads/2022/10/restoran.jpg" alt="banner">
     </div>
     <div class="banner-inner banner-inner_left">
       <div class="wrapper">
@@ -62,22 +62,13 @@ get_header();
       </div>
     </div>
   </section>
-  <section class="cuisine-shef">
-    <div class="wrapper">
-      <div class="cuisine-shef-inner">
-        <div class="cuisine-shef-item"><img src="assets/images/png/cuisine/img-shef.png" alt="shef"></div>
-        <div class="cuisine-shef-item cuisine-shef-item__text">
-          <h3 class="page__title page_regular page__title-h3 page_braun">Шеф</h3>
-          <h3 class="page__title page_regular page__title-h3">Величев Николай</h3>
-          <p class="page__text page_regular">Признанный мастер в мире кулинарии. Создавал, открывал и консультировал
-            гастрономические заведения по всему миру. Всю свою жизнь посвятил изучению тонкостей этого искусства: опыт
-            работы в сфере более 20 лет.</p>
-          <p class="page__text page_regular">Специалист по приготовлению дикого мяса. В совершенстве владеет навыками приготовления
-            всевозможных настоек, в том числе и медовухи и хреновухи.</p><img src="assets/images/svg/img-shef-rospis.svg" alt="shef">
-        </div>
-        <div class="cuisine-shef-item"><img src="assets/images/png/cuisine/img-shef-2.png" alt="shef"></div>
-      </div>
-    </div>
+  
+  
+ 
+    
+    
+    
+    
   </section>
   <section class="cuisine-menu">
     <div class="wrapper">
@@ -121,14 +112,19 @@ get_header();
         <div class="cuisine-contacts__map"><img src="assets/images/png/cuisine/img-map.png" alt="map"></div>
         <div class="cuisine-contacts__text">
           <h3 class="page__title page_regular page__title-h3">Рестораны на территории</h3>
-          <p class="page__text">В шаговой доступности от банного комплексаесть два ресторана:</p>
+          
+             <div class="cuisine-contacts__text-item"><span>«Парус»: <a class="page-link" href="tel:+7 (499) 325-42-85">+7 (499) 325-42-85</a></span>
+            <div class="page__text">Пн-Суб: 11.00-21.00, Вс: 11.00-20.00</div>
+          </div>
+          
+         
           <div class="cuisine-contacts__text-item">
             <span>«Nachile»: <a class="page-link" href="tel:+7 (499) 325-35-35">+7 (499) 325-35-35</a></span>
             <div class="page__text">Пн-Суб: 11.00-21.00, Вс: 11.00-20.00</div>
           </div>
-          <div class="cuisine-contacts__text-item"><span>«Парус»: <a class="page-link" href="tel:+7 (499) 325-42-85">+7 (499) 325-42-85</a></span>
-            <div class="page__text">Пн-Суб: 11.00-21.00, Вс: 11.00-20.00</div>
-          </div>
+          
+       
+          
           <div class="cuisine-contacts__text-item"><span>«Surf Bar»: <a class="page-link" href="tel:+7 (499) 325-42-82">+7 (499) 325-42-82</a></span>
             <div class="page__text">Пн-Суб: 11.00-21.00, Вс: 11.00-20.00</div>
           </div>
@@ -136,56 +132,11 @@ get_header();
       </div>
     </div>
   </section>
-  <section class="slider-banner js--slider-banner swiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide slider-banner-slide">
-        <div class="slider-banner-slide__text">
-          <div class="wrapper">
-            <div class="slider-banner-slide-text">
-              <div class="page__title page_regular page__title-h2">Попробуйте программу «SPA VIP PLUS»</div>
-            </div>
-          </div>
-        </div>
-        <div class="slider-banner-slide__img">
-          <div class="slider-banner-slide__img_bg"></div><img src="assets/images/png/main-page/banner-menu.png" alt="banner-spa">
-        </div>
-      </div>
-      <div class="swiper-slide slider-banner-slide">
-        <div class="slider-banner-slide__text">
-          <div class="wrapper">
-            <div class="slider-banner-slide-text">
-              <div class="page__title page_regular page__title-h2"> Попробуйте программу «SPA VIP PLUS»</div>
-            </div>
-          </div>
-        </div>
-        <div class="slider-banner-slide__img">
-          <div class="slider-banner-slide__img_bg"></div><img src="assets/images/png/main-page/banner-spa.png" alt="banner-spa">
-        </div>
-      </div>
-      <div class="swiper-slide slider-banner-slide">
-        <div class="slider-banner-slide__text">
-          <div class="wrapper">
-            <div class="slider-banner-slide-text">
-              <div class="page__title page_regular page__title-h2"> Попробуйте программу «SPA VIP PLUS»</div>
-            </div>
-          </div>
-        </div>
-        <div class="slider-banner-slide__img">
-          <div class="slider-banner-slide__img_bg"></div><img src="assets/images/png/main-page/banner-sport.png" alt="banner-spa">
-        </div>
-      </div>
-    </div>
-    <div class="wrapper">
-      <div class="slider-banner-inner">
-        <div class="slider-banner__toggles">
-          <div class="js--swiper-pagination swiper-pagination"></div>
-          <div class="js--swiper-button-next swiper-button-next"></div>
-          <div class="js--swiper-button-prev swiper-button-prev"></div>
-        </div>
-      </div>
-    </div>
-    <div class="slider-banner__link-show-more"><a class="page-link page-link_arrow" href="/">Больше программ<div class="svg-cheveron-right svg-cheveron-right-box"></div></a></div>
-  </section>
+
+
+
+
+
   <?php include(TEMPLATEPATH . "/src/components/callback/_callback-2.php");?>
 </main>
 <?php get_footer(); ?>

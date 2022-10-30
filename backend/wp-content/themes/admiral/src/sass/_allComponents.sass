@@ -598,7 +598,6 @@ $heightBanner: calc(100vh - 100px)
       background: #fff
       padding-right: 15px
       margin-bottom: -1px
-      max-width: 40%  
       &_text
         // width: 70%
     &__title
@@ -978,6 +977,15 @@ $heightBanner: calc(100vh - 100px)
       color: $braun-900
       font-size: 14px
       line-height: 150%
+      &.page-fl-aic__block
+        flex-direction: column
+        align-items: flex-start
+
+      &-block
+        display: flex
+        .page__text
+          font-size: 10px
+
       .page-link
         margin: 0
 
@@ -987,7 +995,7 @@ $heightBanner: calc(100vh - 100px)
     +size-sm(3)
     +size-md(2)
     &.footer__contacts
-      +size(12) 
+      +size(12)
       +size-sm(3)
       +size-md(3)
       .page-fl-aic
@@ -995,13 +1003,12 @@ $heightBanner: calc(100vh - 100px)
           width: 100%
           font-family: Roboto-Regular
 
-
   &__bottom
     display: flex
-    
+
     align-items: center
     justify-content: flex-start
-    
+
     width: 100% !important
     +md-block
       margin-top: -60px
@@ -1017,7 +1024,6 @@ $heightBanner: calc(100vh - 100px)
     img
       max-width: 153px
       max-height: 100px
-    
 
   &__copy
     color: $braun-900
@@ -1030,6 +1036,8 @@ $heightBanner: calc(100vh - 100px)
     +sm-block
       flex-direction: row
 
+small 
+    opacity: 1 !important
 .header
     padding: 16px 0 10px
     +md-block
@@ -1052,6 +1060,9 @@ $heightBanner: calc(100vh - 100px)
         // +size(4)
         // +size-sm(4)
         // +size-md(4)
+        margin-left: -5px
+        +sm-block
+            margin-left: 0
         a
             display: flex
         img
@@ -1065,19 +1076,35 @@ $heightBanner: calc(100vh - 100px)
         // +size(4)
         // +size-sm(4)
         // +size-md(4)
-        .page-link
-            +col
-            .page-link
-            white-space: nowrap
+        
         display: none
         flex-grow: 1
         text-align: center
         +sm-block
             display: block
+        .page-link
+            +col
+            white-space: nowrap
 
     &__phone
+        margin-left: -16px
+        +sm-block
+            margin-left: 0
         .page-link
             white-space: nowrap
+            small 
+                opacity: 1 !important
+        
+        .page-fl-aic
+            font-size: 14px
+            line-height: 150%
+            &.page-fl-aic__block
+                flex-direction: column
+                align-items: flex-start
+            &-block
+                display: flex
+                .page__text
+                    font-size: 10px
     &__menu
         .menu-btn
             /* Auto layout */
@@ -1345,9 +1372,10 @@ $heightBanner: calc(100vh - 100px)
       label
         width: 100%
     .notification_warning 
-        font-size: 14px
-        color: red
+      font-size: 14px
+      color: red
     .notification_accept
+      font-size: 14px
       text-align: center
       color: #012768
 
@@ -1475,9 +1503,12 @@ $heightBanner: calc(100vh - 100px)
 
 .single-bath-page
   &-inner
+    +row-flex
     .page__title
       color: $blue-500
-    +row-flex
+    .page__title-h3
+      margin-bottom: 30px
+    
   &-img
     display: flex
     flex-wrap: wrap
@@ -1725,10 +1756,11 @@ $heightBanner: calc(100vh - 100px)
 
 /*ui*/
 
-/*btn*/
 /*btns*/
 /*checkbox*/
+/*btn*/
 /*datapicker*/
+/*forms*/
 /*input*/
 /*link*/
 .page-link
@@ -1753,7 +1785,6 @@ $heightBanner: calc(100vh - 100px)
   &_arrow
     display: flex
     align-items: center
-/*forms*/
 /*modals*/
 /*radio*/
 /*search*/
