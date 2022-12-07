@@ -29,7 +29,7 @@ get_header();
           </div>
           <div class="cuisine-advantages__item-text">
             <h3 class="page__title page_regular page__title-h3">Ежедневный сервис</h3>
-            <p class="page__text">Принимаем заказы каждый день <br> с 10.00 до 23.00</p>
+            <p class="page__text">Принимаем заказы каждый день <br> с 10.00 до 22.00</p>
           </div>
         </div>
         <div class="cuisine-advantages__item">

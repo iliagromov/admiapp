@@ -4,8 +4,8 @@
     <section class="single-bath-page">
       <div class="wrapper">
         <div class="single-bath-page-inner">
-          <h3 class="page__title-h3 page__title page_regular">
-          <?php the_title() ?></h3>
+          <h1 class="page__title-h3 page__title page_regular">
+          <?php the_title() ?></h1>
           <div class="single-bath-page-img">
             <div class="single-bath-page__img"> 
                 <img src="assets/images/png/archive-bath/single-bath-page-img-1.png"

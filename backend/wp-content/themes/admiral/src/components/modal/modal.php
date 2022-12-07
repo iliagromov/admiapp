@@ -4,12 +4,9 @@
   <div class="modalContent">
     <h2 class="page__title-h2">Форма обратной связи</h2>
     <p class="page__text">Оставьте свои контакты, и администратор яхт-клуба свяжется с Вами в ближайшее время</p>
-    <!-- <form class="page-form">
-      <input class="page-input" type="text" placeholder="Имя">
-      <input class="page-input" type="tel" placeholder="Телефон">
-      <button class="page__btn page_broun-outline">Забронировать проживание</button>
-    </form> -->
-    <form id="form" class="page-form">
+
+    <?php /*
+    <form id="form" class="page-form" onsubmit="ym(30586067,'reachGoal','formaf')"> 
       <label for="form_name">
         <p class="page__text">Ваше имя: </p>
         <input require type="text" name="form_name" class="page-input required form_name" placeholder="Имя Фамилия" value=""/>
@@ -24,6 +21,13 @@
       <input type="text" name="form_submitted" class="form_submitted" value="" style="display: none !important;"/>
 
       <input type="submit"  class="form_submit page__btn page_broun-outline" value="Отправить"/>
-    </form>
+    </form>*/?>
+
+    <script data-b24-form="inline/71/9zxdst" data-skip-moving="true">
+    (function(w,d,u){
+    var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);
+    var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+    })(window,document,'https://cdn-ru.bitrix24.ru/b20055040/crm/form/loader_71.js');
+    </script>
   </div>
 </section>  

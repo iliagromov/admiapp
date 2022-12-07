@@ -1,0 +1,31 @@
+//-_contacts
+mixin item(item)
+  .contacts-item
+    h4 #{item.title}
+    a #{item.href}
+mixin items(array)
+  each item in array
+    +item(item)
+
+section.contacts
+  .wrapper
+    .contacts-items
+      +items([
+        {
+          title: 'Ресторан "Парус":',
+          href: 'тел.: +7 (930) 995-46-02'
+        },
+        {
+          title: 'Ресторан "Парус":',
+          href: 'тел.: +7 (930) 995-46-02'
+        },
+        {
+          title: 'Ресторан "Парус":',
+          href: 'тел.: +7 (930) 995-46-02'
+        },
+        {
+          title: 'Ресторан "Парус":',
+          href: 'тел.: +7 (930) 995-46-02'
+        },
+      ])
+    .contacts-map

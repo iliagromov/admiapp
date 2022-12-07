@@ -19,9 +19,9 @@ $information = $singleBlockACF["information"];
           <button onclick="javascript:history.back()" class="link-back page-link-back">
             <img src="assets/images/svg/icon-cheveron-left.svg" alt="icon">
           </button>
-          <h3 class="page__title-h3 page__title page_regular">
+          <h1 class="page__title-h3 page__title page_regular">
           <?php the_title() ?>
-        </h3>
+        </h1>
         </div>
 
         <?php include(TEMPLATEPATH . "/src/components/single-bath-page/_single-bath-page-img.php"); ?>

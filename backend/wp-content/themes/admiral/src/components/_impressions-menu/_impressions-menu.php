@@ -32,6 +32,12 @@ if (!empty($blockACF) && $blockACF["isShow"]) : ?>
   <section class="impressions-menu">
     <div class="wrapper">
       <h3 class="page__title page_regular page__title-h3"><?php echo $blockACF['fields']['title'];?></h3>
+      <?php if($blockACF['fields']['isMemu']) :?>
+      <div style="justify-content: center;display: flex;">
+        <a href="<?php echo $blockACF['fields']['link-menu'];?>" class="page-btn page-btn_outline" target="_blank">Посмотреть меню</a>
+      </div>
+      <br>
+      <?php endif;?>
       <div class="impressions-menu-inner">
         <div class="tabs">
           <?php if (!empty($blockACF['_isLinks'])) : ?>

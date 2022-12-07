@@ -2,16 +2,19 @@
 
 // $arhiveBlockACF = get_field('_arhive');
 $singleBlockACF = get_field('_single-page')['fields'];
-
+$tlACF = get_field('_tl-search-form');
 $gallary = $singleBlockACF["gallary"];
 $advantages = $singleBlockACF["advantages"];
 $moreOrder = $singleBlockACF["more-order"];
 $information = $singleBlockACF["information"];
-
+// var_dump($tlACF);
 ?>
 <!-- single -->
 
 <main class="page">
+  <!-- single -->
+<?php include(TEMPLATEPATH . "/src/components/_tl-search-form/_tl-search-form.php"); ?>
+  <!-- single -->
   <section class="single-bath-page">
     <div class="wrapper">
       <div class="single-bath-page-inner">
@@ -19,9 +22,9 @@ $information = $singleBlockACF["information"];
           <button onclick="javascript:history.back()" class="link-back page-link-back">
             <img src="assets/images/svg/icon-cheveron-left.svg" alt="icon">
           </button>
-          <h3 class="page__title-h3 page__title page_regular">
+          <h1 class="page__title-h3 page__title page_regular">
           <?php the_title() ?>
-        </h3>
+        </h1>
         </div>
        
 

@@ -94,9 +94,11 @@ $isLink = $blockDescripion["isLink"];
           endforeach; 
         endif;?>
         </div>
-
-        <button class="page-btn page-btn_outline js-open-modal js-get-utm" data-modal='modalCallback' data-utm="<?php the_title(); ?>" >Забронировать</button>
-      
+        <?php if($blockDescripion['isTravelain']) :?>
+          <button  class="page-btn page-btn_outline js-get-utm"  data-tl-booking-open='true' data-tl-room='206476'>Забронировать</button>
+        <?php else: ?>
+          <button  class="page-btn page-btn_outline js-open-modal js-get-utm" data-modal='modalCallback' data-utm="<?php the_title(); ?>" >Забронировать</button>
+        <?php endif;?>
       </div>
 
     </a>

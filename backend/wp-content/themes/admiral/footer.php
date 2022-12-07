@@ -151,12 +151,7 @@
     padding: 0 30px;
   }
 </style>
-<!-- start TL Search form script -->
-<?php /*<div id='block-search'>
-  <div id="tl-search-form" class="tl-container">
-    <noindex><a href="https://www.travelline.ru/products/tl-hotel/" rel='nofollow' target="_blank">TravelLine</a></noindex>
-  </div>
-</div>
+
 
 <script type='text/javascript'>
     (function (w) {
@@ -193,9 +188,14 @@
             })(h);
         }
     })(window);
-</script>*/ ?>
+</script>
 <!-- end TL Search form script -->
 <?php wp_footer(); ?>
+<script>
+  (function(w,d,u){
+  var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+  var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+  })(window,document,'https://cdn-ru.bitrix24.ru/b20055040/crm/tag/call.tracker.js');
+</script>
 </body>
-
 </html>

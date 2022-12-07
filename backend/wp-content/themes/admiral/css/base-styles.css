@@ -248,3 +248,23 @@ p {
     padding-right: 24px;
   }
 }
+.modalCallback .b24-form-btn{
+  padding: 12px 24px !important;
+  color: #7D4E30 !important;
+  background: #ffffff !important;
+  border: 1px solid #A87E5C !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+}
+
+.modalCallback  input.b24-form-control {
+  display: block;
+  font-size: 14px;
+  line-height: 150%;
+  background: transparent;
+  border: none;
+  color: #A87E5C !important;
+  opacity: 0.7;
+  padding-bottom: 8px !important;
+  border-bottom: 2px solid #A87E5C;
+}

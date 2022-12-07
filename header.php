@@ -64,28 +64,9 @@ $fieldsACF =  [
   </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <meta name="yandex-verification" content="c5b87436f0957cfb">
-  <script async="" src="https://mc.yandex.ru/metrika/tag.js"></script>
-  <script type="text/javascript">
-    (function(m, e, t, r, i, k, a) {
-      m[i] = m[i] || function() {
-        (m[i].a = m[i].a || []).push(arguments)
-      };
-      m[i].l = 1 * new Date();
-      k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-    })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-    ym(30586067, "init", {
-      id: 30586067,
-      clickmap: true,
-      trackLinks: true,
-      accurateTrackBounce: true,
-      webvisor: true
-    });
-  </script>
-  <noscript>
-    <div>
-      <img src="https://mc.yandex.ru/watch/30586067" style="position:absolute; left:-9999px;" alt="" />
-    </div>
-  </noscript>
+  
+  <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date(); for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }} k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(30586067, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, ecommerce:"dataLayer" }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/30586067" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  
   <!-- start TL head script -->
   <script type='text/javascript'>
     (function(w) {
@@ -121,6 +102,7 @@ $fieldsACF =  [
     })(window);
   </script>
   <!-- end TL head script -->
+  
 </head>
 
 <body <?php body_class(); ?>>
@@ -153,16 +135,6 @@ $fieldsACF =  [
                 <p class="page__text">Банный клуб</p>
                 <a class="page-link" href="tel:+74999387227">
                   +7 (499) 938-72-27</a>
-              </div>
-            </div>
-
-            <div class="page-fl-aic-block">
-              <div class="svg-phone svg-phone-box"></div>
-              <div class="page-fl-aic-block_text">
-                <p class="page__text">Администрация</p>
-
-                <a class="page-link" href="tel:+74993253535">
-                  +7 (499) 325-35-35</a>
               </div>
             </div>
           </div>
